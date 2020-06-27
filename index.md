@@ -1,4 +1,4 @@
-# Code for SAITAMA
+![Code for SAITAMA](image/CfS_logo.png)
 
 ## Code for SAITAMAとは
 
@@ -6,11 +6,14 @@
 
 2014年1月発足、以降マッピングパーティ、アイデアソン、ハッカソン、勉強会など、様々なイベントをほぼ月イチで開催しています。
 
-## Code for SAITAMAのロゴ
-
-
-![Code for SAITAMA](image/CfS_logo.png)
 ロゴは埼玉の「勾玉」、またマップのピンを表しています。
 
-- [Facebook Group](https://www.facebook.com/groups/186097664924714/)
-- [Facebook event](https://www.facebook.com/pg/Code4SAITAMA/events/?ref=page_internal)
+## LINK
+
+Facebookでの活動が多いです。
+最近Discordはじめました。
+
+- [Facebookグループ](https://www.facebook.com/groups/186097664924714/)
+- [Facebookイベント](https://www.facebook.com/pg/Code4SAITAMA/events/?ref=page_internal)
+- [Discord](https://discord.gg/2vbAx7)
+- [GitHub](https://github.com/Code4Saitama)
