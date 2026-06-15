@@ -2,15 +2,46 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import StatBand from "../components/StatBand.astro";
 import EventCard from "../components/EventCard.astro";
-import { getEvents, getSlides } from "../lib/archive";
+import { absoluteUrl, defaultOgImage, getEvents, getSlides, pageUrl, schemaDateTime, siteDescription, siteName, siteOrigin } from "../lib/archive";
 import imageManifest from "../../public/assets/images/images-manifest.json";
 
 const events = await getEvents();
 const slides = await getSlides();
 const eventByDate = new Map(events.filter((event) => event.data.hasDetail).map((event) => [event.data.date, event]));
 const highlights = events.filter((event) => event.data.hasDetail).slice(0, 6);
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Code for SAITAMA",
+    url: siteOrigin,
+    description: "埼玉県を拠点に、シビックテック、オープンデータ、OpenStreetMap、地域課題解決に取り組むコミュニティです。",
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "埼玉県"
+    },
+    knowsAbout: ["シビックテック", "オープンデータ", "OpenStreetMap", "地域課題解決", "マッピングパーティ", "アイデアソン", "ハッカソン"]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: siteName,
+    url: pageUrl("index.html"),
+    inLanguage: "ja",
+    description: siteDescription,
+    about: "Code for SAITAMAのイベント、写真、関連資料の公式アーカイブ",
+    hasPart: highlights.map((event) => ({
+      "@type": "Event",
+      name: event.data.title,
+      startDate: schemaDateTime(event.data.start || event.data.date),
+      url: pageUrl(event.data.page),
+      image: absoluteUrl(event.data.image || defaultOgImage),
+      location: event.data.place
+    }))
+  }
+];
 ---
-<BaseLayout title="トップ" active="index.html" bodyClass="home">
+<BaseLayout title="トップ" active="index.html" bodyClass="home" description={siteDescription} jsonLd={jsonLd}>
   <section class="hero-slider" data-slider data-interval="5000">
     {slides.map((slide, i) => {
       const event = slide.data.eventDate ? eventByDate.get(slide.data.eventDate) : null;

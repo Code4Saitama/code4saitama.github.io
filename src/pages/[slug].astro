@@ -1,7 +1,7 @@
 ---
 import { render } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { excerpt, getEvents, logoPath, siteImage, themeText } from "../lib/archive";
+import { absoluteUrl, excerpt, getEvents, logoPath, pageUrl, schemaDateTime, siteImage, themeText } from "../lib/archive";
 
 export async function getStaticPaths() {
   const events = await getEvents();
@@ -17,8 +17,41 @@ const { event } = Astro.props;
 const { Content } = await render(event);
 const fb = event.data.fbid ? `https://www.facebook.com/events/${event.data.fbid}/` : "";
 const heroImage = siteImage(event.data.image);
+const description = excerpt(event.body || `${event.data.title}のイベント記録。`, 155);
+const isOnline = `${event.data.title} ${event.body || ""} ${event.data.place || ""}`.includes("オンライン") || `${event.data.title} ${event.body || ""}`.includes("Discord");
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: event.data.title,
+  url: pageUrl(event.data.page),
+  description,
+  startDate: schemaDateTime(event.data.start || event.data.date),
+  endDate: schemaDateTime(event.data.end || ""),
+  eventStatus: event.data.title.includes("中止") ? "https://schema.org/EventCancelled" : "https://schema.org/EventScheduled",
+  eventAttendanceMode: isOnline ? "https://schema.org/OnlineEventAttendanceMode" : "https://schema.org/OfflineEventAttendanceMode",
+  image: absoluteUrl(heroImage),
+  organizer: {
+    "@type": "Organization",
+    name: "Code for SAITAMA",
+    url: "https://www.code4saitama.org"
+  },
+  location: isOnline
+    ? {
+        "@type": "VirtualLocation",
+        name: "オンライン"
+      }
+    : event.data.place
+    ? {
+        "@type": "Place",
+        name: event.data.place,
+        address: event.data.place
+      }
+    : undefined,
+  keywords: event.data.themes.join(", "),
+  sameAs: fb || undefined
+};
 ---
-<BaseLayout title={event.data.title}>
+<BaseLayout title={event.data.title} description={description} canonicalPath={event.data.page} image={heroImage} type="article" jsonLd={jsonLd}>
   <article class="detail-page">
     <div class="detail-hero">
       {event.data.image ? (

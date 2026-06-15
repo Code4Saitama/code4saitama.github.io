@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { getEvents } from "../lib/archive";
+import { getEvents, pageUrl } from "../lib/archive";
 
 const events = await getEvents();
 const themes = new Map<string, { label: string; events: typeof events }>();
@@ -11,8 +11,24 @@ for (const event of events) {
   });
 }
 const themeRows = [...themes.entries()].sort((a, b) => a[1].label.localeCompare(b[1].label, "ja"));
+const description = "Code for SAITAMAの活動を、地図、オープンデータ、防災、学び、地域課題解決などのテーマ別に整理したページです。";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Code for SAITAMA テーマ別活動",
+  url: pageUrl("themes.html"),
+  inLanguage: "ja",
+  description,
+  about: themeRows.map(([, group]) => group.label),
+  hasPart: themeRows.map(([key, group]) => ({
+    "@type": "ItemList",
+    name: group.label,
+    url: `${pageUrl("themes.html")}#${key}`,
+    numberOfItems: group.events.length
+  }))
+};
 ---
-<BaseLayout title="テーマ別" active="themes.html">
+<BaseLayout title="テーマ別" active="themes.html" description={description} jsonLd={jsonLd}>
   <section class="page-title">
     <p class="eyebrow">Themes</p>
     <h1>テーマ別に見る</h1>
