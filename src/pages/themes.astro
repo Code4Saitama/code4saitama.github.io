@@ -11,7 +11,7 @@ for (const event of events) {
   });
 }
 const themeRows = [...themes.entries()].sort((a, b) => a[1].label.localeCompare(b[1].label, "ja"));
-const description = "Code for SAITAMAの活動を、地図、オープンデータ、防災、学び、地域課題解決などのテーマ別に整理したページです。";
+const description = "Code for SAITAMAの活動を、地図、オープンデータ、防災、学び、地域課題解決などのテーマ別に紹介しています。";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
@@ -32,7 +32,7 @@ const jsonLd = {
   <section class="page-title">
     <p class="eyebrow">Themes</p>
     <h1>テーマ別に見る</h1>
-    <p>活動のまとまりを、地図、データ、防災、学びなどの観点で整理しています。</p>
+    <p>Code for SAITAMAの活動を、地図、データ、防災、学びなどの観点から見られるようにまとめています。</p>
   </section>
   {themeRows.map(([key, group]) => (
     <section class="theme-section" id={key}>

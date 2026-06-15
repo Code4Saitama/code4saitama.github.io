@@ -28,7 +28,7 @@ const navItems = [
   ["timeline.html", "時系列"],
   ["themes.html", "テーマ別"],
   ["research.html", "関連資料"],
-  ["about.html", "紹介"]
+  ["about.html", "公式情報"]
 ];
 const pageTitle = title === "トップ" ? siteName : `${title} | ${siteName}`;
 const canonicalUrl = pageUrl(canonicalPath);
@@ -87,9 +87,9 @@ const structuredData = cleanJsonLd([
   </head>
   <body class={bodyClass}>
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Code for SAITAMA アーカイブ">
+      <a class="brand" href="index.html" aria-label="Code for SAITAMA 公式サイト">
         <img src={logoPath} alt="Code for SAITAMA" />
-        <span>Archive</span>
+        <span>Official</span>
       </a>
       <nav>
         {navItems.map(([href, label]) => <a class:list={[{ active: href === active }]} href={href}>{label}</a>)}
@@ -99,7 +99,7 @@ const structuredData = cleanJsonLd([
       <slot />
     </main>
     <footer class="site-footer">
-      <p>Code for SAITAMA 公式アーカイブ</p>
+      <p>Code for SAITAMA 公式サイト</p>
       <p><a href="/docs/code-for-saitama-facebook-archive.md">アーカイブ資料</a> / <a href="/docs/deepresearch-code-for-saitama-analysis.md">関連資料メモ</a> / <a href="/assets/images/images-manifest.md">画像一覧</a></p>
     </footer>
   </body>

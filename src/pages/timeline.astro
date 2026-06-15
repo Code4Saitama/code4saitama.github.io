@@ -6,7 +6,7 @@ import { getEvents, getNotes, groupByYear, pageUrl, schemaDateTime } from "../li
 const events = (await getEvents()).map((event) => ({ ...event, kind: "イベント" as const }));
 const notes = (await getNotes()).map((note) => ({ ...note, kind: "補足" as const }));
 const grouped = groupByYear([...events, ...notes]);
-const description = "Code for SAITAMAのイベント記録、外部イベント、登壇資料、他コミュニティとの交流を時系列で整理した年表です。";
+const description = "Code for SAITAMAの活動記録を、イベント、登壇、他コミュニティとの交流とあわせて時系列で紹介しています。";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
@@ -30,7 +30,7 @@ const jsonLd = {
   <section class="page-title">
     <p class="eyebrow">Timeline</p>
     <h1>年表</h1>
-    <p>Code for SAITAMAのイベント記録に、関連資料から確認した外部イベント、登壇資料、他コミュニティとの交流を加えて古い順に並べています。本文情報がないもの、または詳細を継続整理中のものは年表のみの掲載です。</p>
+    <p>Code for SAITAMAの活動を、イベント、登壇、他コミュニティとの交流とあわせて古い順に並べています。本文情報がないもの、または詳細を確認中のものは年表のみの掲載です。</p>
   </section>
   {grouped.map(([year, items]) => (
     <section class="timeline-year">
