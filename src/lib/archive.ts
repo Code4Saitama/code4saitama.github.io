@@ -1,11 +1,11 @@
 import { getCollection, render } from "astro:content";
 
-export const siteName = "Code for SAITAMA Archive";
+export const siteName = "Code for SAITAMA 公式サイト";
 export const siteOrigin = "https://www.code4saitama.org";
 export const siteDescription =
-  "Code for SAITAMAの公式アーカイブ。埼玉県を拠点にしたシビックテック、オープンデータ、OpenStreetMap、地域課題解決のイベント記録と関連資料を整理しています。";
+  "Code for SAITAMAの公式サイトです。埼玉県を拠点に、シビックテック、オープンデータ、OpenStreetMap、地域課題解決の活動と記録を紹介しています。";
 export const logoPath = "/assets/images/webp/cfs-image-0051.webp";
-export const defaultOgImage = logoPath;
+export const defaultOgImage = "/assets/images/ogp-code-for-saitama-archive.png";
 
 export function excerpt(value = "", limit = 150) {
   const compact = value

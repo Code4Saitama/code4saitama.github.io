@@ -29,7 +29,7 @@ const jsonLd = [
     url: pageUrl("index.html"),
     inLanguage: "ja",
     description: siteDescription,
-    about: "Code for SAITAMAのイベント、写真、関連資料の公式アーカイブ",
+    about: "Code for SAITAMAの公式情報、活動記録、関連資料",
     hasPart: highlights.map((event) => ({
       "@type": "Event",
       name: event.data.title,
@@ -68,12 +68,12 @@ const jsonLd = [
 
   <section class="intro-band">
     <div>
-      <p class="eyebrow">Code for SAITAMA Archive</p>
-      <h2>イベント記録からたどる、地図とデータの活動史。</h2>
+      <p class="eyebrow">Official Site</p>
+      <h2>Code for SAITAMAの活動を、ここからたどれます。</h2>
     </div>
-    <p>Facebookバックアップに残るイベント情報を中心に、OpenStreetMap、オープンデータ、アイデアソン、ハッカソン、防災、UDC/COGなどの流れを整理しました。写真は内容との対応を確認できるものだけを詳細に掲載しています。</p>
+    <p>このサイトは、Code for SAITAMAの公式ページです。現在は活動アーカイブを中心に、OpenStreetMap、オープンデータ、アイデアソン、ハッカソン、防災、UDC/COGなどの記録を整理しています。</p>
   </section>
 
-  <section class="section-head"><h2>初期の主なイベント</h2><a href="timeline.html">年表を見る</a></section>
+  <section class="section-head"><h2>主な活動記録</h2><a href="timeline.html">年表を見る</a></section>
   <div class="card-grid">{highlights.map((event) => <EventCard event={event} />)}</div>
 </BaseLayout>

@@ -6,7 +6,7 @@ import imageManifest from "../../public/assets/images/images-manifest.json";
 
 const events = await getEvents();
 const { page, Content } = await getPage("about");
-const description = page.data.lead || "Code for SAITAMAの団体紹介と、この公式アーカイブの掲載範囲を説明するページです。";
+const description = page.data.lead || "Code for SAITAMAの公式情報と、このサイトの掲載範囲を紹介するページです。";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
@@ -23,7 +23,7 @@ const jsonLd = {
   }
 };
 ---
-<BaseLayout title="紹介" active="about.html" description={description} jsonLd={jsonLd}>
+<BaseLayout title="公式情報" active="about.html" description={description} jsonLd={jsonLd}>
   <section class="page-title about-title">
     <p class="eyebrow">{page.data.eyebrow}</p>
     <h1>{page.data.title}</h1>
