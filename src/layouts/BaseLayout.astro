@@ -1,14 +1,28 @@
 ---
 import "../styles/global.css";
-import { logoPath } from "../lib/archive";
+import { absoluteUrl, defaultOgImage, logoPath, pageUrl, siteDescription, siteName, siteOrigin } from "../lib/archive";
 
 interface Props {
   title: string;
   active?: string;
   bodyClass?: string;
+  description?: string;
+  canonicalPath?: string;
+  image?: string;
+  type?: "website" | "article";
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { title, active = "", bodyClass = "" } = Astro.props;
+const {
+  title,
+  active = "",
+  bodyClass = "",
+  description = siteDescription,
+  canonicalPath = active || "index.html",
+  image = defaultOgImage,
+  type = "website",
+  jsonLd = []
+} = Astro.props;
 const navItems = [
   ["index.html", "トップ"],
   ["timeline.html", "時系列"],
@@ -16,13 +30,59 @@ const navItems = [
   ["research.html", "関連資料"],
   ["about.html", "紹介"]
 ];
+const pageTitle = title === "トップ" ? siteName : `${title} | ${siteName}`;
+const canonicalUrl = pageUrl(canonicalPath);
+const ogImage = absoluteUrl(image);
+function cleanJsonLd(value: unknown): unknown {
+  if (Array.isArray(value)) return value.map(cleanJsonLd).filter((item) => item !== undefined);
+  if (!value || typeof value !== "object") return value === "" ? undefined : value;
+
+  return Object.fromEntries(
+    Object.entries(value)
+      .map(([key, item]) => [key, cleanJsonLd(item)])
+      .filter(([, item]) => item !== undefined)
+  );
+}
+const structuredData = cleanJsonLd([
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteName,
+    url: siteOrigin,
+    inLanguage: "ja",
+    description: siteDescription,
+    publisher: {
+      "@type": "Organization",
+      name: "Code for SAITAMA",
+      url: siteOrigin,
+      logo: absoluteUrl(logoPath)
+    }
+  },
+  ...(Array.isArray(jsonLd) ? jsonLd : [jsonLd])
+] as Record<string, unknown>[]) as Record<string, unknown>[];
 ---
 <!doctype html>
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title} | Code for SAITAMA Archive</title>
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     <script defer src="/assets/site.js"></script>
   </head>
   <body class={bodyClass}>

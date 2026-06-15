@@ -1,13 +1,32 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimelineItem from "../components/TimelineItem.astro";
-import { getEvents, getNotes, groupByYear } from "../lib/archive";
+import { getEvents, getNotes, groupByYear, pageUrl, schemaDateTime } from "../lib/archive";
 
 const events = (await getEvents()).map((event) => ({ ...event, kind: "イベント" as const }));
 const notes = (await getNotes()).map((note) => ({ ...note, kind: "補足" as const }));
 const grouped = groupByYear([...events, ...notes]);
+const description = "Code for SAITAMAのイベント記録、外部イベント、登壇資料、他コミュニティとの交流を時系列で整理した年表です。";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Code for SAITAMA 年表",
+  url: pageUrl("timeline.html"),
+  inLanguage: "ja",
+  description,
+  about: "Code for SAITAMAの活動年表",
+  hasPart: events
+    .filter((event) => event.data.hasDetail)
+    .map((event) => ({
+      "@type": "Event",
+      name: event.data.title,
+      startDate: schemaDateTime(event.data.start || event.data.date),
+      url: pageUrl(event.data.page),
+      location: event.data.place
+    }))
+};
 ---
-<BaseLayout title="時系列" active="timeline.html">
+<BaseLayout title="時系列" active="timeline.html" description={description} jsonLd={jsonLd}>
   <section class="page-title">
     <p class="eyebrow">Timeline</p>
     <h1>年表</h1>

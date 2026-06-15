@@ -1,11 +1,28 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { getNotes, getPage } from "../lib/archive";
+import { getNotes, getPage, pageUrl } from "../lib/archive";
 
 const { page, Content } = await getPage("research");
 const notes = await getNotes();
+const description = page.data.lead || "Code for SAITAMAの活動を補足する外部発表資料、GitHub、Code for Japanネットワーク、関連コミュニティの記録を整理したページです。";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: page.data.title,
+  url: pageUrl("research.html"),
+  inLanguage: "ja",
+  description,
+  about: "Code for SAITAMAの関連資料と補足記録",
+  hasPart: notes.map((note) => ({
+    "@type": "CreativeWork",
+    name: note.data.title,
+    datePublished: note.data.date,
+    keywords: note.data.theme,
+    sourceOrganization: note.data.source
+  }))
+};
 ---
-<BaseLayout title="関連資料" active="research.html">
+<BaseLayout title="関連資料" active="research.html" description={description} jsonLd={jsonLd}>
   <section class="page-title research-title">
     <p class="eyebrow">{page.data.eyebrow}</p>
     <h1>{page.data.title}</h1>

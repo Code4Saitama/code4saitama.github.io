@@ -1,6 +1,11 @@
 import { getCollection, render } from "astro:content";
 
+export const siteName = "Code for SAITAMA Archive";
+export const siteOrigin = "https://www.code4saitama.org";
+export const siteDescription =
+  "Code for SAITAMAの公式アーカイブ。埼玉県を拠点にしたシビックテック、オープンデータ、OpenStreetMap、地域課題解決のイベント記録と関連資料を整理しています。";
 export const logoPath = "/assets/images/webp/cfs-image-0051.webp";
+export const defaultOgImage = logoPath;
 
 export function excerpt(value = "", limit = 150) {
   const compact = value
@@ -15,6 +20,30 @@ export function siteImage(path?: string) {
   if (!path) return logoPath;
   if (path.startsWith("/") || path.startsWith("http://") || path.startsWith("https://")) return path;
   return `/${path}`;
+}
+
+export function absoluteUrl(path = "/") {
+  if (path.startsWith("http://") || path.startsWith("https://")) return path;
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  return new URL(normalized, siteOrigin).toString();
+}
+
+export function pageUrl(path = "index.html") {
+  if (path === "/" || path === "/index.html" || path === "index.html") return siteOrigin;
+  return absoluteUrl(path);
+}
+
+export function sitemapDate(value = "") {
+  const match = value.match(/^(\d{4})[.-](\d{2})[.-](\d{2})/);
+  return match ? `${match[1]}-${match[2]}-${match[3]}` : value;
+}
+
+export function schemaDateTime(value = "") {
+  const match = value.match(/^(\d{4})[.-](\d{2})[.-](\d{2})(?:\s+(\d{1,2}):(\d{2}))?/);
+  if (!match) return value || undefined;
+  const [, year, month, day, hour, minute] = match;
+  if (!hour || !minute) return `${year}-${month}-${day}`;
+  return `${year}-${month}-${day}T${hour.padStart(2, "0")}:${minute}:00+09:00`;
 }
 
 export function firstImage(event: { data: { image?: string } }) {
