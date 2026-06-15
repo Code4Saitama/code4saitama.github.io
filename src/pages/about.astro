@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import StatBand from "../components/StatBand.astro";
+import { getEvents, getPage } from "../lib/archive";
+import imageManifest from "../../public/assets/images/images-manifest.json";
+
+const events = await getEvents();
+const { page, Content } = await getPage("about");
+---
+<BaseLayout title="紹介" active="about.html">
+  <section class="page-title about-title">
+    <p class="eyebrow">{page.data.eyebrow}</p>
+    <h1>{page.data.title}</h1>
+    <p>{page.data.lead}</p>
+  </section>
+  <StatBand events={events} imageCount={imageManifest.length} />
+  <section class="text-page">
+    <Content />
+  </section>
+</BaseLayout>

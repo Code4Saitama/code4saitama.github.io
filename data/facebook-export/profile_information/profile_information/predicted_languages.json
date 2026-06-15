@@ -1,0 +1,21 @@
+{
+  "timestamp": 1664939272,
+  "media": [
+    
+  ],
+  "label_values": [
+    {
+      "label": "\u00e3\u0082\u00ad\u00e3\u0083\u00bc\u00e3\u0083\u009c\u00e3\u0083\u00bc\u00e3\u0083\u0089\u00e3\u0081\u00ab\u00e5\u009f\u00ba\u00e3\u0081\u00a5\u00e3\u0081\u008f\u00e4\u00ba\u0088\u00e6\u00b8\u00ac\u00e8\u00a8\u0080\u00e8\u00aa\u009e",
+      "value": ""
+    },
+    {
+      "label": "\u00e5\u009c\u00b0\u00e5\u009f\u009f\u00e3\u0081\u00ab\u00e5\u009f\u00ba\u00e3\u0081\u00a5\u00e3\u0081\u008f\u00e4\u00ba\u0088\u00e6\u00b8\u00ac\u00e8\u00a8\u0080\u00e8\u00aa\u009e",
+      "value": "ja, en, pt, zh, vi, es, id, ko"
+    },
+    {
+      "label": "\u00e6\u009b\u00b4\u00e6\u0096\u00b0\u00e6\u0097\u00a5\u00e6\u0099\u0082",
+      "timestamp_value": 1735567717
+    }
+  ],
+  "fbid": "468736981952012"
+}

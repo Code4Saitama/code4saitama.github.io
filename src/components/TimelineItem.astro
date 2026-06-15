@@ -1,0 +1,47 @@
+---
+import { excerpt, logoPath, siteImage, themeText } from "../lib/archive";
+
+interface Props {
+  item: {
+    body?: string;
+    data: {
+      title: string;
+      date: string;
+      page?: string;
+      themes?: string[];
+      theme?: string;
+      hasDetail?: boolean;
+      source?: string;
+      image?: string;
+    };
+    kind: "イベント" | "補足";
+  };
+}
+
+const { item } = Astro.props;
+const hasDetail = item.data.hasDetail === true;
+const theme = item.data.themes ? themeText(item.data.themes) : item.data.theme || "";
+const text = excerpt(item.body || "", 130);
+const image = item.data.image ? siteImage(item.data.image) : logoPath;
+const isLogo = !item.data.image;
+const isSupplemental = item.kind === "補足";
+---
+<article class:list={["timeline-item", { "is-supplemental": isSupplemental }]}>
+  <time>{item.data.date}</time>
+  {!isSupplemental && (
+    hasDetail && item.data.page ? (
+      <a class:list={["timeline-thumb", { "is-logo": isLogo }]} href={item.data.page} aria-label={`${item.data.title}の詳細`}>
+        <img src={image} alt="" loading="lazy" />
+      </a>
+    ) : (
+      <div class:list={["timeline-thumb", { "is-logo": isLogo }]}>
+        <img src={image} alt="" loading="lazy" />
+      </div>
+    )
+  )}
+  <div>
+    <p class="meta">{item.kind} · {theme} {!hasDetail && <span class="timeline-only">年表のみ</span>} {item.data.source && <span class="timeline-source">{item.data.source}</span>}</p>
+    <h3>{hasDetail && item.data.page ? <a href={item.data.page}>{item.data.title}</a> : item.data.title}</h3>
+    <p>{text}</p>
+  </div>
+</article>

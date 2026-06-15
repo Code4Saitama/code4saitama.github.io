@@ -1,0 +1,8 @@
+.DS_Store
+**/.DS_Store
+__pycache__/
+*.py[cod]
+archive-site/qa-*.png
+node_modules/
+.astro/
+dist/

@@ -1,0 +1,1444 @@
+[
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u008b\u00e3\u0083\u00a5\u00e3\u0083\u00bc\u00e3\u0082\u00b9\u00e3\u0083\u0095\u00e3\u0082\u00a3\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1724928419
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1724928419
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0081\u008a\u00e7\u009f\u00a5\u00e3\u0082\u0089\u00e3\u0081\u009b"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1724928419
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u0097\u00e3\u0083\u00ad\u00e3\u0083\u0095\u00e3\u0082\u00a7\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u008a\u00e3\u0083\u00ab\u00e3\u0083\u0080\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a5\u00e3\u0083\u009c\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1724928419
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1724928419
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0082\u00bf\u00e3\u0082\u00a4\u00e3\u0083\u00a0\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0083\u00b3"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1724928419
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": "CPH2603"
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 1724928419
+      }
+    ],
+    "fbid": "909618237863882"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": "CPH2603"
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      }
+    ],
+    "fbid": "909618227863883"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u008b\u00e3\u0083\u00a5\u00e3\u0083\u00bc\u00e3\u0082\u00b9\u00e3\u0083\u0095\u00e3\u0082\u00a3\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1708021598
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1708021598
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0081\u008a\u00e7\u009f\u00a5\u00e3\u0082\u0089\u00e3\u0081\u009b"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1708021598
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u0097\u00e3\u0083\u00ad\u00e3\u0083\u0095\u00e3\u0082\u00a7\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u008a\u00e3\u0083\u00ab\u00e3\u0083\u0080\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a5\u00e3\u0083\u009c\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1708021598
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e8\u00aa\u00a4\u00e3\u0082\u008a"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1708021598
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e8\u00aa\u00a4\u00e3\u0082\u008a"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0082\u00bf\u00e3\u0082\u00a4\u00e3\u0083\u00a0\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0083\u00b3"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1708021598
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": "Pixel 7a"
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 1708145795
+      }
+    ],
+    "fbid": "791118703047170"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": "CPH2013"
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      }
+    ],
+    "fbid": "774681898024184"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u008b\u00e3\u0083\u00a5\u00e3\u0083\u00bc\u00e3\u0082\u00b9\u00e3\u0083\u0095\u00e3\u0082\u00a3\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1704668458
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1704668458
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0081\u008a\u00e7\u009f\u00a5\u00e3\u0082\u0089\u00e3\u0081\u009b"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1704668458
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u0097\u00e3\u0083\u00ad\u00e3\u0083\u0095\u00e3\u0082\u00a7\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u008a\u00e3\u0083\u00ab\u00e3\u0083\u0080\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a5\u00e3\u0083\u009c\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1704668458
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e8\u00aa\u00a4\u00e3\u0082\u008a"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1704668458
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e8\u00aa\u00a4\u00e3\u0082\u008a"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0082\u00bf\u00e3\u0082\u00a4\u00e3\u0083\u00a0\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0083\u00b3"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1704668458
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": "Pixel 7 Pro"
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 1704668458
+      }
+    ],
+    "fbid": "766303988861975"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": "Pixel 7 Pro"
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      }
+    ],
+    "fbid": "766303982195309"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u008b\u00e3\u0083\u00a5\u00e3\u0083\u00bc\u00e3\u0082\u00b9\u00e3\u0083\u0095\u00e3\u0082\u00a3\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1689934555
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1689934555
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0081\u008a\u00e7\u009f\u00a5\u00e3\u0082\u0089\u00e3\u0081\u009b"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1689934555
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u0097\u00e3\u0083\u00ad\u00e3\u0083\u0095\u00e3\u0082\u00a7\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u008a\u00e3\u0083\u00ab\u00e3\u0083\u0080\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a5\u00e3\u0083\u009c\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1689934555
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e8\u00aa\u00a4\u00e3\u0082\u008a"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1689934555
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e8\u00aa\u00a4\u00e3\u0082\u008a"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0082\u00bf\u00e3\u0082\u00a4\u00e3\u0083\u00a0\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0083\u00b3"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1689934555
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": "Pixel 4a"
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 1689934555
+      }
+    ],
+    "fbid": "665741542251554"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": "Pixel 4a"
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      }
+    ],
+    "fbid": "665741532251555"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u008b\u00e3\u0083\u00a5\u00e3\u0083\u00bc\u00e3\u0082\u00b9\u00e3\u0083\u0095\u00e3\u0082\u00a3\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1687995503
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1687995503
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0081\u008a\u00e7\u009f\u00a5\u00e3\u0082\u0089\u00e3\u0081\u009b"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1687995503
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u0097\u00e3\u0083\u00ad\u00e3\u0083\u0095\u00e3\u0082\u00a7\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u008a\u00e3\u0083\u00ab\u00e3\u0083\u0080\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a5\u00e3\u0083\u009c\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1687995503
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e8\u00aa\u00a4\u00e3\u0082\u008a"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1687995503
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e8\u00aa\u00a4\u00e3\u0082\u008a"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0082\u00bf\u00e3\u0082\u00a4\u00e3\u0083\u00a0\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0083\u00b3"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1687995503
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": "Pixel 6a"
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 1704530598
+      }
+    ],
+    "fbid": "651984666960575"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": "Pixel 6a"
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      }
+    ],
+    "fbid": "651984656960576"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u008b\u00e3\u0083\u00a5\u00e3\u0083\u00bc\u00e3\u0082\u00b9\u00e3\u0083\u0095\u00e3\u0082\u00a3\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1687580942
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1687580942
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0081\u008a\u00e7\u009f\u00a5\u00e3\u0082\u0089\u00e3\u0081\u009b"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1687580942
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0082\u00bf\u00e3\u0082\u00a4\u00e3\u0083\u00a0\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0083\u00b3"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1687580942
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u0097\u00e3\u0083\u00ad\u00e3\u0083\u0095\u00e3\u0082\u00a7\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u008a\u00e3\u0083\u00ab\u00e3\u0083\u0080\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a5\u00e3\u0083\u009c\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1687580942
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e8\u00aa\u00a4\u00e3\u0082\u008a"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": "SO-53C"
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 1722300174
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 1722300174
+      }
+    ],
+    "fbid": "649000403925668"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": "SO-53C"
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      }
+    ],
+    "fbid": "649000397259002"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u008b\u00e3\u0083\u00a5\u00e3\u0083\u00bc\u00e3\u0082\u00b9\u00e3\u0083\u0095\u00e3\u0082\u00a3\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1679022462
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1679022462
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0081\u008a\u00e7\u009f\u00a5\u00e3\u0082\u0089\u00e3\u0081\u009b"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1679022462
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1679022462
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Composer button for creator tool"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1679022462
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "Facebook for iPhone"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": "iPhone14,5"
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 1724583724
+      }
+    ],
+    "fbid": "587634150062294"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u008b\u00e3\u0083\u00a5\u00e3\u0083\u00bc\u00e3\u0082\u00b9\u00e3\u0083\u0095\u00e3\u0082\u00a3\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1675012161
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1675012161
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0081\u008a\u00e7\u009f\u00a5\u00e3\u0082\u0089\u00e3\u0081\u009b"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1675012161
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u0097\u00e3\u0083\u00ad\u00e3\u0083\u0095\u00e3\u0082\u00a7\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u008a\u00e3\u0083\u00ab\u00e3\u0083\u0080\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a5\u00e3\u0083\u009c\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1675012161
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1675012161
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e8\u00aa\u00a4\u00e3\u0082\u008a"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0082\u00bf\u00e3\u0082\u00a4\u00e3\u0083\u00a0\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0083\u00b3"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1675012161
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": "WAS-LX2J"
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 1698665365
+      }
+    ],
+    "fbid": "555680196591023"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": "WAS-LX2J"
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      }
+    ],
+    "fbid": "555680189924357"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u008b\u00e3\u0083\u00a5\u00e3\u0083\u00bc\u00e3\u0082\u00b9\u00e3\u0083\u0095\u00e3\u0082\u00a3\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1665132809
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1665132809
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0081\u008a\u00e7\u009f\u00a5\u00e3\u0082\u0089\u00e3\u0081\u009b"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1665132809
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u0097\u00e3\u0083\u00ad\u00e3\u0083\u0095\u00e3\u0082\u00a7\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u008a\u00e3\u0083\u00ab\u00e3\u0083\u0080\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a5\u00e3\u0083\u009c\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1675064719
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e8\u00aa\u00a4\u00e3\u0082\u008a"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1675064719
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e8\u00aa\u00a4\u00e3\u0082\u008a"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0082\u00bf\u00e3\u0082\u00a4\u00e3\u0083\u00a0\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0083\u00b3"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1665132809
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": "Pixel 5a"
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 1675064719
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 1675064719
+      }
+    ],
+    "fbid": "470596901766020"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": "Pixel 5a"
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 0
+      }
+    ],
+    "fbid": "470596895099354"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "\u00e7\u008f\u00be\u00e5\u009c\u00a8\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e3\u0081\u0082\u00e3\u0082\u008b\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u00ae\u00e3\u0082\u00bb\u00e3\u0083\u0083\u00e3\u0083\u0088",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u008b\u00e3\u0083\u00a5\u00e3\u0083\u00bc\u00e3\u0082\u00b9\u00e3\u0083\u0095\u00e3\u0082\u00a3\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1664339200
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u009a\u00e3\u0083\u00bc\u00e3\u0082\u00b8"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1667295211
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e6\u00ad\u00a3\u00e3\u0081\u0097\u00e3\u0081\u0084"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e3\u0083\u0097\u00e3\u0083\u00ad\u00e3\u0083\u0095\u00e3\u0082\u00a7\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u008a\u00e3\u0083\u00ab\u00e3\u0083\u0080\u00e3\u0083\u0083\u00e3\u0082\u00b7\u00e3\u0083\u00a5\u00e3\u0083\u009c\u00e3\u0083\u00bc\u00e3\u0083\u0089"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1667295211
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e8\u00aa\u00a4\u00e3\u0082\u008a"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1667295211
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e8\u00aa\u00a4\u00e3\u0082\u008a"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "\u00e5\u0090\u008d\u00e5\u0089\u008d",
+                "value": "\u00e5\u008b\u0095\u00e7\u0094\u00bb"
+              },
+              {
+                "label": "\u00e8\u00bf\u00bd\u00e5\u008a\u00a0\u00e6\u0097\u00a5",
+                "timestamp_value": 1689748686
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "\u00e8\u00aa\u00a4\u00e3\u0082\u008a"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "\u00e3\u0082\u00af\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u0090\u008d",
+        "value": "WWW (Comet)"
+      },
+      {
+        "label": "\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0083\u00a2\u00e3\u0083\u0087\u00e3\u0083\u00ab",
+        "value": ""
+      },
+      {
+        "label": "\u00e3\u0083\u008a\u00e3\u0083\u0093\u00e3\u0082\u00b2\u00e3\u0083\u00bc\u00e3\u0082\u00b7\u00e3\u0083\u00a7\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0083\u00bc\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e5\u00a4\u0089\u00e6\u009b\u00b4\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 1689748686
+      },
+      {
+        "label": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00aa\u00e3\u0081\u008c\u00e3\u0083\u0087\u00e3\u0083\u0090\u00e3\u0082\u00a4\u00e3\u0082\u00b9\u00e3\u0081\u00a7\u00e5\u0089\u008d\u00e5\u009b\u009e\u00e8\u00a1\u00a8\u00e7\u00a4\u00ba\u00e3\u0081\u0095\u00e3\u0082\u008c\u00e3\u0081\u009f\u00e6\u0099\u0082\u00e9\u0096\u0093",
+        "timestamp_value": 1771202058
+      }
+    ],
+    "fbid": "462884509203926"
+  }
+]

@@ -1,0 +1,33 @@
+---
+import { excerpt, firstImage, themeText, logoPath } from "../lib/archive";
+
+interface Props {
+  event: {
+    body?: string;
+    data: {
+      title: string;
+      date: string;
+      page: string;
+      themes: string[];
+      image?: string;
+      hasDetail: boolean;
+    };
+  };
+}
+
+const { event } = Astro.props;
+const image = firstImage(event);
+const text = excerpt(event.body || "", 110);
+---
+<article class="archive-card">
+  {event.data.hasDetail ? (
+    <a class="thumb" href={event.data.page}><img src={image} alt="" loading="lazy" /></a>
+  ) : (
+    <div class="thumb"><div class="verified-placeholder"><img src={logoPath} alt="Code for SAITAMA" loading="lazy" /></div></div>
+  )}
+  <div>
+    <p class="meta">{event.data.date} · {themeText(event.data.themes)} {!event.data.hasDetail && <span class="timeline-only">年表のみ</span>}</p>
+    <h3>{event.data.hasDetail ? <a href={event.data.page}>{event.data.title}</a> : event.data.title}</h3>
+    <p>{text}</p>
+  </div>
+</article>
