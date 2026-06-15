@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import StatBand from "../components/StatBand.astro";
+import EventCard from "../components/EventCard.astro";
+import { getEvents, getSlides } from "../lib/archive";
+import imageManifest from "../../public/assets/images/images-manifest.json";
+
+const events = await getEvents();
+const slides = await getSlides();
+const eventByDate = new Map(events.filter((event) => event.data.hasDetail).map((event) => [event.data.date, event]));
+const highlights = events.filter((event) => event.data.hasDetail).slice(0, 6);
+---
+<BaseLayout title="トップ" active="index.html" bodyClass="home">
+  <section class="hero-slider" data-slider data-interval="5000">
+    {slides.map((slide, i) => {
+      const event = slide.data.eventDate ? eventByDate.get(slide.data.eventDate) : null;
+      return (
+        <article class:list={["slide", { "is-active": i === 0 }]}>
+          <div class="slide-media">
+            <img src={`/assets/images/webp/${slide.data.assetId}.webp`} alt="" />
+          </div>
+          <div class="slide-copy">
+            <p class="eyebrow">{slide.data.date}</p>
+            <h1>{slide.data.caption}</h1>
+            <p>{slide.data.text}</p>
+            {event && <a class="button" href={event.data.page}>詳細を見る</a>}
+          </div>
+        </article>
+      );
+    })}
+    <button class="carousel-control prev" type="button" data-slider-prev aria-label="前の写真">‹</button>
+    <button class="carousel-control next" type="button" data-slider-next aria-label="次の写真">›</button>
+    <div class="slider-dots" aria-hidden="true">{slides.map(() => <span></span>)}</div>
+  </section>
+
+  <StatBand events={events} imageCount={imageManifest.length} />
+
+  <section class="intro-band">
+    <div>
+      <p class="eyebrow">Code for SAITAMA Archive</p>
+      <h2>イベント記録からたどる、地図とデータの活動史。</h2>
+    </div>
+    <p>Facebookバックアップに残るイベント情報を中心に、OpenStreetMap、オープンデータ、アイデアソン、ハッカソン、防災、UDC/COGなどの流れを整理しました。写真は内容との対応を確認できるものだけを詳細に掲載しています。</p>
+  </section>
+
+  <section class="section-head"><h2>初期の主なイベント</h2><a href="timeline.html">年表を見る</a></section>
+  <div class="card-grid">{highlights.map((event) => <EventCard event={event} />)}</div>
+</BaseLayout>

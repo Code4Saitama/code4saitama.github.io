@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getNotes, getPage } from "../lib/archive";
+
+const { page, Content } = await getPage("research");
+const notes = await getNotes();
+---
+<BaseLayout title="関連資料" active="research.html">
+  <section class="page-title research-title">
+    <p class="eyebrow">{page.data.eyebrow}</p>
+    <h1>{page.data.title}</h1>
+    <p>{page.data.lead}</p>
+  </section>
+  <section class="text-page research-summary">
+    <Content />
+  </section>
+  <section class="theme-section">
+    <div class="section-head"><h2>関連資料から見える活動</h2><span>参考情報</span></div>
+    <div class="research-list">
+      {notes.map((note) => (
+        <article><time>{note.data.date}</time><div><h3>{note.data.title}</h3><p>{note.body}</p></div></article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

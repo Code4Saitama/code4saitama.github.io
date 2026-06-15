@@ -1,0 +1,17 @@
+---
+interface Props {
+  events: Array<{ data: { date: string; hasDetail: boolean; images: string[] } }>;
+  imageCount: number;
+}
+
+const { events, imageCount } = Astro.props;
+const years = events.map((event) => event.data.date.slice(0, 4)).filter(Boolean).sort();
+const detailed = events.filter((event) => event.data.hasDetail).length;
+const photographed = events.filter((event) => event.data.images.length > 0).length;
+---
+<section class="stats-band">
+  <div><strong>{events.length}</strong><span>Events</span></div>
+  <div><strong>{detailed}</strong><span>Detail Pages</span></div>
+  <div><strong>{photographed}</strong><span>With Photos</span></div>
+  <div><strong>{years[0]}-{years[years.length - 1]}</strong><span>Recorded Years</span></div>
+</section>

@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimelineItem from "../components/TimelineItem.astro";
+import { getEvents, getNotes, groupByYear } from "../lib/archive";
+
+const events = (await getEvents()).map((event) => ({ ...event, kind: "イベント" as const }));
+const notes = (await getNotes()).map((note) => ({ ...note, kind: "補足" as const }));
+const grouped = groupByYear([...events, ...notes]);
+---
+<BaseLayout title="時系列" active="timeline.html">
+  <section class="page-title">
+    <p class="eyebrow">Timeline</p>
+    <h1>年表</h1>
+    <p>Code for SAITAMAのイベント記録に、関連資料から確認した外部イベント、登壇資料、他コミュニティとの交流を加えて古い順に並べています。本文情報がないもの、または詳細を継続整理中のものは年表のみの掲載です。</p>
+  </section>
+  {grouped.map(([year, items]) => (
+    <section class="timeline-year">
+      <h2>{year}</h2>
+      <div class="timeline-list">
+        {items.map((item) => <TimelineItem item={item} />)}
+      </div>
+    </section>
+  ))}
+</BaseLayout>

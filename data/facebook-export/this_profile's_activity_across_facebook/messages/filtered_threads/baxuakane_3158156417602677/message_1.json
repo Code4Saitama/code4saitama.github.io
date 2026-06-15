@@ -1,0 +1,25 @@
+{
+  "participants": [
+    {
+      "name": "\u00e5\u0085\u00ab\u00e9\u00a0\u0088 \u00e3\u0081\u0082\u00e3\u0081\u008b\u00e3\u0081\u00ad"
+    },
+    {
+      "name": "Code for SAITAMA"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "\u00e5\u0085\u00ab\u00e9\u00a0\u0088 \u00e3\u0081\u0082\u00e3\u0081\u008b\u00e3\u0081\u00ad",
+      "timestamp_ms": 1596174831593,
+      "content": "\u00e3\u0082\u00aa\u00e3\u0083\u00b3\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0083\u00b3\u00e3\u0082\u00a4\u00e3\u0083\u0099\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u008f\u0082\u00e5\u008a\u00a0\u00e5\u00b8\u008c\u00e6\u009c\u009b\u00ef\u00bc\u0081\u00ef\u00bc\u0081",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "\u00e5\u0085\u00ab\u00e9\u00a0\u0088 \u00e3\u0081\u0082\u00e3\u0081\u008b\u00e3\u0081\u00ad",
+  "is_still_participant": false,
+  "thread_path": "filtered_threads/baxuakane_3158156417602677",
+  "magic_words": [
+    
+  ]
+}
