@@ -12,6 +12,8 @@ page: "event-2020-12-15-code-for-saitama-meetup-2020-12-udc.html"
 image: ""
 images: []
 fbid: ""
+sources: ["facebook-page", "facebook-group"]
+groupPostIds: ["1573869129480887"]
 hasDetail: true
 ---
 

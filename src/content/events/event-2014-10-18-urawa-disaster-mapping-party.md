@@ -12,6 +12,8 @@ page: "event-2014-10-18-urawa-disaster-mapping-party.html"
 image: "assets/images/webp/cfs-image-0169.webp"
 images: ["assets/images/webp/cfs-image-0169.webp"]
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

@@ -12,6 +12,8 @@ page: "event-2017-04-09-toda-hanami-mapping-party-2017.html"
 image: ""
 images: []
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

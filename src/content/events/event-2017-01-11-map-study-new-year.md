@@ -12,7 +12,9 @@ page: "event-2017-01-11-map-study-new-year.html"
 image: ""
 images: []
 fbid: ""
-hasDetail: false
+sources: ["facebook-page", "facebook-group"]
+groupPostIds: ["599697023564774"]
+hasDetail: true
 ---
 
 CartoやQGISに関する勉強会を開催します。

@@ -12,6 +12,8 @@ page: "event-2017-01-24-urban-data-challenge-prep-mokumoku.html"
 image: ""
 images: []
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

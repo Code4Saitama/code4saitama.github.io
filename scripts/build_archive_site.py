@@ -49,6 +49,7 @@ SUPPLEMENTAL_TIMELINE = [
         "title": "Code for Kumagaya 観光を考えるアイデアソン",
         "theme": "他コミュニティ交流",
         "text": "熊谷市観光協会やNPO支援センターと連携した観光資源のデジタル化活動として、補足レポートに記載されています。",
+        "integrated_page": "event-2017-06-25-kumagaya-tourism-ideathon-hackathon.html",
     },
     {
         "date": "2017.08.06",

@@ -12,6 +12,8 @@ page: "event-2015-04-11-arduino-workshop-beginner.html"
 image: "assets/images/webp/cfs-image-0200.webp"
 images: ["assets/images/webp/cfs-image-0200.webp"]
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

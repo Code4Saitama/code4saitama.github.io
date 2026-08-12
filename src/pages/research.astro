@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SourceTags from "../components/SourceTags.astro";
 import { getNotes, getPage, pageUrl } from "../lib/archive";
 
 const { page, Content } = await getPage("research");
@@ -35,7 +36,7 @@ const jsonLd = {
     <div class="section-head"><h2>関連資料から見える活動</h2><span>参考情報</span></div>
     <div class="research-list">
       {notes.map((note) => (
-        <article><time>{note.data.date}</time><div><h3>{note.data.title}</h3><p>{note.body}</p></div></article>
+        <article><time>{note.data.date}</time><div><SourceTags sources={note.data.sources} /><h3>{note.data.title}</h3><p>{note.body}</p></div></article>
       ))}
     </div>
   </section>

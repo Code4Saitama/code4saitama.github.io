@@ -12,6 +12,8 @@ page: "event-2017-03-25-programming-electronics-class.html"
 image: ""
 images: []
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: false
 ---
 

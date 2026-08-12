@@ -12,6 +12,8 @@ page: "event-2014-09-06-d3js-study-meetup.html"
 image: ""
 images: []
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

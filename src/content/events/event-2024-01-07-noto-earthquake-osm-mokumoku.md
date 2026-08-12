@@ -12,7 +12,9 @@ page: "event-2024-01-07-noto-earthquake-osm-mokumoku.html"
 image: ""
 images: []
 fbid: "2659913800981998"
-hasDetail: false
+sources: ["facebook-page", "facebook-group"]
+groupPostIds: ["2372431526291306"]
+hasDetail: true
 ---
 
 

@@ -12,6 +12,8 @@ page: "event-2021-10-02-cog2021-kumagaya-meetup.html"
 image: ""
 images: []
 fbid: "561595085115665"
+sources: ["facebook-page", "facebook-group"]
+groupPostIds: ["1781084482092683"]
 hasDetail: true
 ---
 

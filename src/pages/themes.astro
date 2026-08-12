@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SourceTags from "../components/SourceTags.astro";
 import { getEvents, pageUrl } from "../lib/archive";
 
 const events = await getEvents();
@@ -40,9 +41,9 @@ const jsonLd = {
       <div class="compact-list">
         {group.events.sort((a, b) => a.data.sort - b.data.sort).map((event) => (
           event.data.hasDetail ? (
-            <a href={event.data.page}><time>{event.data.date}</time><strong>{event.data.title}</strong><span>詳細</span></a>
+            <a href={event.data.page}><time>{event.data.date}</time><strong>{event.data.title}</strong><span><SourceTags sources={event.data.sources} /></span></a>
           ) : (
-            <div class="theme-row"><time>{event.data.date}</time><strong>{event.data.title}</strong><span>年表のみ</span></div>
+            <div class="theme-row"><time>{event.data.date}</time><strong>{event.data.title}</strong><span><SourceTags sources={event.data.sources} /></span></div>
           )
         ))}
       </div>

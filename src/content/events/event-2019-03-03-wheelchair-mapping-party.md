@@ -12,6 +12,8 @@ page: "event-2019-03-03-wheelchair-mapping-party.html"
 image: "assets/images/webp/cfs-image-0122.webp"
 images: ["assets/images/webp/cfs-image-0122.webp"]
 fbid: ""
+sources: ["facebook-page", "facebook-group"]
+groupPostIds: ["1037934673074338"]
 hasDetail: true
 ---
 

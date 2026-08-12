@@ -12,6 +12,8 @@ page: "event-2016-07-30-thematic-map-open-data-hackathon.html"
 image: "assets/images/webp/cfs-image-0081.webp"
 images: ["assets/images/webp/cfs-image-0081.webp", "assets/images/webp/cfs-image-0079.webp", "assets/images/webp/cfs-image-0080.webp"]
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

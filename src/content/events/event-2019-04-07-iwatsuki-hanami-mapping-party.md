@@ -12,6 +12,8 @@ page: "event-2019-04-07-iwatsuki-hanami-mapping-party.html"
 image: "assets/images/webp/cfs-image-0127.webp"
 images: ["assets/images/webp/cfs-image-0127.webp", "assets/images/webp/cfs-image-0126.webp"]
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

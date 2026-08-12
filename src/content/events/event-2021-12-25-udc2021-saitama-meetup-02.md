@@ -12,6 +12,8 @@ page: "event-2021-12-25-udc2021-saitama-meetup-02.html"
 image: ""
 images: []
 fbid: "1094284908035611"
+sources: ["facebook-page", "facebook-group"]
+groupPostIds: ["1846162035584927"]
 hasDetail: true
 ---
 

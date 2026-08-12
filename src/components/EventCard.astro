@@ -1,5 +1,7 @@
 ---
 import { excerpt, firstImage, themeText, logoPath } from "../lib/archive";
+import SourceTags from "./SourceTags.astro";
+import type { SourceKey } from "../lib/sources";
 
 interface Props {
   event: {
@@ -10,6 +12,7 @@ interface Props {
       page: string;
       themes: string[];
       image?: string;
+      sources?: SourceKey[];
       hasDetail: boolean;
     };
   };
@@ -27,6 +30,7 @@ const text = excerpt(event.body || "", 110);
   )}
   <div>
     <p class="meta">{event.data.date} · {themeText(event.data.themes)} {!event.data.hasDetail && <span class="timeline-only">年表のみ</span>}</p>
+    <SourceTags sources={event.data.sources} />
     <h3>{event.data.hasDetail ? <a href={event.data.page}>{event.data.title}</a> : event.data.title}</h3>
     <p>{text}</p>
   </div>

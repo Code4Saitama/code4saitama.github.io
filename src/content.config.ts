@@ -16,6 +16,8 @@ const events = defineCollection({
     image: z.string().optional(),
     images: z.array(z.string()).default([]),
     fbid: z.string().optional(),
+    sources: z.array(z.enum(["facebook-page", "facebook-group", "deep-research"])).default([]),
+    groupPostIds: z.array(z.string()).default([]),
     hasDetail: z.boolean()
   })
 });
@@ -27,7 +29,8 @@ const notes = defineCollection({
     date: z.string(),
     sort: z.number(),
     theme: z.string(),
-    source: z.string()
+    source: z.string(),
+    sources: z.array(z.enum(["facebook-page", "facebook-group", "deep-research"])).default([])
   })
 });
 

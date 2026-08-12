@@ -12,6 +12,8 @@ page: "event-2017-03-15-map-study-03.html"
 image: ""
 images: []
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

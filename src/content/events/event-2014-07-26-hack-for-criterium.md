@@ -12,6 +12,8 @@ page: "event-2014-07-26-hack-for-criterium.html"
 image: ""
 images: []
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

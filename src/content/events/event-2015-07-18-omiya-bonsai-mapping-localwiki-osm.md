@@ -12,6 +12,8 @@ page: "event-2015-07-18-omiya-bonsai-mapping-localwiki-osm.html"
 image: ""
 images: []
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

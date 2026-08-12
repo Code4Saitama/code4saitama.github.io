@@ -1,5 +1,7 @@
 ---
 import { excerpt, logoPath, siteImage, themeText } from "../lib/archive";
+import SourceTags from "./SourceTags.astro";
+import type { SourceKey } from "../lib/sources";
 
 interface Props {
   item: {
@@ -12,6 +14,7 @@ interface Props {
       theme?: string;
       hasDetail?: boolean;
       source?: string;
+      sources?: SourceKey[];
       image?: string;
     };
     kind: "イベント" | "補足";
@@ -40,7 +43,8 @@ const isSupplemental = item.kind === "補足";
     )
   )}
   <div>
-    <p class="meta">{item.kind} · {theme} {!hasDetail && <span class="timeline-only">年表のみ</span>} {item.data.source && <span class="timeline-source">{item.data.source}</span>}</p>
+    <p class="meta">{item.kind} · {theme} {!hasDetail && <span class="timeline-only">年表のみ</span>}</p>
+    <SourceTags sources={item.data.sources} />
     <h3>{hasDetail && item.data.page ? <a href={item.data.page}>{item.data.title}</a> : item.data.title}</h3>
     <p>{text}</p>
   </div>

@@ -12,6 +12,8 @@ page: "event-2015-02-21-open-data-day-mokumoku-2015.html"
 image: "assets/images/webp/cfs-image-0189.webp"
 images: ["assets/images/webp/cfs-image-0189.webp"]
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

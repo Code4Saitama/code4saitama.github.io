@@ -12,6 +12,8 @@ page: "event-2022-10-02-cog2022-kumagaya-kickoff-udc2022.html"
 image: ""
 images: []
 fbid: "510483177511134"
+sources: ["facebook-page", "facebook-group"]
+groupPostIds: ["2053178228216639"]
 hasDetail: true
 ---
 

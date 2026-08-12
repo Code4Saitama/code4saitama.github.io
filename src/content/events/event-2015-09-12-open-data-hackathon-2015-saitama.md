@@ -12,6 +12,8 @@ page: "event-2015-09-12-open-data-hackathon-2015-saitama.html"
 image: ""
 images: []
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

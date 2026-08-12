@@ -12,6 +12,8 @@ page: "event-2015-10-17-mapping-party-2015-iwatsuki.html"
 image: ""
 images: []
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

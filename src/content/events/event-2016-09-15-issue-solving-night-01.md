@@ -12,6 +12,8 @@ page: "event-2016-09-15-issue-solving-night-01.html"
 image: ""
 images: []
 fbid: ""
+sources: ["facebook-page", "facebook-group"]
+groupPostIds: ["556386861229124", "558494944351649", "558825324318611"]
 hasDetail: true
 ---
 

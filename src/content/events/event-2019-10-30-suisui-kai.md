@@ -12,6 +12,8 @@ page: "event-2019-10-30-suisui-kai.html"
 image: ""
 images: []
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: false
 ---
 

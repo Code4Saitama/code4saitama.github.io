@@ -12,6 +12,8 @@ page: "event-2015-09-05-open-data-ideathon-2015-saitama.html"
 image: "assets/images/webp/cfs-image-0046.webp"
 images: ["assets/images/webp/cfs-image-0046.webp"]
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

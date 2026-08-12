@@ -12,7 +12,9 @@ page: "event-2020-10-17-code-for-japan-summit-2020-kanto-meetup.html"
 image: ""
 images: []
 fbid: ""
-hasDetail: false
+sources: ["facebook-page", "facebook-group"]
+groupPostIds: ["1521404634727337"]
+hasDetail: true
 ---
 
 

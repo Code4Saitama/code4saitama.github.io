@@ -12,6 +12,8 @@ page: "event-2017-03-04-open-data-day-2017-saitama.html"
 image: "assets/images/webp/cfs-image-0107.webp"
 images: ["assets/images/webp/cfs-image-0107.webp"]
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

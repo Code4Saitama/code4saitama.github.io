@@ -12,6 +12,8 @@ page: "event-2016-05-15-beer-mapping-party-keyaki-hiroba.html"
 image: ""
 images: []
 fbid: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

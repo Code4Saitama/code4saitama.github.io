@@ -12,7 +12,11 @@ page: "event-2017-06-25-kumagaya-tourism-ideathon-hackathon.html"
 image: ""
 images: []
 fbid: ""
-hasDetail: false
+sources: ["facebook-page", "deep-research"]
+groupPostIds: []
+hasDetail: true
 ---
 
+## DeepResearch補足
 
+熊谷市観光協会やNPO支援センターと連携した観光資源のデジタル化活動として、補足レポートに記載されています。

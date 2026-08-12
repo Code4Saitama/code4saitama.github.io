@@ -4,6 +4,7 @@ import pathlib
 import re
 import shutil
 import sys
+import datetime as dt
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -11,6 +12,8 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import build_archive_site as archive  # noqa: E402
 
 CONTENT = ROOT / "src" / "content"
+GROUP_POSTS_FILE = ROOT / "fb_group_archive" / "posts.json"
+GROUP_DELETIONS_FILE = ROOT / "fb_group_archive" / "facebook-posts-selected-for-deletion.json"
 
 
 SLIDER_ITEMS = [
@@ -110,8 +113,40 @@ def write_markdown(path, data, body=""):
     path.write_text(content, encoding="utf-8")
 
 
+def normalize_match_text(value):
+    value = str(value or "").lower()
+    value = re.sub(r"第[0-9０-９]+回", "", value)
+    return re.sub(r"[\s　【】\[\]（）()「」『』・:：!！?？☆★♪●〜~\-－]", "", value)
+
+
+def load_public_group_posts():
+    posts = json.loads(GROUP_POSTS_FILE.read_text(encoding="utf-8"))
+    deletions = json.loads(GROUP_DELETIONS_FILE.read_text(encoding="utf-8"))
+    deleted_ids = {str(item["post_id"]) for item in deletions.get("posts", [])}
+    return [post for post in posts if str(post["id"]) not in deleted_ids]
+
+
+def related_group_post_ids(title, event_date, posts):
+    normalized_title = normalize_match_text(title)
+    if len(normalized_title) < 8:
+        return []
+    event_day = dt.date.fromisoformat(event_date.replace(".", "-"))
+    return [
+        str(post["id"])
+        for post in posts
+        if normalized_title in normalize_match_text(post.get("text", ""))
+        and abs((dt.date.fromisoformat(post["date"]) - event_day).days) <= 60
+    ]
+
+
 def main():
     events, images, by_id = archive.build_data()
+    group_posts = load_public_group_posts()
+    integrated_notes = {
+        note["integrated_page"]: note
+        for note in archive.SUPPLEMENTAL_TIMELINE
+        if note.get("integrated_page")
+    }
     for dirname in ("events", "notes", "slides"):
         target = CONTENT / dirname
         if target.exists():
@@ -120,6 +155,13 @@ def main():
 
     for event in events:
         stem = pathlib.Path(event["page"]).stem
+        group_post_ids = related_group_post_ids(event["name"], event["date"], group_posts)
+        integrated_note = integrated_notes.get(event["page"])
+        sources = ["facebook-page"]
+        if group_post_ids:
+            sources.append("facebook-group")
+        if integrated_note:
+            sources.append("deep-research")
         data = {
             "title": event["name"],
             "eventId": event["id"],
@@ -134,18 +176,26 @@ def main():
             "image": event["image"],
             "images": [row["webp_asset_path"] for row in event["images"]],
             "fbid": event["fbid"],
-            "hasDetail": event["has_detail"],
+            "sources": sources,
+            "groupPostIds": group_post_ids,
+            "hasDetail": event["has_detail"] or bool(group_post_ids) or bool(integrated_note),
         }
-        write_markdown(CONTENT / "events" / f"{stem}.md", data, md_body(event["description"]))
+        body = md_body(event["description"])
+        if integrated_note:
+            body = f"{body}\n\n## DeepResearch補足\n\n{integrated_note['text']}".strip()
+        write_markdown(CONTENT / "events" / f"{stem}.md", data, body)
 
     for idx, note in enumerate(archive.SUPPLEMENTAL_TIMELINE, start=1):
+        if note.get("integrated_page"):
+            continue
         slug = re.sub(r"[^a-z0-9]+", "-", note["title"].lower()).strip("-") or f"note-{idx:02d}"
         data = {
             "title": note["title"],
             "date": note["date"],
             "sort": note["sort"],
             "theme": note["theme"],
-            "source": "関連資料",
+            "source": "DeepResearch",
+            "sources": ["deep-research"],
         }
         write_markdown(CONTENT / "notes" / f"{idx:02d}-{slug}.md", data, note["text"])
 
@@ -162,7 +212,8 @@ def main():
         }
         write_markdown(CONTENT / "slides" / f"{idx:02d}-{asset_id}.md", data)
 
-    print(f"events={len(events)} notes={len(archive.SUPPLEMENTAL_TIMELINE)} slides={len(SLIDER_ITEMS)} images={len(images)}")
+    note_count = sum(1 for note in archive.SUPPLEMENTAL_TIMELINE if not note.get("integrated_page"))
+    print(f"events={len(events)} notes={note_count} slides={len(SLIDER_ITEMS)} images={len(images)} group_posts={len(group_posts)}")
 
 
 if __name__ == "__main__":
