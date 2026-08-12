@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SourceTags from "../components/SourceTags.astro";
 import { getNotes, getPage, pageUrl } from "../lib/archive";
+import { archiveRecordImages, referenceRecords } from "../lib/archiveRecords";
 
 const { page, Content } = await getPage("research");
 const notes = await getNotes();
@@ -37,6 +38,9 @@ const jsonLd = {
     <div class="research-list">
       {notes.map((note) => (
         <article><time>{note.data.date}</time><div><SourceTags sources={note.data.sources} /><h3>{note.data.title}</h3><p>{note.body}</p></div></article>
+      ))}
+      {referenceRecords.map((record) => (
+        <article><time>{record.date || "日付不明"}</time><div><SourceTags sources={record.sources} /><h3>{record.title}</h3><p>{record.summary}</p>{archiveRecordImages(record).length > 0 && <div class="archive-record-gallery">{archiveRecordImages(record).map((src) => <img src={src} alt="" loading="lazy" />)}</div>}</div></article>
       ))}
     </div>
   </section>

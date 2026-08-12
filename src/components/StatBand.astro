@@ -2,16 +2,16 @@
 interface Props {
   events: Array<{ data: { date: string; hasDetail: boolean; images: string[] } }>;
   imageCount: number;
-  groupPostCount: number;
+  archiveRecordCount: number;
 }
 
-const { events, imageCount, groupPostCount } = Astro.props;
+const { events, imageCount, archiveRecordCount } = Astro.props;
 const years = events.map((event) => event.data.date.slice(0, 4)).filter(Boolean).sort();
 const detailed = events.filter((event) => event.data.hasDetail).length;
 ---
 <section class="stats-band">
   <div><strong>{events.length}</strong><span>Events</span></div>
-  <div><strong>{groupPostCount}</strong><span>Group Posts</span></div>
+  <div><strong>{archiveRecordCount}</strong><span>Group Records</span></div>
   <div><strong>{detailed}</strong><span>Detail Pages</span></div>
   <div><strong>{imageCount}</strong><span>Page Photos</span></div>
   <div><strong>{years[0]}-{years[years.length - 1]}</strong><span>Recorded Years</span></div>

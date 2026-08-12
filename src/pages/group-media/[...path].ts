@@ -1,14 +1,18 @@
 import type { APIRoute } from "astro";
 import fs from "node:fs";
 import path from "node:path";
-import { groupPostMedia, groupPosts } from "../../lib/groupPosts";
-import { groupEvents } from "../../lib/groupEvents";
+import { archiveRecords } from "../../lib/archiveRecords";
+import postImages from "../../../fb_group_archive/images_manifest.json";
+import commentImages from "../../../fb_group_archive/comment_images_manifest.json";
+import eventImages from "../../../fb_group_archive/event_images_manifest.json";
 
 export const prerender = true;
 
 const media = [...new Set([
-  ...groupPosts.flatMap(groupPostMedia),
-  ...groupEvents.flatMap((event) => event.saved_images),
+  ...archiveRecords.flatMap((record) => record.images),
+  ...postImages.map((item) => item.saved_path),
+  ...commentImages.map((item) => item.saved_path),
+  ...eventImages.map((item) => item.saved_path),
 ])].map((savedPath) => {
   const relativePath = savedPath.replace(/^images\//, "");
   return {

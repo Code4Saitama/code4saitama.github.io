@@ -1,12 +1,10 @@
 import type { APIRoute } from "astro";
 import { getEvents, pageUrl, sitemapDate } from "../lib/archive";
-import { groupPostPage, groupPosts } from "../lib/groupPosts";
 
 const staticPages = [
   { path: "index.html", priority: "1.0", changefreq: "weekly" },
   { path: "timeline.html", priority: "0.9", changefreq: "monthly" },
   { path: "themes.html", priority: "0.8", changefreq: "monthly" },
-  { path: "posts.html", priority: "0.8", changefreq: "monthly" },
   { path: "research.html", priority: "0.8", changefreq: "monthly" },
   { path: "about.html", priority: "0.7", changefreq: "monthly" }
 ];
@@ -22,16 +20,9 @@ export const GET: APIRoute = async () => {
       changefreq: "yearly"
     }));
   const lastmod = new Date().toISOString().slice(0, 10);
-  const groupPostPages = groupPosts.map((post) => ({
-    path: groupPostPage(post),
-    lastmod: post.date,
-    priority: "0.4",
-    changefreq: "yearly"
-  }));
   const urls = [
     ...staticPages.map((page) => ({ ...page, lastmod })),
-    ...eventPages,
-    ...groupPostPages
+    ...eventPages
   ];
 
   return new Response(

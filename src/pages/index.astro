@@ -4,7 +4,7 @@ import StatBand from "../components/StatBand.astro";
 import EventCard from "../components/EventCard.astro";
 import { absoluteUrl, defaultOgImage, getEvents, getSlides, pageUrl, schemaDateTime, siteDescription, siteName, siteOrigin } from "../lib/archive";
 import imageManifest from "../../public/assets/images/images-manifest.json";
-import { groupPosts } from "../lib/groupPosts";
+import { archiveRecords } from "../lib/archiveRecords";
 
 const events = await getEvents();
 const slides = await getSlides();
@@ -65,7 +65,7 @@ const jsonLd = [
     <div class="slider-dots" aria-hidden="true">{slides.map(() => <span></span>)}</div>
   </section>
 
-  <StatBand events={events} imageCount={imageManifest.length} groupPostCount={groupPosts.length} />
+  <StatBand events={events} imageCount={imageManifest.length} archiveRecordCount={archiveRecords.length} />
 
   <section class="intro-band">
     <div>
@@ -77,5 +77,5 @@ const jsonLd = [
 
   <section class="section-head"><h2>主な活動記録</h2><a href="timeline.html">年表を見る</a></section>
   <div class="card-grid">{highlights.map((event) => <EventCard event={event} />)}</div>
-  <section class="section-head"><h2>FBグループの投稿記録</h2><a href="/posts.html">{groupPosts.length}件を見る</a></section>
+  <section class="section-head"><h2>活動記録を探す</h2><span><a href="/timeline.html">時系列</a> · <a href="/themes.html">テーマ別</a> · <a href="/research.html">関連資料</a></span></section>
 </BaseLayout>

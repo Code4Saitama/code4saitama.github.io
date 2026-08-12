@@ -1,11 +1,20 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimelineItem from "../components/TimelineItem.astro";
+import ArchiveRecordRow from "../components/ArchiveRecordRow.astro";
 import { getEvents, getNotes, groupByYear, pageUrl, schemaDateTime } from "../lib/archive";
+import { activityRecords } from "../lib/archiveRecords";
 
 const events = (await getEvents()).map((event) => ({ ...event, kind: "イベント" as const }));
 const notes = (await getNotes()).map((note) => ({ ...note, kind: "補足" as const }));
 const grouped = groupByYear([...events, ...notes]);
+const activityByYear = new Map<string, typeof activityRecords>();
+for (const record of activityRecords) {
+  const year = record.date.slice(0, 4);
+  if (!activityByYear.has(year)) activityByYear.set(year, []);
+  activityByYear.get(year)?.push(record);
+}
+const years = [...new Set([...grouped.map(([year]) => year), ...activityByYear.keys()])].sort();
 const description = "Code for SAITAMAの活動記録を、イベント、登壇、他コミュニティとの交流とあわせて時系列で紹介しています。";
 const jsonLd = {
   "@context": "https://schema.org",
@@ -30,14 +39,21 @@ const jsonLd = {
   <section class="page-title">
     <p class="eyebrow">Timeline</p>
     <h1>年表</h1>
-    <p>Code for SAITAMAの活動を古い順に並べています。情報源タグでFBページ、FBグループ、DeepResearchを区別し、同じ活動を確認できた情報は一つの記録に統合しています。</p>
+    <p>Code for SAITAMAの活動を古い順に並べています。イベント記録に、公開FBグループから活動単位に再編集した記録を統合しています。個人名やプロフィール情報など、活動の理解に不要な情報は掲載していません。</p>
   </section>
-  {grouped.map(([year, items]) => (
+  {years.map((year) => {
+    const items = grouped.find(([itemYear]) => itemYear === year)?.[1] || [];
+    const records = activityByYear.get(year) || [];
+    const merged = [
+      ...items.map((item) => ({ sort: item.data.sort, item })),
+      ...records.map((record) => ({ sort: record.sort, record })),
+    ].sort((a, b) => a.sort - b.sort);
+    return (
     <section class="timeline-year">
       <h2>{year}</h2>
       <div class="timeline-list">
-        {items.map((item) => <TimelineItem item={item} />)}
+        {merged.map((row) => "item" in row ? <TimelineItem item={row.item} /> : <ArchiveRecordRow record={row.record} />)}
       </div>
     </section>
-  ))}
+  );})}
 </BaseLayout>
