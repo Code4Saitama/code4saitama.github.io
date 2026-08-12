@@ -47,11 +47,14 @@ const pages = defineCollection({
 const slides = defineCollection({
   type: "content",
   schema: z.object({
-    assetId: z.string(),
+    assetId: z.string().optional(),
+    image: z.string().optional(),
     date: z.string(),
     caption: z.string(),
     text: z.string(),
     eventDate: z.string().optional(),
+    link: z.string().optional(),
+    sources: z.array(z.enum(["facebook-page", "facebook-group", "deep-research"])).default([]),
     sort: z.number()
   })
 });

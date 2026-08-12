@@ -111,6 +111,7 @@ main { min-height: 70vh; }
   border: 1px solid rgba(255,255,255,.24);
   backdrop-filter: blur(10px);
 }
+.slide-copy .source-tags { margin: 0 0 10px; }
 .eyebrow { margin: 0 0 10px; color: var(--orange); font-weight: 700; text-transform: uppercase; font-size: 14px; letter-spacing: .08em; }
 .slide-copy .eyebrow {
   display: inline-flex;

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import StatBand from "../components/StatBand.astro";
+import SourceTags from "../components/SourceTags.astro";
 import { absoluteUrl, defaultOgImage, getEvents, getNotes, getPage, getSlides, pageUrl, schemaDateTime, siteDescription, siteName, siteOrigin } from "../lib/archive";
 import imageManifest from "../../public/assets/images/images-manifest.json";
 import { archiveRecords } from "../lib/archiveRecords";
@@ -47,16 +48,19 @@ const jsonLd = [
   <section class="hero-slider" data-slider data-interval="5000">
     {slides.map((slide, i) => {
       const event = slide.data.eventDate ? eventByDate.get(slide.data.eventDate) : null;
+      const image = slide.data.image || `/assets/images/webp/${slide.data.assetId}.webp`;
+      const href = slide.data.link || event?.data.page;
       return (
         <article class:list={["slide", { "is-active": i === 0 }]}>
           <div class="slide-media">
-            <img src={`/assets/images/webp/${slide.data.assetId}.webp`} alt="" />
+            <img src={image} alt={slide.data.caption} />
           </div>
           <div class="slide-copy">
+            <SourceTags sources={slide.data.sources} />
             <p class="eyebrow">{slide.data.date}</p>
             <h1>{slide.data.caption}</h1>
             <p>{slide.data.text}</p>
-            {event && <a class="button" href={event.data.page}>詳細を見る</a>}
+            {href && <a class="button" href={href}>詳細を見る</a>}
           </div>
         </article>
       );

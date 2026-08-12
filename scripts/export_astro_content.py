@@ -64,6 +64,41 @@ TOP_SLIDE_IDS = {
     "cfs-image-0095", "cfs-image-0107", "cfs-image-0122", "cfs-image-0165",
 }
 
+GROUP_SLIDER_ITEMS = [
+    {
+        "key": "fb-group-248707561997057",
+        "image": "/group-media/2014/2014-06-11/248707561997057/05.jpg",
+        "date": "2014.06.11",
+        "caption": "ミニアイデアソンの活動風景",
+        "text": "参加者がアイデアを出し合い、発表を通じて企画を磨いたリハーサルの記録です。",
+        "link": "/archive/fb-post-248707561997057.html",
+    },
+    {
+        "key": "fb-group-441675946033550",
+        "image": "/group-media/2015/2015-10-11/441675946033550/01.jpg",
+        "date": "2015.09.05",
+        "caption": "オープンデータ・アイデアソン2015",
+        "text": "地域課題とデータ活用を考えた参加者が、成果を手に集まった活動記録です。",
+        "link": "/archive/fb-post-441675946033550.html",
+    },
+    {
+        "key": "fb-group-978984848969321",
+        "image": "/group-media/2018/2018-11-23/978984848969321/01.jpg",
+        "date": "2018.11.23",
+        "caption": "e-Todaオープンデータ・ハッカソン",
+        "text": "Code for SAITAMAのメンバーも参加し、社会課題を解決するアプリを開発しました。",
+        "link": "/archive/fb-post-978984848969321.html",
+    },
+    {
+        "key": "fb-group-2409004232634035",
+        "image": "/group-media/2024/2024-03-02/2409004232634035/01.jpg",
+        "date": "2024.03.02",
+        "caption": "公園アイデアソンのワーク",
+        "text": "Code for SAITAMAも共催し、世代を越えて公園の使い方や可能性を考えました。",
+        "link": "/archive/fb-post-2409004232634035.html",
+    },
+]
+
 
 def frontmatter(data):
     lines = ["---"]
@@ -265,19 +300,25 @@ def main():
         }
         write_markdown(CONTENT / "notes" / f"{idx:02d}-{slug}.md", data, note["text"])
 
-    top_slider_items = [item for item in SLIDER_ITEMS if item[0] in TOP_SLIDE_IDS]
-    for idx, (asset_id, date, caption, text, event_date) in enumerate(top_slider_items, start=1):
-        if asset_id not in by_id:
-            continue
-        data = {
+    top_slider_items = [
+        {
+            "key": asset_id,
             "assetId": asset_id,
             "date": date,
             "caption": caption,
             "text": text,
             "eventDate": event_date,
-            "sort": idx,
+            "sources": ["facebook-page"],
         }
-        write_markdown(CONTENT / "slides" / f"{idx:02d}-{asset_id}.md", data)
+        for asset_id, date, caption, text, event_date in SLIDER_ITEMS
+        if asset_id in TOP_SLIDE_IDS and asset_id in by_id
+    ]
+    top_slider_items.extend({**item, "sources": ["facebook-group"]} for item in GROUP_SLIDER_ITEMS)
+    top_slider_items.sort(key=lambda item: (item["date"], item["key"]))
+    for idx, item in enumerate(top_slider_items, start=1):
+        data = {key: value for key, value in item.items() if key != "key"}
+        data["sort"] = idx
+        write_markdown(CONTENT / "slides" / f"{idx:02d}-{item['key']}.md", data)
 
     note_count = sum(1 for note in archive.SUPPLEMENTAL_TIMELINE if not note.get("integrated_page"))
     print(f"events={len(events)} notes={note_count} slides={len(top_slider_items)} images={len(images)} group_posts={len(group_posts)}")
