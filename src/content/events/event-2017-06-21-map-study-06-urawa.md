@@ -12,6 +12,7 @@ page: "event-2017-06-21-map-study-06-urawa.html"
 image: ""
 images: []
 fbid: ""
+groupEventId: ""
 sources: ["facebook-page"]
 groupPostIds: []
 hasDetail: true

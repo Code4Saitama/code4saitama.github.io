@@ -12,6 +12,7 @@ page: "event-2020-08-01-sdgs-hackathon-hare-to-ke.html"
 image: "assets/images/webp/cfs-image-0160.webp"
 images: ["assets/images/webp/cfs-image-0160.webp", "/group-media/2020/2020-07-31/1451606581707143/01.jpg", "/group-media/2020/2020-07-31/1451606581707143/02.jpg"]
 fbid: "601702510545158"
+groupEventId: "601702510545158"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1451606581707143"]
 hasDetail: true

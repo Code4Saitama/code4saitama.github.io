@@ -12,6 +12,7 @@ page: "event-2017-02-22-map-study-02.html"
 image: ""
 images: []
 fbid: ""
+groupEventId: ""
 sources: ["facebook-page"]
 groupPostIds: []
 hasDetail: true

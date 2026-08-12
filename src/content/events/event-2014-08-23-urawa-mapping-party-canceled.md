@@ -12,6 +12,7 @@ page: "event-2014-08-23-urawa-mapping-party-canceled.html"
 image: ""
 images: []
 fbid: ""
+groupEventId: ""
 sources: ["facebook-page"]
 groupPostIds: []
 hasDetail: true

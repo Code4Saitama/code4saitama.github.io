@@ -12,6 +12,7 @@ page: "event-2016-07-20-tsukutama-openstreetmap-workshop.html"
 image: ""
 images: []
 fbid: ""
+groupEventId: ""
 sources: ["facebook-page"]
 groupPostIds: []
 hasDetail: false

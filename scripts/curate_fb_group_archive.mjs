@@ -143,11 +143,12 @@ const existingEvents = fs.readdirSync(path.join(repoRoot, "src", "content", "eve
     date: String(frontmatterValue(source, "date") || "").replaceAll(".", "-"),
     page: frontmatterValue(source, "page") || "",
     fbid: String(frontmatterValue(source, "fbid") || ""),
+    groupEventId: String(frontmatterValue(source, "groupEventId") || ""),
     groupPostIds: (frontmatterValue(source, "groupPostIds") || []).map(String),
   };
 });
 const existingPostIds = new Set(existingEvents.flatMap((event) => event.groupPostIds));
-const existingEventIds = new Set(existingEvents.map((event) => event.fbid).filter(Boolean));
+const existingEventIds = new Set(existingEvents.flatMap((event) => [event.fbid, event.groupEventId]).filter(Boolean));
 const groupEventById = new Map(groupEvents.map((event) => [String(event.event_id), event]));
 
 function titleFrom(text, themes) {

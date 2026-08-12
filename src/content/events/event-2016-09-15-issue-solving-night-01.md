@@ -12,6 +12,7 @@ page: "event-2016-09-15-issue-solving-night-01.html"
 image: ""
 images: ["/group-media/2016/2016-09-10/556386861229124/01.jpg", "/group-media/2016/2016-09-16/558825324318611/01.jpg", "/group-media/2016/2016-09-16/558825324318611/02.jpg", "/group-media/2016/2016-09-16/558825324318611/03.jpg", "/group-media/2016/2016-09-19/560125797521897/01.jpg", "/group-media/events/2016/1151849991555710/01.jpg"]
 fbid: "1151849991555710"
+groupEventId: "1151849991555710"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["556386861229124", "558494944351649", "558825324318611", "560125797521897"]
 hasDetail: true

@@ -12,6 +12,7 @@ page: "event-2017-07-26-map-study-07-gis-mokumoku.html"
 image: ""
 images: []
 fbid: ""
+groupEventId: ""
 sources: ["facebook-page"]
 groupPostIds: []
 hasDetail: true

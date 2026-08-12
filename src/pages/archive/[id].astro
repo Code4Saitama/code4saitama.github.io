@@ -1,0 +1,139 @@
+---
+import { render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SourceTags from "../../components/SourceTags.astro";
+import { excerpt, getNotes, logoPath, noteArchivePath, pageUrl } from "../../lib/archive";
+import {
+  archiveRecordEvent,
+  archiveRecordImage,
+  archiveRecordImages,
+  archiveRecordPath,
+  archiveRecordPosts,
+  archiveRecordSourceLinks,
+  archiveRecords,
+  groupMediaPath,
+  groupPostUrl,
+  type ArchiveRecord,
+} from "../../lib/archiveRecords";
+
+export async function getStaticPaths() {
+  const notes = await getNotes();
+  return [
+    ...archiveRecords.map((record) => ({
+      params: { id: record.id },
+      props: { kind: "record" as const, record },
+    })),
+    ...notes.map((note) => ({
+      params: { id: noteArchivePath(note.id).replace(/^.*\//, "").replace(/\.html$/, "") },
+      props: { kind: "note" as const, note },
+    })),
+  ];
+}
+
+const props = Astro.props;
+const isRecord = props.kind === "record";
+const record = (isRecord ? props.record : undefined) as ArchiveRecord | undefined;
+const note = isRecord ? undefined : props.note;
+const renderedNote = note ? await render(note) : undefined;
+const NoteContent = renderedNote?.Content;
+const posts = record ? archiveRecordPosts(record) : [];
+const groupEvent = record ? archiveRecordEvent(record) : undefined;
+const sourceLinks = record ? archiveRecordSourceLinks(record) : [];
+const images = record ? archiveRecordImages(record) : [];
+const title = record?.title || note?.data.title || "アーカイブ記録";
+const date = record?.date || note?.data.date || "";
+const summary = record?.summary || note?.body || "";
+const sources = record?.sources || note?.data.sources || [];
+const canonicalPath = record ? archiveRecordPath(record) : noteArchivePath(note.id);
+const heroImage = record ? archiveRecordImage(record) : "";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  datePublished: date || undefined,
+  description: excerpt(summary, 155),
+  url: pageUrl(canonicalPath),
+  image: heroImage ? pageUrl(heroImage) : undefined,
+};
+---
+<BaseLayout title={title} description={excerpt(summary, 155)} canonicalPath={canonicalPath} image={heroImage || undefined} type="article" jsonLd={jsonLd}>
+  <article class="detail-page archive-detail-page">
+    <div class="detail-hero">
+      {heroImage ? <img src={heroImage} alt="" /> : <div class="verified-placeholder"><img src={logoPath} alt="Code for SAITAMA" /></div>}
+      <div>
+        <p class="eyebrow">Archive / {date || "日付不明"}</p>
+        <SourceTags sources={sources} />
+        <h1>{title}</h1>
+        <p>{excerpt(summary, 240)}</p>
+      </div>
+    </div>
+
+    {record ? (
+      <>
+        <dl class="detail-meta">
+          <div><dt>日付</dt><dd>{date || "日付不明"}</dd></div>
+          <div><dt>テーマ</dt><dd>{record.themes.join(" / ")}</dd></div>
+          <div><dt>コメント</dt><dd>{record.commentCount}件</dd></div>
+          <div><dt>統合した情報</dt><dd>{record.sourceCount}件</dd></div>
+        </dl>
+        <section class="text-page">
+          <h2>要約</h2>
+          <p>{record.summary}</p>
+        </section>
+
+        {groupEvent?.description && (
+          <section class="text-page">
+            <h2>Facebookイベントの記録</h2>
+            <p>{groupEvent.description}</p>
+            {groupEvent.place && <p><strong>場所：</strong>{groupEvent.place}</p>}
+          </section>
+        )}
+
+        {posts.map((post, postIndex) => (
+          <section class="text-page post-transcript">
+            <div class="section-head inline-section-head">
+              <h2>投稿記録{posts.length > 1 ? ` ${postIndex + 1}` : ""}</h2>
+              <a href={groupPostUrl(String(post.id))} target="_blank" rel="noopener">元の投稿を確認</a>
+            </div>
+            <p class="meta">{post.date}</p>
+            <p class="preserve-lines">{post.text || post.summary}</p>
+            {post.comments.length > 0 && (
+              <div class="comments-section">
+                <h3>コメント（{post.comments.length}件）</h3>
+                <ol class="comment-list">
+                  {post.comments.map((comment) => (
+                    <li>
+                      {comment.timestamp_label && <time>{comment.timestamp_label}</time>}
+                      {(comment.text || comment.summary) && <p class="preserve-lines">{comment.text || comment.summary}</p>}
+                      {comment.saved_images.length > 0 && (
+                        <div class="comment-images">{comment.saved_images.map((image) => <img src={groupMediaPath(image)} alt="" loading="lazy" />)}</div>
+                      )}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
+          </section>
+        ))}
+
+        {sourceLinks.length > 0 && (
+          <section class="text-page source-links-panel">
+            <h2>元のページ・投稿</h2>
+            <ul>{sourceLinks.map((link) => <li><a href={link.url} target="_blank" rel="noopener">{link.label}</a></li>)}</ul>
+          </section>
+        )}
+
+        {images.length > 0 && (
+          <section class="detail-gallery archive-detail-gallery" aria-label="関連画像">
+            {images.map((image, index) => <figure><a href={image}><img src={image} alt="" loading="lazy" /></a><figcaption>関連画像 / {index + 1}</figcaption></figure>)}
+          </section>
+        )}
+      </>
+    ) : (
+      <section class="text-page">
+        <h2>全文</h2>
+        {NoteContent && <NoteContent />}
+      </section>
+    )}
+  </article>
+</BaseLayout>

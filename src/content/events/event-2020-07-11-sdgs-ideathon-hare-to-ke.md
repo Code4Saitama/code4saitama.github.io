@@ -12,6 +12,7 @@ page: "event-2020-07-11-sdgs-ideathon-hare-to-ke.html"
 image: "assets/images/webp/cfs-image-0149.webp"
 images: ["assets/images/webp/cfs-image-0149.webp", "/group-media/2020/2020-07-07/1432508856950249/01.jpg"]
 fbid: "2699772700307616"
+groupEventId: "2699772700307616"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1432508856950249", "1435453016655833"]
 hasDetail: true

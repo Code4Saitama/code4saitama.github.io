@@ -12,6 +12,7 @@ page: "event-2016-01-16-open-data-hackathon-2015-02.html"
 image: "assets/images/webp/cfs-image-0216.webp"
 images: ["assets/images/webp/cfs-image-0216.webp", "assets/images/webp/cfs-image-0218.webp"]
 fbid: ""
+groupEventId: ""
 sources: ["facebook-page"]
 groupPostIds: []
 hasDetail: true

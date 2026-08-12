@@ -12,6 +12,7 @@ page: "event-2021-03-06-open-data-day-2021-saitama-online.html"
 image: ""
 images: ["/group-media/2021/2021-03-03/1630665777134555/01.jpg", "/group-media/events/2021/267869458041563/01.jpg", "/group-media/events/2021/267869458041563/02.png"]
 fbid: "267869461374896"
+groupEventId: "267869458041563"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1630665777134555"]
 hasDetail: true

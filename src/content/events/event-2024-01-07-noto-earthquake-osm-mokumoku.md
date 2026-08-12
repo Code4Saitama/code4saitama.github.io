@@ -12,6 +12,7 @@ page: "event-2024-01-07-noto-earthquake-osm-mokumoku.html"
 image: ""
 images: ["/group-media/2024/2024-01-06/2372431526291306/01.jpg", "/group-media/events/2024/2659902737649771/01.jpg"]
 fbid: "2659913800981998"
+groupEventId: "2659902737649771"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["2372431526291306"]
 hasDetail: true

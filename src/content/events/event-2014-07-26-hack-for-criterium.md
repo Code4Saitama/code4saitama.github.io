@@ -12,6 +12,7 @@ page: "event-2014-07-26-hack-for-criterium.html"
 image: ""
 images: ["/group-media/2014/2014-07-30/269369546597525/01.jpg"]
 fbid: ""
+groupEventId: ""
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["269369546597525", "269774396557040"]
 hasDetail: true

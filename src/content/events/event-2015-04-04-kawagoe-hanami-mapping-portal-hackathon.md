@@ -12,6 +12,7 @@ page: "event-2015-04-04-kawagoe-hanami-mapping-portal-hackathon.html"
 image: ""
 images: []
 fbid: "1418239738488078"
+groupEventId: "1418239738488078"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["362185767315902"]
 hasDetail: true

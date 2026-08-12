@@ -12,6 +12,7 @@ page: "event-2015-01-31-open-data-hackathon.html"
 image: "assets/images/webp/cfs-image-0024.webp"
 images: ["assets/images/webp/cfs-image-0024.webp", "assets/images/webp/cfs-image-0025.webp", "assets/images/webp/cfs-image-0026.webp", "assets/images/webp/cfs-image-0027.webp", "assets/images/webp/cfs-image-0028.webp", "assets/images/webp/cfs-image-0029.webp", "assets/images/webp/cfs-image-0030.webp", "assets/images/webp/cfs-image-0031.webp", "assets/images/webp/cfs-image-0032.webp", "assets/images/webp/cfs-image-0033.webp", "assets/images/webp/cfs-image-0034.webp", "assets/images/webp/cfs-image-0035.webp", "assets/images/webp/cfs-image-0036.webp", "assets/images/webp/cfs-image-0037.webp", "assets/images/webp/cfs-image-0038.webp", "assets/images/webp/cfs-image-0039.webp", "assets/images/webp/cfs-image-0040.webp", "assets/images/webp/cfs-image-0041.webp"]
 fbid: ""
+groupEventId: ""
 sources: ["facebook-page"]
 groupPostIds: []
 hasDetail: true

@@ -12,6 +12,7 @@ page: "event-2020-12-15-code-for-saitama-meetup-2020-12-udc.html"
 image: ""
 images: ["/group-media/2020/2020-12-14/1573869129480887/01.jpg", "/group-media/events/2020/1017926552026394/01.jpg"]
 fbid: "1017926552026394"
+groupEventId: "1017926552026394"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1573869129480887"]
 hasDetail: true

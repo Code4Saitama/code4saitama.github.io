@@ -12,6 +12,7 @@ page: "event-2015-09-26-arduino-workshop-04.html"
 image: ""
 images: []
 fbid: ""
+groupEventId: ""
 sources: ["facebook-page"]
 groupPostIds: []
 hasDetail: true

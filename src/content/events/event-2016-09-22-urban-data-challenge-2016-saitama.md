@@ -12,6 +12,7 @@ page: "event-2016-09-22-urban-data-challenge-2016-saitama.html"
 image: "assets/images/webp/cfs-image-0095.webp"
 images: ["assets/images/webp/cfs-image-0095.webp", "assets/images/webp/cfs-image-0096.webp", "/group-media/2016/2016-09-07/555081764692967/01.jpg", "/group-media/2016/2016-09-10/556386861229124/01.jpg", "/group-media/events/2016/1147580585316886/01.jpg"]
 fbid: "1147580585316886"
+groupEventId: "1147580585316886"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["555081764692967", "556386861229124"]
 hasDetail: true

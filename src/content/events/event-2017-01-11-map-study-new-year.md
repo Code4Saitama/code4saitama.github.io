@@ -12,6 +12,7 @@ page: "event-2017-01-11-map-study-new-year.html"
 image: ""
 images: ["/group-media/2016/2016-12-12/599697023564774/01.jpg", "/group-media/events/2017/1638363429791547/01.jpg"]
 fbid: "1638363429791547"
+groupEventId: "1638363429791547"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["599697023564774"]
 hasDetail: true

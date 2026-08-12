@@ -12,6 +12,7 @@ page: "event-2015-12-12-open-data-ideathon-2015-02.html"
 image: "assets/images/webp/cfs-image-0212.webp"
 images: ["assets/images/webp/cfs-image-0212.webp", "assets/images/webp/cfs-image-0213.webp", "assets/images/webp/cfs-image-0214.webp"]
 fbid: ""
+groupEventId: ""
 sources: ["facebook-page"]
 groupPostIds: []
 hasDetail: true

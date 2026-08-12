@@ -12,6 +12,7 @@ page: "event-2020-01-29-code-for-saitama-meetup-2020-01.html"
 image: "assets/images/webp/cfs-image-0136.webp"
 images: ["assets/images/webp/cfs-image-0136.webp", "/group-media/2020/2020-01-17/1291007321100404/01.jpg", "/group-media/events/2020/508407279801057/01.jpg"]
 fbid: "508407279801057"
+groupEventId: "508407279801057"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1291007321100404"]
 hasDetail: true

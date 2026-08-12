@@ -1,7 +1,7 @@
 export const sourceLabels = {
-  "facebook-page": "FBページ",
-  "facebook-group": "FBグループ",
-  "deep-research": "DeepResearch"
+  "facebook-page": "FB Page",
+  "facebook-group": "FB Group",
+  "deep-research": "Deep Research"
 } as const;
 
 export type SourceKey = keyof typeof sourceLabels;

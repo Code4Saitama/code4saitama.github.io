@@ -12,6 +12,7 @@ page: "event-2017-06-17-kumagaya-tourism-pre-ideathon-hackathon.html"
 image: ""
 images: ["/group-media/2017/2017-05-26/675851605949315/01.jpg", "/group-media/events/2017/407349702997670/01.jpg"]
 fbid: "407349702997670"
+groupEventId: "407349702997670"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["675851605949315"]
 hasDetail: true

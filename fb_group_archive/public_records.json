@@ -9314,37 +9314,6 @@
     "sourceCount": 1
   },
   {
-    "id": "fb-event-267869458041563",
-    "date": "2021-03-06",
-    "sort": 1614956400,
-    "title": "3月6日●International Open Data Day 2021 in SAITAMA【オンライン】",
-    "summary": "年に一度、世界で同時にイベントを開催するオープンデータのお祭り、インターナショナルオープンデータデイ2021が、2021年3月6日〜、開催されます。 Code for SAITAMAではオープンデータに関するテーマを持ち込んで各自もくもく会形式で開催します。最初と真ん中と最後だけ全体集合して楽しみましょう！ 昨今の情勢もあり、今年もオンライン開催となります。場所はDiscordのCode for SAITAMAサーバで行います！ 【ざ…",
-    "kind": "activity",
-    "themeKeys": [
-      "mapping",
-      "open-data",
-      "community"
-    ],
-    "themes": [
-      "地図・マッピング",
-      "オープンデータ",
-      "Meetup・交流"
-    ],
-    "sources": [
-      "facebook-group"
-    ],
-    "image": "images/events/2021/267869458041563/01.jpg",
-    "images": [
-      "images/events/2021/267869458041563/01.jpg",
-      "images/events/2021/267869458041563/02.png"
-    ],
-    "commentCount": 0,
-    "sourceTypes": [
-      "event"
-    ],
-    "sourceCount": 1
-  },
-  {
     "id": "fb-post-1673987552802377",
     "date": "2021-05-01",
     "sort": 1619794800,
@@ -9570,106 +9539,6 @@
     "sourceCount": 2
   },
   {
-    "id": "fb-event-561595081782332",
-    "date": "2021-10-02",
-    "sort": 1633100400,
-    "title": "COG2021熊谷ミートアップ",
-    "summary": "COG2021熊谷ミートアップ",
-    "kind": "reference",
-    "themeKeys": [
-      "community"
-    ],
-    "themes": [
-      "Meetup・交流"
-    ],
-    "sources": [
-      "facebook-group"
-    ],
-    "image": "",
-    "images": [],
-    "commentCount": 0,
-    "sourceTypes": [
-      "event"
-    ],
-    "sourceCount": 1
-  },
-  {
-    "id": "fb-event-441736034247612",
-    "date": "2021-11-09",
-    "sort": 1636383600,
-    "title": "UDC2021埼玉拠点 Meetup @Code for SAITAMA",
-    "summary": "UDC2021埼玉拠点 Meetup @Code for SAITAMA",
-    "kind": "activity",
-    "themeKeys": [
-      "community"
-    ],
-    "themes": [
-      "Meetup・交流"
-    ],
-    "sources": [
-      "facebook-group"
-    ],
-    "image": "images/events/2021/441736034247612/01.jpg",
-    "images": [
-      "images/events/2021/441736034247612/01.jpg"
-    ],
-    "commentCount": 0,
-    "sourceTypes": [
-      "event"
-    ],
-    "sourceCount": 1
-  },
-  {
-    "id": "fb-event-311783284283348",
-    "date": "2021-12-11",
-    "sort": 1639148400,
-    "title": "COG2021熊谷ミートアップ Vol.2",
-    "summary": "COG2021熊谷ミートアップ Vol.2",
-    "kind": "reference",
-    "themeKeys": [
-      "community"
-    ],
-    "themes": [
-      "Meetup・交流"
-    ],
-    "sources": [
-      "facebook-group"
-    ],
-    "image": "",
-    "images": [],
-    "commentCount": 0,
-    "sourceTypes": [
-      "event"
-    ],
-    "sourceCount": 1
-  },
-  {
-    "id": "fb-event-1094284904702278",
-    "date": "2021-12-25",
-    "sort": 1640358000,
-    "title": "UDC2021埼玉拠点 Meetup #2@Code for SAITAMA",
-    "summary": "あっという間に12月も末ですね。今日締切のアーバンデータチャレンジ2021作品概要応募に向けて、またその後の作品応募に向けて、埼玉拠点として話し合おうかなと思います。 今回もオンラインです。 主催：Code for SAITAMA 共催：アーバンデータチャレンジ2021埼玉拠点",
-    "kind": "activity",
-    "themeKeys": [
-      "community"
-    ],
-    "themes": [
-      "Meetup・交流"
-    ],
-    "sources": [
-      "facebook-group"
-    ],
-    "image": "images/events/2021/1094284904702278/01.jpg",
-    "images": [
-      "images/events/2021/1094284904702278/01.jpg"
-    ],
-    "commentCount": 0,
-    "sourceTypes": [
-      "event"
-    ],
-    "sourceCount": 1
-  },
-  {
     "id": "fb-post-1878573455677118",
     "date": "2022-02-09",
     "sort": 1644332400,
@@ -9858,38 +9727,6 @@
       "post"
     ],
     "sourceCount": 2
-  },
-  {
-    "id": "fb-event-2659902737649771",
-    "date": "2024-01-07",
-    "sort": 1704553200,
-    "title": "令和6年能登半島地震のOpenStreetMap マッピングプロジェクトに賛同して「もくもく会」やります",
-    "summary": "被災地のOpenStreetMapデータを充実させ、中長期的に被災地支援に役立てることができたら…という目的で、OpenStreetMapの建物および道路データを充実させる「もくもく会」を開きます。 こちらのプロジェクトに賛同して開催します。 【日程】2024年1月7日（日）13:00～16:00 【場所】エムズスクエア武蔵野銀行（さいたま市大宮区桜木町1丁目10-8） 【参加方法】パソコン持参で直接お越しください（Wi-Fi環境はあ…",
-    "kind": "activity",
-    "themeKeys": [
-      "mapping",
-      "disaster",
-      "civic-tech",
-      "community"
-    ],
-    "themes": [
-      "地図・マッピング",
-      "防災・災害対応",
-      "アイデアソン・ハッカソン",
-      "Meetup・交流"
-    ],
-    "sources": [
-      "facebook-group"
-    ],
-    "image": "images/events/2024/2659902737649771/01.jpg",
-    "images": [
-      "images/events/2024/2659902737649771/01.jpg"
-    ],
-    "commentCount": 0,
-    "sourceTypes": [
-      "event"
-    ],
-    "sourceCount": 1
   },
   {
     "id": "fb-post-2409004232634035",

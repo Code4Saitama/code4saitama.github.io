@@ -12,6 +12,7 @@ page: "event-2020-04-12-online-hanami-mapping-party-2020.html"
 image: ""
 images: ["/group-media/2020/2020-04-10/1360771107457358/01.jpg", "/group-media/events/2020/235802937477030/01.jpg"]
 fbid: "235802937477030"
+groupEventId: "235802937477030"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1360771107457358"]
 hasDetail: true

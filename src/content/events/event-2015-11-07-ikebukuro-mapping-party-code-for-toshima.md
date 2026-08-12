@@ -12,6 +12,7 @@ page: "event-2015-11-07-ikebukuro-mapping-party-code-for-toshima.html"
 image: "assets/images/webp/cfs-image-0059.webp"
 images: ["assets/images/webp/cfs-image-0059.webp", "assets/images/webp/cfs-image-0060.webp", "assets/images/webp/cfs-image-0061.webp", "assets/images/webp/cfs-image-0062.webp", "/group-media/2015/2015-10-30/446164668918011/01.jpg"]
 fbid: "488767151305916"
+groupEventId: "488767151305916"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["446164668918011"]
 hasDetail: true

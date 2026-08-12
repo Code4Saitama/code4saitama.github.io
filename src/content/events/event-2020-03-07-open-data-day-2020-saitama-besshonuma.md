@@ -12,6 +12,7 @@ page: "event-2020-03-07-open-data-day-2020-saitama-besshonuma.html"
 image: ""
 images: ["/group-media/2020/2020-02-19/1318274448373691/01.jpg", "/group-media/2020/2020-03-03/1328751903992612/01.jpg", "/group-media/events/2020/486213945394491/01.jpg"]
 fbid: "486213945394491"
+groupEventId: "486213945394491"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1318274448373691", "1328751903992612"]
 hasDetail: true

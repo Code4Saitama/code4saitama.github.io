@@ -12,6 +12,7 @@ page: "event-2020-05-27-code-for-saitama-meetup-2020-05.html"
 image: ""
 images: []
 fbid: ""
+groupEventId: ""
 sources: ["facebook-page"]
 groupPostIds: []
 hasDetail: true

@@ -12,6 +12,7 @@ page: "event-2021-11-09-udc2021-saitama-meetup-code-for-saitama.html"
 image: "assets/images/webp/cfs-image-0165.webp"
 images: ["assets/images/webp/cfs-image-0165.webp", "/group-media/2021/2021-11-07/1812328315634966/01.jpg", "/group-media/events/2021/441736034247612/01.jpg"]
 fbid: "441736037580945"
+groupEventId: "441736034247612"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1812328315634966"]
 hasDetail: true
