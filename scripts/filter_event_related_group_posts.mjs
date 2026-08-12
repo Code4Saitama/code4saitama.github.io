@@ -5,6 +5,7 @@ const repoRoot = path.resolve(import.meta.dirname, "..");
 const archiveDir = path.join(repoRoot, "fb_group_archive");
 const postsPath = path.join(archiveDir, "posts.json");
 const apply = process.argv.includes("--apply");
+const previousReportPath = path.join(archiveDir, "event_filter_manifest.json");
 
 const posts = JSON.parse(fs.readFileSync(postsPath, "utf8"));
 const reviewedDeletionPath = path.join(archiveDir, "facebook-posts-selected-for-deletion.json");
@@ -118,16 +119,26 @@ const classified = posts.map((post) => ({
 const keptIds = new Set(classified.filter((item) => item.keep).map((item) => item.post_id));
 const keptPosts = posts.filter((post) => keptIds.has(post.id));
 const removed = classified.filter((item) => !item.keep);
+const previousReport = fs.existsSync(previousReportPath)
+  ? JSON.parse(fs.readFileSync(previousReportPath, "utf8"))
+  : null;
+const previousRemoved = previousReport && Number(previousReport.original_posts) > posts.length
+  ? previousReport.removed || []
+  : [];
+const allRemoved = [...previousRemoved, ...removed].filter((item, index, rows) => rows.findIndex((row) => String(row.post_id) === String(item.post_id)) === index);
+const originalPostCount = previousReport && Number(previousReport.original_posts) > posts.length
+  ? Number(previousReport.original_posts)
+  : posts.length;
 
 const report = {
   generated_at: new Date().toISOString(),
   mode: apply ? "applied" : "dry-run",
   criteria: "シビックテックのイベントへの関連が本文・コメント・イベントリンク・既存イベント記録から確認できる投稿のみ保持",
-  original_posts: posts.length,
+  original_posts: originalPostCount,
   kept_posts: keptPosts.length,
-  removed_posts: removed.length,
+  removed_posts: allRemoved.length,
   kept: classified.filter((item) => item.keep),
-  removed,
+  removed: allRemoved,
 };
 
 if (!apply) {
@@ -148,7 +159,11 @@ function filterManifest(fileName, key = "post_id") {
   const filePath = path.join(archiveDir, fileName);
   if (!fs.existsSync(filePath)) return;
   const rows = JSON.parse(fs.readFileSync(filePath, "utf8"));
-  fs.writeFileSync(filePath, `${JSON.stringify(rows.filter((row) => keptIds.has(String(row[key]))), null, 2)}\n`);
+  const usedPaths = new Set(keptPosts.flatMap((post) => [
+    ...post.saved_images,
+    ...(post.comments || []).flatMap((comment) => comment.saved_images),
+  ]));
+  fs.writeFileSync(filePath, `${JSON.stringify(rows.filter((row) => keptIds.has(String(row[key])) || usedPaths.has(row.saved_path)), null, 2)}\n`);
 }
 
 fs.writeFileSync(postsPath, `${JSON.stringify(keptPosts, null, 2)}\n`);

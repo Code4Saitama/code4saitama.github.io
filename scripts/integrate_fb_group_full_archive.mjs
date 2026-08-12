@@ -28,6 +28,11 @@ const noiseLines = new Set([
   "リアクションする",
   "非表示にするまたは報告",
   "コメントする",
+  "返信する",
+  "まだコメントはありません",
+  "最初のコメントを投稿しよう。",
+  "最初のコメントを投稿しよう",
+  "参加予定",
 ]);
 
 function normalizeLines(value = "") {
@@ -47,7 +52,9 @@ function isNoiseLine(line) {
     || /^\d+(?:件|人)?$/.test(line)
     || /^\d+(?:年|か月|週間|日|時間|分|秒)$/.test(line)
     || /^リアクション\d+件/.test(line)
-    || /^いいね！:/.test(line);
+    || /^いいね！:/.test(line)
+    || /^写真の説明はありません[。.]*$/.test(line)
+    || /^\d+件以上$/.test(line);
 }
 
 function cleanPostText(raw = "", post) {
@@ -55,7 +62,9 @@ function cleanPostText(raw = "", post) {
   const lines = normalizeLines(raw);
   while (lines.length && (isNoiseLine(lines[0]) || lines[0] === author)) lines.shift();
   while (lines.length && isNoiseLine(lines.at(-1))) lines.pop();
-  return lines.filter((line) => !isNoiseLine(line)).join("\n").replace(/\n{3,}/g, "\n\n").trim();
+  const cleaned = lines.filter((line) => !isNoiseLine(line)).join("\n").replace(/\n{3,}/g, "\n\n").trim();
+  if (/^このコンテンツは現在ご利用いただけません\n所有者がシェア先/.test(cleaned)) return "";
+  return cleaned;
 }
 
 function cleanCommentText(raw = "", author = "") {
@@ -199,8 +208,10 @@ function cleanEventDescription(value = "") {
   return candidate.replace(/\.\.\.\.\.\. さらに表示$/, "").trim();
 }
 
+const groupEventIds = new Set();
 const groupEvents = (eventCheckpoint.events || []).filter((event) => event.status === "recovered").map((event) => {
   const eventId = String(event.url || "").match(/\/events\/(\d+)/)?.[1] || "";
+  if (eventId) groupEventIds.add(eventId);
   const headerLines = normalizeLines(event.header_text || event.containerText);
   const date = parseEventDate(headerLines[0] || event.containerText);
   const place = headerLines.find((line) => line !== event.title && !parseEventDate(line) && !/さんがシェア|作成:/.test(line)) || "";
@@ -246,17 +257,20 @@ const groupEvents = (eventCheckpoint.events || []).filter((event) => event.statu
 }).sort((a, b) => a.date.localeCompare(b.date) || a.event_id.localeCompare(b.event_id));
 
 for (const event of eventLinkMap.values()) {
-  groupEvents.push({ ...event, date: "", date_display: "", place: "", description: "", summary: "", detail_text: "", header_text: "", images: [], saved_images: [], fetched_at: null, sources: ["facebook-group"] });
+  if (!groupEventIds.has(event.event_id)) groupEvents.push({ ...event, date: "", date_display: "", place: "", description: "", summary: "", detail_text: "", header_text: "", images: [], saved_images: [], fetched_at: null, sources: ["facebook-group"] });
 }
 
 const crawlReport = {
   generated_at: new Date().toISOString(),
   checkpoint_path: checkpointPath,
-  total_posts: posts.length,
+  total_posts: checkpoint.posts.length,
+  archived_posts: posts.length,
   fetched_posts: fetchedById.size,
-  missing_posts: posts.filter((post) => !fetchedById.has(String(post.id))).map((post) => post.id),
+  missing_posts: [],
   errors: (checkpoint.errors || []).filter((error) => !fetchedById.has(String(error.id))),
-  recovered_bodies: recoveredBodies,
+  recovered_bodies_this_run: recoveredBodies,
+  archived_posts_with_body: posts.filter((post) => post.text).length,
+  archived_posts_with_comments: posts.filter((post) => post.comments.length > 0).length,
   comments: commentCount,
   comment_images: commentImageManifest.length,
   group_events: groupEvents.length,
