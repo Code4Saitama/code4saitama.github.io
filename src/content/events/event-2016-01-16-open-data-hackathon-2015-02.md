@@ -58,7 +58,6 @@ Code for SAITAMA、さいたま市
 
 【問合わせ・申込み】：Code for Saitama
 （事務局：立正大学地球環境科学部環境システム学科後藤研究室
-Fax:048-539-1653　 E-mail: gotoken@ris.ac.jp)
 【費用】　無料
 
 ## 【プログラム（予定）】

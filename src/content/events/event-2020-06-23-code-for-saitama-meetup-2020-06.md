@@ -10,7 +10,7 @@ themes: ["オープンデータ", "アイデアソン・ハッカソン", "Meetu
 themeKeys: ["open-data", "civic-tech", "community"]
 page: "event-2020-06-23-code-for-saitama-meetup-2020-06.html"
 image: ""
-images: []
+images: ["/group-media/2020/2020-06-22/1419884751545993/01.jpg", "/group-media/events/2020/2562453324004545/01.jpg"]
 fbid: "2562453324004545"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1419884751545993"]
@@ -30,3 +30,7 @@ hasDetail: true
 
 時間：2020年6月23日 19:00-22:00
 場所：zoomでやります
+
+## Facebookグループでの記録
+
+- 2020-06-22: 2020/06/23(火) Code for SAITAMA Meetup 2020/6月

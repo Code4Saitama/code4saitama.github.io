@@ -61,7 +61,6 @@ hasDetail: true
 武蔵浦和コミュニティセンター（サウスピア8F）（JR武蔵浦和駅西口からデッキ直結（徒歩２分））
 第６集会室 http://musashiurawa-sp.info/question/#gmap
 〒336-0021 埼玉県さいたま市南区別所７−２０−１
-TEL: 048-844-7215
 
 ## 【主催】
 
@@ -69,7 +68,6 @@ Code for SAITAMA、さいたま市
 
 【問合わせ・申込み】：Code for Saitama
 （事務局：立正大学地球環境科学部環境システム学科後藤研究室
-Fax:048-539-1653　 E-mail: gotoken@ris.ac.jp)
 
 ## 【プログラム】
 

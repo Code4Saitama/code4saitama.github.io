@@ -10,7 +10,7 @@ themes: ["アイデアソン・ハッカソン", "SDGs・地域課題"]
 themeKeys: ["civic-tech", "sdgs"]
 page: "event-2020-08-01-sdgs-hackathon-hare-to-ke.html"
 image: "assets/images/webp/cfs-image-0160.webp"
-images: ["assets/images/webp/cfs-image-0160.webp"]
+images: ["assets/images/webp/cfs-image-0160.webp", "/group-media/2020/2020-07-31/1451606581707143/01.jpg", "/group-media/2020/2020-07-31/1451606581707143/02.jpg"]
 fbid: "601702510545158"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1451606581707143"]
@@ -23,9 +23,6 @@ hasDetail: true
 
 日時：8/1 13:00-17:00  8/2 10:00-17:00（作戦会議の時間は十分ありますので手ぶらでご参加ください。共に、入退出自由です。）
 場所：オンライン開催
-https://zoom.us/j/92427890858
-Meeting ID: 924 2789 0858
-Passcode: 918593
 
 主催：Code for SAITAMA/Kumagaya
 協力：熊谷JCI有志
@@ -47,3 +44,7 @@ Passcode: 918593
 - 13:30-16:00    チーム毎にワーク
 
 - 16:00-17:00     最終報告
+
+## Facebookグループでの記録
+
+- 2020-07-31: アイデアソンの続きをやります。アイデアソンで青年会議所から出てきたDMOやスマートシティー対応などに対する事業計画は作りたいと思いますのでオンラインでガヤガヤやりませんか？お待ちしてます。 2020/08/01(土) 8/1-2 SDGsハッカソン－アプリを使ってハレからケへの橋渡し－ local_art_communityとシェアされています

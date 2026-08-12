@@ -10,7 +10,7 @@ themes: ["オープンデータ", "アイデアソン・ハッカソン", "Meetu
 themeKeys: ["open-data", "civic-tech", "community", "sdgs"]
 page: "event-2021-10-02-cog2021-kumagaya-meetup.html"
 image: ""
-images: []
+images: ["/group-media/2021/2021-09-26/1781084482092683/01.jpg"]
 fbid: "561595085115665"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1781084482092683"]
@@ -28,7 +28,6 @@ hasDetail: true
 後援：熊谷市
 場所：市民活動支援センター（限定12名、事前に連絡ください）
 オンライン
-https://us06web.zoom.us/j/82700921423?pwd=TFlvK254TGErN3pmc3NwbjBHa0RBdz09
 
 テーマ：
 ①	「ラグビータウン熊谷」の活性化支援
@@ -58,3 +57,7 @@ https://us06web.zoom.us/j/82700921423?pwd=TFlvK254TGErN3pmc3NwbjBHa0RBdz09
 17:00 終了
 
 申し込み：https://forms.gle/dw2mJfG5bSL3LDmD9
+
+## Facebookグループでの記録
+
+- 2021-09-26: 10/2から3か月かけて、 熊谷市との産学官民連携で共に考えともに創っていく事になりました。参加者ラーニングの授業で学生も参加します。10/2は「熊谷にゃおざね祭り」が近くで開催されてますので会場からもオンライン参加もアリ。ご関心ある方の参加をお待ちしてます。 テーマ： 「ラグビータウン熊谷」の活性化支援、「暑さ対策日本一の街」の推進 等 2021/10/…

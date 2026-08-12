@@ -48,7 +48,6 @@ hasDetail: true
 http://saitama-culture.jp/omiya/access.html
 最寄り駅 JR 大宮駅東口徒歩15分
 住所 〒330-0844 さいたま市大宮区下町3-47-8
-TEL.048-641-6131 FAX.048-641-6133
 
 ## 【Code for Saitamaについて】
 

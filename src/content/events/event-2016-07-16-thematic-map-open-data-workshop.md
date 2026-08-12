@@ -10,7 +10,7 @@ themes: ["地図・マッピング", "オープンデータ", "アイデアソ�
 themeKeys: ["mapping", "open-data", "civic-tech", "community"]
 page: "event-2016-07-16-thematic-map-open-data-workshop.html"
 image: "assets/images/webp/cfs-image-0068.webp"
-images: ["assets/images/webp/cfs-image-0068.webp", "assets/images/webp/cfs-image-0066.webp", "assets/images/webp/cfs-image-0067.webp"]
+images: ["assets/images/webp/cfs-image-0068.webp", "assets/images/webp/cfs-image-0066.webp", "assets/images/webp/cfs-image-0067.webp", "/group-media/2016/2016-07-13/532891423578668/01.jpg"]
 fbid: "825236170943103"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["532891423578668"]
@@ -73,3 +73,7 @@ hasDetail: true
 - 15:00-　プレゼンテーション
 
 - 16:00-　講評
+
+## Facebookグループでの記録
+
+- 2016-07-13: 7/16(土)にさいたま新都心（北与野駅）で「オープンデータで主題図を作ろう－地理学x市民活動で地域を見える化する－」イベントがあります。途中参加もOKですのでよろしくお願いします！ 2016/07/16(土) オープンデータで主題図を作ろう－地理学x市民活動で地域を見える化する－ さいたま市 参加者15人・興味あり78人

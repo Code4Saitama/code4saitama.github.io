@@ -13,7 +13,6 @@ import build_archive_site as archive  # noqa: E402
 
 CONTENT = ROOT / "src" / "content"
 GROUP_POSTS_FILE = ROOT / "fb_group_archive" / "posts.json"
-GROUP_DELETIONS_FILE = ROOT / "fb_group_archive" / "facebook-posts-selected-for-deletion.json"
 GROUP_EVENTS_FILE = ROOT / "fb_group_archive" / "group_events.json"
 
 
@@ -69,7 +68,13 @@ def frontmatter(data):
 
 
 def md_body(text):
+    text = re.sub(r"https?://[^\s]*(?:zoom\.us|discord\.gg)[^\s]*", "", str(text or ""), flags=re.I)
+    text = re.sub(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}", "", text)
+    text = re.sub(r"(?<![\d/])(?:\+81[- ]?|0\d{1,4}[- ]\d{1,4}[- ]\d{3,4})(?!\d)", "", text)
+    text = re.sub(r"(?:ミーティングID|Meeting ID|パスワード|Passcode)[：:]\s*[A-Za-z0-9 -]{3,30}", "", text, flags=re.I)
     lines = [line.strip() for line in archive.clean(text).splitlines()]
+    lines = [line for line in lines if not re.search(r"(?:E-?mail|メール|TEL|FAX|電話番号|連絡先|問い合わせ先|ミーティングID|Meeting ID|パスワード|Passcode)", line, re.I)]
+    lines = [line for line in lines if not re.match(r"^(?:【招待リンク】|※?zoomのURLはこちらです|Zoomミーティングに参加する|場所[：:]?)$", line, re.I)]
     parts = []
     paragraph = []
     schedule = []
@@ -121,23 +126,29 @@ def normalize_match_text(value):
 
 
 def load_public_group_posts():
-    posts = json.loads(GROUP_POSTS_FILE.read_text(encoding="utf-8"))
-    deletions = json.loads(GROUP_DELETIONS_FILE.read_text(encoding="utf-8"))
-    deleted_ids = {str(item["post_id"]) for item in deletions.get("posts", [])}
-    return [post for post in posts if str(post["id"]) not in deleted_ids]
+    # posts.json はレビュー済みの公開対象だけを保持する。
+    return json.loads(GROUP_POSTS_FILE.read_text(encoding="utf-8"))
 
 
-def related_group_post_ids(title, event_date, posts):
+def related_group_post_ids(title, event_date, posts, event_ids=()):
     normalized_title = normalize_match_text(title)
-    if len(normalized_title) < 8:
-        return []
     event_day = dt.date.fromisoformat(event_date.replace(".", "-"))
-    return [
-        str(post["id"])
-        for post in posts
-        if normalized_title in normalize_match_text(post.get("text", ""))
-        and abs((dt.date.fromisoformat(post["date"]) - event_day).days) <= 60
-    ]
+    event_ids = {str(event_id) for event_id in event_ids if event_id}
+    matches = []
+    for post in posts:
+        linked_event_ids = {
+            str(link.get("event_id", ""))
+            for link in post.get("fb_event_links", [])
+        }
+        explicit_match = bool(event_ids & linked_event_ids)
+        title_match = (
+            len(normalized_title) >= 8
+            and normalized_title in normalize_match_text(post.get("text", ""))
+            and abs((dt.date.fromisoformat(post["date"]) - event_day).days) <= 60
+        )
+        if explicit_match or title_match:
+            matches.append(str(post["id"]))
+    return list(dict.fromkeys(matches))
 
 
 def matching_group_event(title, event_date, group_events):
@@ -174,14 +185,26 @@ def main():
 
     for event in events:
         stem = pathlib.Path(event["page"]).stem
-        group_post_ids = related_group_post_ids(event["name"], event["date"], group_posts)
         group_event = matching_group_event(event["name"], event["date"], group_events)
+        event_ids = [event.get("fbid", "")]
+        if group_event:
+            event_ids.append(group_event.get("event_id", ""))
+        group_post_ids = related_group_post_ids(event["name"], event["date"], group_posts, event_ids)
+        related_group_posts = [post for post in group_posts if str(post["id"]) in group_post_ids]
         integrated_note = integrated_notes.get(event["page"])
         sources = ["facebook-page"]
         if group_post_ids or group_event:
             sources.append("facebook-group")
         if integrated_note:
             sources.append("deep-research")
+        group_media = []
+        for post in related_group_posts:
+            group_media.extend(post.get("saved_images", []))
+            for comment in post.get("comments", []):
+                group_media.extend(comment.get("saved_images", []))
+        if group_event:
+            group_media.extend(group_event.get("saved_images", []))
+        group_media_urls = [f"/group-media/{item.removeprefix('images/')}" for item in dict.fromkeys(group_media)]
         data = {
             "title": event["name"],
             "eventId": event["id"],
@@ -194,13 +217,25 @@ def main():
             "themeKeys": [key for key, _ in event["themes"]],
             "page": event["page"],
             "image": event["image"],
-            "images": [row["webp_asset_path"] for row in event["images"]],
+            "images": [row["webp_asset_path"] for row in event["images"]] + group_media_urls,
             "fbid": event["fbid"] or (group_event.get("event_id", "") if group_event else ""),
             "sources": sources,
             "groupPostIds": group_post_ids,
             "hasDetail": event["has_detail"] or bool(group_post_ids) or bool(integrated_note),
         }
         body = md_body(event["description"])
+        if related_group_posts:
+            group_notes = []
+            for post in related_group_posts:
+                post_summary = post.get("summary") or post.get("text") or ""
+                comment_summary = post.get("comments_summary") or ""
+                note = post_summary
+                if comment_summary and comment_summary not in post_summary:
+                    note = f"{note} コメントでは、{comment_summary}".strip()
+                comment_count = len(post.get("comments", []))
+                comment_note = f"（コメント{comment_count}件を要約）" if comment_count else ""
+                group_notes.append(f"- {post['date']}{comment_note}: {note}")
+            body = f"{body}\n\n## Facebookグループでの記録\n\n" + "\n".join(group_notes)
         if group_event and group_event.get("description") and normalize_match_text(group_event["description"]) not in normalize_match_text(body):
             body = f"{body}\n\n## Facebookグループイベント補足\n\n{group_event['description']}".strip()
         if integrated_note:

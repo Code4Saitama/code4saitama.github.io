@@ -10,7 +10,7 @@ themes: ["オープンデータ", "アイデアソン・ハッカソン", "Meetu
 themeKeys: ["open-data", "civic-tech", "community"]
 page: "event-2020-12-15-code-for-saitama-meetup-2020-12-udc.html"
 image: ""
-images: []
+images: ["/group-media/2020/2020-12-14/1573869129480887/01.jpg", "/group-media/events/2020/1017926552026394/01.jpg"]
 fbid: "1017926552026394"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1573869129480887"]
@@ -20,3 +20,7 @@ hasDetail: true
 こんにちは、Code for SAITAMAです。
 あっという間に師走ですね。久々にMeetup開きます。アーバンデータチャレンジ2020の概要〆切も12/26にひかえ、埼玉拠点としてどうしていこうか話し合おうかなと。また、先日アイデアソンを行ったCode for TODAの定例会とかも盛り混んでいこうと思います。
 今回はMessengerルームを使って集まろうと思います。
+
+## Facebookグループでの記録
+
+- 2020-12-14: UDC2020応募〆切も近くなってきたので埼玉のブリゲード集まって話そうよって感じの回です。先週Code for CATのミーティングで使ったMessengerルームがお手軽だったので今回使おうと思います。イベントの写真はUDC中間シンポジウムの室蘭帰りに立ち寄った森町の風景。 2020/12/15(火) Code for SAITAMA Meetup 2…

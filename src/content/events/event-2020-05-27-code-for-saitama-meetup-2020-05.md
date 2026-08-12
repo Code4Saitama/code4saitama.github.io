@@ -24,8 +24,6 @@ hasDetail: true
 近況とか今後の展望とかゆるっと語りましょう。
 
 時間：2020年5月27日 20:00-21:30
-場所：
-https://zoom.us/j/91352205433?pwd=WGQrUjZtZmIrRjMyMU13MVZqM3R1Zz09
 
 内容：
 ・Code for SAITAMAとは

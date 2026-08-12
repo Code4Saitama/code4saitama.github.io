@@ -10,7 +10,7 @@ themes: ["Meetup・交流"]
 themeKeys: ["community"]
 page: "event-2020-01-29-code-for-saitama-meetup-2020-01.html"
 image: "assets/images/webp/cfs-image-0136.webp"
-images: ["assets/images/webp/cfs-image-0136.webp"]
+images: ["assets/images/webp/cfs-image-0136.webp", "/group-media/2020/2020-01-17/1291007321100404/01.jpg", "/group-media/events/2020/508407279801057/01.jpg"]
 fbid: "508407279801057"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1291007321100404"]
@@ -32,3 +32,7 @@ hasDetail: true
 ・次回以降の日程、内容を決める
 
 終了後、希望者で懇親会します。
+
+## Facebookグループでの記録
+
+- 2020-01-17: あけましておめでとうございます。 今年は埼玉で定期的に集まってもくもく会、勉強会、色々やっていきましょう！まずはmeetupを設定しました。浦和の市民活動サポートセンターです。途中参加・退出歓迎です！ [ 2020/01/29(水) Code for SAITAMA Meetup 2020/1月 さいたま市 Code for Saitama運営会議とシェア…

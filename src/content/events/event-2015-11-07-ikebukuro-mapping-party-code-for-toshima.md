@@ -10,7 +10,7 @@ themes: ["地図・マッピング"]
 themeKeys: ["mapping"]
 page: "event-2015-11-07-ikebukuro-mapping-party-code-for-toshima.html"
 image: "assets/images/webp/cfs-image-0059.webp"
-images: ["assets/images/webp/cfs-image-0059.webp", "assets/images/webp/cfs-image-0060.webp", "assets/images/webp/cfs-image-0061.webp", "assets/images/webp/cfs-image-0062.webp"]
+images: ["assets/images/webp/cfs-image-0059.webp", "assets/images/webp/cfs-image-0060.webp", "assets/images/webp/cfs-image-0061.webp", "assets/images/webp/cfs-image-0062.webp", "/group-media/2015/2015-10-30/446164668918011/01.jpg"]
 fbid: "488767151305916"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["446164668918011"]
@@ -27,3 +27,7 @@ hasDetail: true
 持ち物：とくにいりませんが、ノートパソコンがあれば入力作業が捗ります
 
 ※雨天決行、状況によっては屋内作業となります。
+
+## Facebookグループでの記録
+
+- 2015-10-30: 【池袋は埼玉】 来週末のCode for Japan Summit 2015でマッピングパーティーやります！その直前に「マッピングパーティーの始め方」ワークショップもあります。 2015/11/07(土) 【11/7土曜】Code for SAITAMA 池袋マッピングパーティー【Code for Toshima共催】 東京都東京都 豊島区

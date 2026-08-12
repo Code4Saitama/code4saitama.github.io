@@ -10,7 +10,7 @@ themes: ["地図・マッピング", "オープンデータ", "アイデアソ�
 themeKeys: ["mapping", "open-data", "civic-tech", "sdgs"]
 page: "event-2014-07-26-hack-for-criterium.html"
 image: ""
-images: []
+images: ["/group-media/2014/2014-07-30/269369546597525/01.jpg"]
 fbid: ""
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["269369546597525", "269774396557040"]
@@ -100,3 +100,8 @@ Yahoo! map プレース情報（予定）
 - 16:30-17:00 優勝作品決定、表彰、副賞授与
 
 - 17:30- 懇親会（別会場にて参加費有）
+
+## Facebookグループでの記録
+
+- 2014-07-30: ハッカソンに参加していただいたGunma GIS Geek の参加者よりこのような評価をいただきました。次につなげましょう。 SHIMZ.ME 「Code for SAITAMA ハッカソン Hack for クリテリウム」に参加してきました。 先週末の土日にCode for Saitamaハッカソンに参加してきました。 Code for SAITAMA…
+- 2014-07-30（コメント1件を要約）: 「Code for SAITAMA ハッカソン Hack for クリテリウム」お疲れ様でした。 「みんなで作るさいたまツアー」グループの皆様、プレゼンでは時間がなく、皆様の作業成果を全て発表できず、失礼しました。 成果を、「みんなで作ったさいたまツアー」として公開します。聖地の写真は著作権の問題がありそうなので削除しています。 さいたま観光国際協会様のデ… コメントでは、さいたま観光国際協会のものは了解済みです。

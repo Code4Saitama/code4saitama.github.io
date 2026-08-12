@@ -10,7 +10,7 @@ themes: ["オープンデータ", "Meetup・交流", "SDGs・地域課題"]
 themeKeys: ["open-data", "community", "sdgs"]
 page: "event-2021-12-11-cog2021-kumagaya-meetup-vol-2.html"
 image: ""
-images: []
+images: ["/group-media/2021/2021-12-08/1834489116752219/01.jpg"]
 fbid: "311783287616681"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1834489116752219"]
@@ -41,3 +41,7 @@ hasDetail: true
 - 15:00-15:30 プレゼンテーション
 
 16:00 終了
+
+## Facebookグループでの記録
+
+- 2021-12-08: 12/11 に立正大学でラグビーロード活性化、熱中症対策を考えるチャレンジオープンガバナンスのイベント#2を行います。是非ご参加ください。 2021/12/11(土) COG2021熊谷ミートアップ Vol.2 立正大学熊谷キャンパス3号館2FコンピュータB室・演習室
