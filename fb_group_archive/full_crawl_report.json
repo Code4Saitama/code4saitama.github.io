@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-08-12T19:21:03.637Z",
+  "checkpoint_path": "/tmp/fb_group_full_checkpoint.json",
+  "total_posts": 941,
+  "archived_posts": 388,
+  "fetched_posts": 941,
+  "missing_posts": [],
+  "errors": [],
+  "recovered_bodies_this_run": 0,
+  "archived_posts_with_body": 384,
+  "archived_posts_with_comments": 136,
+  "comments": 454,
+  "comment_images": 7,
+  "group_events": 123,
+  "event_images": 72
+}
