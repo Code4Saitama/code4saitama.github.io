@@ -11,7 +11,7 @@ themeKeys: ["mapping"]
 page: "event-2020-04-12-online-hanami-mapping-party-2020.html"
 image: ""
 images: []
-fbid: ""
+fbid: "235802937477030"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1360771107457358"]
 hasDetail: true

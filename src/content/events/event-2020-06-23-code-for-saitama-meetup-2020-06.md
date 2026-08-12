@@ -11,7 +11,7 @@ themeKeys: ["open-data", "civic-tech", "community"]
 page: "event-2020-06-23-code-for-saitama-meetup-2020-06.html"
 image: ""
 images: []
-fbid: ""
+fbid: "2562453324004545"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1419884751545993"]
 hasDetail: true

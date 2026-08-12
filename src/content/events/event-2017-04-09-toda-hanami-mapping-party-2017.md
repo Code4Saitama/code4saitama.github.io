@@ -11,9 +11,9 @@ themeKeys: ["mapping"]
 page: "event-2017-04-09-toda-hanami-mapping-party-2017.html"
 image: ""
 images: []
-fbid: ""
-sources: ["facebook-page"]
-groupPostIds: []
+fbid: "170925160084906"
+sources: ["facebook-page", "facebook-group"]
+groupPostIds: ["644005499133926"]
 hasDetail: true
 ---
 

@@ -11,7 +11,7 @@ themeKeys: ["mapping", "open-data", "civic-tech", "community"]
 page: "event-2016-07-16-thematic-map-open-data-workshop.html"
 image: "assets/images/webp/cfs-image-0068.webp"
 images: ["assets/images/webp/cfs-image-0068.webp", "assets/images/webp/cfs-image-0066.webp", "assets/images/webp/cfs-image-0067.webp"]
-fbid: ""
+fbid: "825236170943103"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["532891423578668"]
 hasDetail: true

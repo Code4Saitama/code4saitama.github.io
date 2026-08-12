@@ -11,8 +11,8 @@ themeKeys: ["iot"]
 page: "event-2015-08-01-arduino-workshop-03.html"
 image: ""
 images: []
-fbid: ""
-sources: ["facebook-page"]
+fbid: "782169155214837"
+sources: ["facebook-page", "facebook-group"]
 groupPostIds: []
 hasDetail: true
 ---

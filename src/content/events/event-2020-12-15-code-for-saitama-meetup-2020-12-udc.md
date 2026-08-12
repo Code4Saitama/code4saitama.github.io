@@ -11,7 +11,7 @@ themeKeys: ["open-data", "civic-tech", "community"]
 page: "event-2020-12-15-code-for-saitama-meetup-2020-12-udc.html"
 image: ""
 images: []
-fbid: ""
+fbid: "1017926552026394"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1573869129480887"]
 hasDetail: true

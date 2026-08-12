@@ -11,7 +11,7 @@ themeKeys: ["mapping", "community"]
 page: "event-2017-01-11-map-study-new-year.html"
 image: ""
 images: []
-fbid: ""
+fbid: "1638363429791547"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["599697023564774"]
 hasDetail: true

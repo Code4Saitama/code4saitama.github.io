@@ -11,7 +11,7 @@ themeKeys: ["open-data", "civic-tech"]
 page: "event-2015-01-16-open-data-ideathon.html"
 image: "assets/images/webp/cfs-image-0001.webp"
 images: ["assets/images/webp/cfs-image-0001.webp", "assets/images/webp/cfs-image-0002.webp", "assets/images/webp/cfs-image-0003.webp", "assets/images/webp/cfs-image-0004.webp", "assets/images/webp/cfs-image-0005.webp", "assets/images/webp/cfs-image-0006.webp", "assets/images/webp/cfs-image-0007.webp", "assets/images/webp/cfs-image-0008.webp", "assets/images/webp/cfs-image-0009.webp", "assets/images/webp/cfs-image-0010.webp", "assets/images/webp/cfs-image-0011.webp", "assets/images/webp/cfs-image-0012.webp", "assets/images/webp/cfs-image-0013.webp", "assets/images/webp/cfs-image-0014.webp", "assets/images/webp/cfs-image-0015.webp", "assets/images/webp/cfs-image-0016.webp", "assets/images/webp/cfs-image-0017.webp", "assets/images/webp/cfs-image-0018.webp", "assets/images/webp/cfs-image-0019.webp", "assets/images/webp/cfs-image-0020.webp", "assets/images/webp/cfs-image-0021.webp", "assets/images/webp/cfs-image-0022.webp", "assets/images/webp/cfs-image-0023.webp", "assets/images/webp/cfs-image-0171.webp"]
-fbid: ""
+fbid: "842165239180533"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["334615663406246"]
 hasDetail: true

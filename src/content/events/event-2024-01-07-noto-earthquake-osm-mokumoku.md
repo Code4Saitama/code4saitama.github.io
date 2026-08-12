@@ -17,4 +17,6 @@ groupPostIds: ["2372431526291306"]
 hasDetail: true
 ---
 
+## Facebookグループイベント補足
 
+被災地のOpenStreetMapデータを充実させ、中長期的に被災地支援に役立てることができたら…という目的で、OpenStreetMapの建物および道路データを充実させる「もくもく会」を開きます。 こちらのプロジェクトに賛同して開催します。 https://tasks.hotosm.org/explore/filters/?orderBy=id&orderByType=DESC 【日程】2024年1月7日（日）13:00～16:00 【場所】エムズスクエア武蔵野銀行（さいたま市大宮区桜木町1丁目10-8） 【参加方法】パソコン持参で直接お越しください（Wi-Fi環境はあります）

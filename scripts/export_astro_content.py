@@ -14,6 +14,7 @@ import build_archive_site as archive  # noqa: E402
 CONTENT = ROOT / "src" / "content"
 GROUP_POSTS_FILE = ROOT / "fb_group_archive" / "posts.json"
 GROUP_DELETIONS_FILE = ROOT / "fb_group_archive" / "facebook-posts-selected-for-deletion.json"
+GROUP_EVENTS_FILE = ROOT / "fb_group_archive" / "group_events.json"
 
 
 SLIDER_ITEMS = [
@@ -139,9 +140,27 @@ def related_group_post_ids(title, event_date, posts):
     ]
 
 
+def matching_group_event(title, event_date, group_events):
+    normalized_title = normalize_match_text(title)
+    event_day = dt.date.fromisoformat(event_date.replace(".", "-"))
+    candidates = []
+    for event in group_events:
+        if not event.get("date"):
+            continue
+        group_day = dt.date.fromisoformat(event["date"])
+        if abs((group_day - event_day).days) > 7:
+            continue
+        candidate_title = normalize_match_text(event.get("title", ""))
+        overlap = normalized_title in candidate_title or candidate_title in normalized_title
+        if overlap and min(len(normalized_title), len(candidate_title)) >= 8:
+            candidates.append((abs((group_day - event_day).days), -min(len(normalized_title), len(candidate_title)), event))
+    return sorted(candidates, key=lambda item: (item[0], item[1]))[0][2] if candidates else None
+
+
 def main():
     events, images, by_id = archive.build_data()
     group_posts = load_public_group_posts()
+    group_events = json.loads(GROUP_EVENTS_FILE.read_text(encoding="utf-8")) if GROUP_EVENTS_FILE.exists() else []
     integrated_notes = {
         note["integrated_page"]: note
         for note in archive.SUPPLEMENTAL_TIMELINE
@@ -156,9 +175,10 @@ def main():
     for event in events:
         stem = pathlib.Path(event["page"]).stem
         group_post_ids = related_group_post_ids(event["name"], event["date"], group_posts)
+        group_event = matching_group_event(event["name"], event["date"], group_events)
         integrated_note = integrated_notes.get(event["page"])
         sources = ["facebook-page"]
-        if group_post_ids:
+        if group_post_ids or group_event:
             sources.append("facebook-group")
         if integrated_note:
             sources.append("deep-research")
@@ -175,12 +195,14 @@ def main():
             "page": event["page"],
             "image": event["image"],
             "images": [row["webp_asset_path"] for row in event["images"]],
-            "fbid": event["fbid"],
+            "fbid": event["fbid"] or (group_event.get("event_id", "") if group_event else ""),
             "sources": sources,
             "groupPostIds": group_post_ids,
             "hasDetail": event["has_detail"] or bool(group_post_ids) or bool(integrated_note),
         }
         body = md_body(event["description"])
+        if group_event and group_event.get("description") and normalize_match_text(group_event["description"]) not in normalize_match_text(body):
+            body = f"{body}\n\n## Facebookグループイベント補足\n\n{group_event['description']}".strip()
         if integrated_note:
             body = f"{body}\n\n## DeepResearch補足\n\n{integrated_note['text']}".strip()
         write_markdown(CONTENT / "events" / f"{stem}.md", data, body)

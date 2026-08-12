@@ -11,9 +11,9 @@ themeKeys: ["mapping", "open-data", "civic-tech"]
 page: "event-2016-03-05-open-data-day-2016-saitama.html"
 image: "assets/images/webp/cfs-image-0222.webp"
 images: ["assets/images/webp/cfs-image-0222.webp"]
-fbid: ""
-sources: ["facebook-page"]
-groupPostIds: []
+fbid: "1665861730335167"
+sources: ["facebook-page", "facebook-group"]
+groupPostIds: ["480276745506803"]
 hasDetail: true
 ---
 

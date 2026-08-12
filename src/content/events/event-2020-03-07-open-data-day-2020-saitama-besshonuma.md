@@ -11,7 +11,7 @@ themeKeys: ["mapping", "open-data", "disaster", "community"]
 page: "event-2020-03-07-open-data-day-2020-saitama-besshonuma.html"
 image: ""
 images: []
-fbid: ""
+fbid: "486213945394491"
 sources: ["facebook-page", "facebook-group"]
 groupPostIds: ["1318274448373691", "1328751903992612"]
 hasDetail: true
