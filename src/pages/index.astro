@@ -1,14 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import StatBand from "../components/StatBand.astro";
-import EventCard from "../components/EventCard.astro";
-import { absoluteUrl, defaultOgImage, getEvents, getSlides, pageUrl, schemaDateTime, siteDescription, siteName, siteOrigin } from "../lib/archive";
+import { absoluteUrl, defaultOgImage, getEvents, getNotes, getPage, getSlides, pageUrl, schemaDateTime, siteDescription, siteName, siteOrigin } from "../lib/archive";
 import imageManifest from "../../public/assets/images/images-manifest.json";
 import { archiveRecords } from "../lib/archiveRecords";
 
 const events = await getEvents();
+const notes = await getNotes();
 const slides = await getSlides();
-const eventByDate = new Map(events.filter((event) => event.data.hasDetail).map((event) => [event.data.date, event]));
+const { page: aboutPage, Content: AboutContent } = await getPage("about");
+const eventByDate = new Map(events.map((event) => [event.data.date, event]));
 const highlights = events.filter((event) => event.data.hasDetail).slice(0, 6);
 const jsonLd = [
   {
@@ -65,17 +66,26 @@ const jsonLd = [
     <div class="slider-dots" aria-hidden="true">{slides.map(() => <span></span>)}</div>
   </section>
 
-  <StatBand events={events} imageCount={imageManifest.length} archiveRecordCount={archiveRecords.length} />
+  <StatBand events={events} imageCount={imageManifest.length} archiveRecordCount={archiveRecords.length} noteCount={notes.length} />
 
   <section class="intro-band">
     <div>
       <p class="eyebrow">Official Site</p>
       <h2>Code for SAITAMAの活動を、ここからたどれます。</h2>
     </div>
-    <p>このサイトは、Code for SAITAMAの公式ページです。Facebookページ、公開FBグループ、DeepResearchの情報源を区別しながら、OpenStreetMap、オープンデータ、防災、UDC/COGなどの記録を統合しています。</p>
+    <p>このサイトは、Code for SAITAMAの公式アーカイブです。FB Page、FB Group、Deep Researchの情報源を区別しながら、OpenStreetMap、オープンデータ、防災、UDC/COGなどの記録を統合しています。</p>
   </section>
 
-  <section class="section-head"><h2>主な活動記録</h2><a href="timeline.html">年表を見る</a></section>
-  <div class="card-grid">{highlights.map((event) => <EventCard event={event} />)}</div>
-  <section class="section-head"><h2>活動記録を探す</h2><span><a href="/timeline.html">時系列</a> · <a href="/themes.html">テーマ別</a> · <a href="/research.html">関連資料</a></span></section>
+  <section class="text-page home-about">
+    <p class="eyebrow">{aboutPage.data.eyebrow}</p>
+    <h2>{aboutPage.data.title}</h2>
+    <p class="about-lead">{aboutPage.data.lead}</p>
+    <AboutContent />
+  </section>
+
+  <section class="archive-entry-links" aria-label="アーカイブを探す">
+    <a href="/timeline.html"><span>Timeline</span><strong>時系列から探す</strong></a>
+    <a href="/themes.html"><span>Themes</span><strong>テーマから探す</strong></a>
+    <a href="/research.html"><span>References</span><strong>関連資料を見る</strong></a>
+  </section>
 </BaseLayout>

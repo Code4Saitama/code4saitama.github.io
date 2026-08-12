@@ -1,22 +1,20 @@
 ---
 import SourceTags from "./SourceTags.astro";
 import type { ArchiveRecord } from "../lib/archiveRecords";
-import { archiveRecordImage, archiveRecordImages } from "../lib/archiveRecords";
+import { archiveRecordImage, archiveRecordPath } from "../lib/archiveRecords";
 import { logoPath } from "../lib/archive";
 
 interface Props { record: ArchiveRecord; label?: string; }
-const { record, label = "FBグループ記録" } = Astro.props;
+const { record, label = "FB Group記録" } = Astro.props;
 const image = archiveRecordImage(record);
-const images = archiveRecordImages(record);
+const href = archiveRecordPath(record);
 ---
-<article class="timeline-item archive-record-row">
+<a class="timeline-item archive-record-row compact-archive-row" href={href}>
   <time>{record.date || "日付不明"}</time>
-  <div class:list={["timeline-thumb", { "is-logo": !image }]}><img src={image || logoPath} alt="" loading="lazy" /></div>
+  <span class:list={["timeline-thumb", { "is-logo": !image }]}><img src={image || logoPath} alt="" loading="lazy" /></span>
   <div>
-    <p class="meta">{label} · {record.themes.slice(0, 2).join(" / ")}{record.commentCount > 0 ? ` · コメント${record.commentCount}件を要約` : ""}</p>
-    <SourceTags sources={record.sources} />
+    <p class="meta">{label} · {record.themes.slice(0, 2).join(" / ")}{record.commentCount > 0 ? ` · コメント${record.commentCount}件` : ""}</p>
     <h3>{record.title}</h3>
-    <p>{record.summary}</p>
-    {images.length > 1 && <div class="archive-record-gallery">{images.slice(1).map((src) => <img src={src} alt="" loading="lazy" />)}</div>}
+    <SourceTags sources={record.sources} />
   </div>
-</article>
+</a>

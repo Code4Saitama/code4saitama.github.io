@@ -25,7 +25,6 @@ const jsonLd = {
   description,
   about: "Code for SAITAMAの活動年表",
   hasPart: events
-    .filter((event) => event.data.hasDetail)
     .map((event) => ({
       "@type": "Event",
       name: event.data.title,
@@ -39,7 +38,7 @@ const jsonLd = {
   <section class="page-title">
     <p class="eyebrow">Timeline</p>
     <h1>年表</h1>
-    <p>Code for SAITAMAの活動を古い順に並べています。イベント記録に、公開FBグループから活動単位に再編集した記録を統合しています。個人名やプロフィール情報など、活動の理解に不要な情報は掲載していません。</p>
+    <p>Code for SAITAMAの活動を古い順に並べています。各行から、要約全文、コメント、画像、元ページを確認できます。個人名やプロフィール情報など、活動の理解に不要な情報は掲載していません。</p>
   </section>
   {years.map((year) => {
     const items = grouped.find(([itemYear]) => itemYear === year)?.[1] || [];
