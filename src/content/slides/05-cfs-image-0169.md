@@ -5,5 +5,5 @@ caption: "浦和防災マッピングパーティー"
 text: "地域を歩き、防災に必要な情報を地図へ記録した活動です。"
 eventDate: "2014.10.18"
 sources: ["facebook-page"]
-sort: 2
+sort: 5
 ---

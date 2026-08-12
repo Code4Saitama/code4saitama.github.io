@@ -5,5 +5,5 @@ caption: "オープンデータアイデアソン2015"
 text: "地域を見つめ、データを使った解決策を考えた活動の記録です。"
 eventDate: "2015.09.05"
 sources: ["facebook-page"]
-sort: 5
+sort: 8
 ---

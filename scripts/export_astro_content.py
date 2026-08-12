@@ -66,11 +66,35 @@ TOP_SLIDE_IDS = {
 
 GROUP_SLIDER_ITEMS = [
     {
+        "key": "fb-group-event-475246445919850",
+        "image": "/group-media/2014/2014-01-09/197269160474231/01.jpg",
+        "date": "2014.01.20",
+        "caption": "Code for SAITAMA（仮）第2回準備会",
+        "text": "Code for SAITAMAの立ち上げに向け、次回会合の日程を調整して関係者が集まった準備会の記録です。",
+        "link": "/archive/fb-event-475246445919850.html",
+    },
+    {
+        "key": "fb-group-event-361641693974911",
+        "image": "/group-media/2024/2024-04-02/2428835527317572/01.jpg",
+        "date": "2014.03.29",
+        "caption": "初開催・大宮マッピングパーティー",
+        "text": "AEDや車いす対応店舗、大宮公園の情報を街歩きで調べ、OpenStreetMapへ記録した初回のマッピングパーティーです。",
+        "link": "/archive/fb-event-361641693974911.html",
+    },
+    {
+        "key": "fb-group-event-677649452289094",
+        "image": "/group-media/2014/2014-05-27/244402545760892/01.jpg",
+        "date": "2014.05.31",
+        "caption": "OpenStreetMap入門講座と第2回大宮マッピングパーティー",
+        "text": "OSMの基本を学んだ後、さいたま新都心まで街を歩き、多言語タグや観光施設などを地図へ記録しました。",
+        "link": "/archive/fb-event-677649452289094.html",
+    },
+    {
         "key": "fb-group-248707561997057",
         "image": "/group-media/2014/2014-06-11/248707561997057/05.jpg",
         "date": "2014.06.11",
-        "caption": "ミニアイデアソンの活動風景",
-        "text": "参加者がアイデアを出し合い、発表を通じて企画を磨いたリハーサルの記録です。",
+        "caption": "「大人の自由研究（仮）」ミニアイデアソン",
+        "text": "関係者リハーサルとして2時間のミニアイデアソンを行い、初参加者を交えてアイデアを形にしました。",
         "link": "/archive/fb-post-248707561997057.html",
     },
     {
