@@ -17,5 +17,3 @@ sources: ["facebook-page"]
 groupPostIds: []
 hasDetail: false
 ---
-
-
