@@ -85,7 +85,7 @@ export async function getSlides() {
 }
 
 export async function getPage(slug: string) {
-  const page = (await getCollection("pages")).find((entry) => entry.id === `${slug}.md`);
+  const page = (await getCollection("pages")).find((entry) => entry.id === slug);
   if (!page) throw new Error(`Missing page content: ${slug}`);
   const rendered = await render(page);
   return { page, Content: rendered.Content };
