@@ -1,7 +1,9 @@
 ---
 import { render } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SourceTags from "../components/SourceTags.astro";
 import { absoluteUrl, defaultOgImage, excerpt, getEvents, logoPath, pageUrl, schemaDateTime, siteImage, themeText } from "../lib/archive";
+import { groupPostExcerpt, groupPostPage, groupPostsById, groupPostTitle } from "../lib/groupPosts";
 
 export async function getStaticPaths() {
   const events = await getEvents();
@@ -15,6 +17,7 @@ export async function getStaticPaths() {
 
 const { event } = Astro.props;
 const { Content } = await render(event);
+const relatedGroupPosts = event.data.groupPostIds.map((id) => groupPostsById.get(id)).filter(Boolean);
 const fb = event.data.fbid ? `https://www.facebook.com/events/${event.data.fbid}/` : "";
 const heroImage = siteImage(event.data.image);
 const ogImage = event.data.image ? heroImage : defaultOgImage;
@@ -62,6 +65,7 @@ const jsonLd = {
       )}
       <div>
         <p class="eyebrow">Event / {event.data.date}</p>
+        <SourceTags sources={event.data.sources} />
         <h1>{event.data.title}</h1>
         <p>{excerpt(event.body || "", 210)}</p>
       </div>
@@ -71,7 +75,7 @@ const jsonLd = {
       {event.data.end && <div><dt>終了</dt><dd>{event.data.end}</dd></div>}
       {event.data.place && <div><dt>場所</dt><dd>{event.data.place}</dd></div>}
       <div><dt>テーマ</dt><dd>{themeText(event.data.themes, event.data.themes.length)}</dd></div>
-      {fb && <div><dt>Facebookイベント</dt><dd>{fb}</dd></div>}
+      {fb && <div><dt>Facebookイベント</dt><dd><a href={fb} target="_blank" rel="noopener">Facebookで開く</a></dd></div>}
     </dl>
     <section class="text-page">
       <h2>詳細</h2>
@@ -82,6 +86,19 @@ const jsonLd = {
         {event.data.images.slice(0, 24).map((image, index) => (
           <figure><img src={siteImage(image)} alt="" loading="lazy" /><figcaption>関連写真 / {index + 1}</figcaption></figure>
         ))}
+      </section>
+    )}
+    {relatedGroupPosts.length > 0 && (
+      <section class="related-records">
+        <h2>関連するFBグループ投稿</h2>
+        <div class="related-record-list">
+          {relatedGroupPosts.map((post) => post && (
+            <article>
+              <time>{post.date}</time>
+              <div><h3><a href={groupPostPage(post)}>{groupPostTitle(post)}</a></h3><p>{groupPostExcerpt(post, 120)}</p></div>
+            </article>
+          ))}
+        </div>
       </section>
     )}
   </article>

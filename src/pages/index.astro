@@ -4,6 +4,7 @@ import StatBand from "../components/StatBand.astro";
 import EventCard from "../components/EventCard.astro";
 import { absoluteUrl, defaultOgImage, getEvents, getSlides, pageUrl, schemaDateTime, siteDescription, siteName, siteOrigin } from "../lib/archive";
 import imageManifest from "../../public/assets/images/images-manifest.json";
+import { groupPosts } from "../lib/groupPosts";
 
 const events = await getEvents();
 const slides = await getSlides();
@@ -64,16 +65,17 @@ const jsonLd = [
     <div class="slider-dots" aria-hidden="true">{slides.map(() => <span></span>)}</div>
   </section>
 
-  <StatBand events={events} imageCount={imageManifest.length} />
+  <StatBand events={events} imageCount={imageManifest.length} groupPostCount={groupPosts.length} />
 
   <section class="intro-band">
     <div>
       <p class="eyebrow">Official Site</p>
       <h2>Code for SAITAMAの活動を、ここからたどれます。</h2>
     </div>
-    <p>このサイトは、Code for SAITAMAの公式ページです。現在は活動アーカイブを中心に、OpenStreetMap、オープンデータ、アイデアソン、ハッカソン、防災、UDC/COGなどの記録を整理しています。</p>
+    <p>このサイトは、Code for SAITAMAの公式ページです。Facebookページ、公開FBグループ、DeepResearchの情報源を区別しながら、OpenStreetMap、オープンデータ、防災、UDC/COGなどの記録を統合しています。</p>
   </section>
 
   <section class="section-head"><h2>主な活動記録</h2><a href="timeline.html">年表を見る</a></section>
   <div class="card-grid">{highlights.map((event) => <EventCard event={event} />)}</div>
+  <section class="section-head"><h2>FBグループの投稿記録</h2><a href="/posts.html">{groupPosts.length}件を見る</a></section>
 </BaseLayout>

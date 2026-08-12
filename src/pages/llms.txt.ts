@@ -1,5 +1,6 @@
 import type { APIRoute } from "astro";
 import { getEvents, pageUrl, siteDescription, siteName, siteOrigin } from "../lib/archive";
+import { groupPosts } from "../lib/groupPosts";
 
 export const GET: APIRoute = async () => {
   const events = (await getEvents()).filter((event) => event.data.hasDetail).slice(0, 12);
@@ -16,6 +17,7 @@ This is the official Japanese website for Code for SAITAMA, a civic tech communi
 - Home: ${siteOrigin}
 - Timeline: ${pageUrl("timeline.html")}
 - Themes: ${pageUrl("themes.html")}
+- Facebook group posts (${groupPosts.length} archived posts): ${pageUrl("posts.html")}
 - Research and related materials: ${pageUrl("research.html")}
 - About Code for SAITAMA: ${pageUrl("about.html")}
 - Sitemap: ${pageUrl("sitemap.xml")}
