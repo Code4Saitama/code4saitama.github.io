@@ -24,11 +24,10 @@ const {
   jsonLd = []
 } = Astro.props;
 const navItems = [
-  ["index.html", "トップ"],
-  ["timeline.html", "時系列"],
-  ["themes.html", "テーマ別"],
-  ["research.html", "関連資料"],
-  ["about.html", "公式情報"]
+  ["/", "index.html", "トップ"],
+  ["/timeline.html", "timeline.html", "時系列"],
+  ["/themes.html", "themes.html", "テーマ別"],
+  ["/research.html", "research.html", "関連資料"]
 ];
 const pageTitle = title === "トップ" ? siteName : `${title} | ${siteName}`;
 const canonicalUrl = pageUrl(canonicalPath);
@@ -87,12 +86,12 @@ const structuredData = cleanJsonLd([
   </head>
   <body class={bodyClass}>
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Code for SAITAMA 公式サイト">
+      <a class="brand" href="/" aria-label="Code for SAITAMA 公式サイト">
         <img src={logoPath} alt="Code for SAITAMA" />
         <span>Official</span>
       </a>
       <nav>
-        {navItems.map(([href, label]) => <a class:list={[{ active: href === active }]} href={href}>{label}</a>)}
+        {navItems.map(([href, key, label]) => <a class:list={[{ active: key === active }]} href={href}>{label}</a>)}
       </nav>
     </header>
     <main>

@@ -1,0 +1,288 @@
+import fs from "node:fs";
+import path from "node:path";
+
+const repoRoot = path.resolve(import.meta.dirname, "..");
+const archiveDir = path.join(repoRoot, "fb_group_archive");
+const args = process.argv.slice(2);
+const dryRun = args.includes("--dry-run");
+const checkpointPath = args.find((argument) => !argument.startsWith("--")) || "/tmp/fb_group_full_checkpoint.json";
+const checkpointIndex = args.indexOf(checkpointPath);
+const eventCheckpointPath = args.slice(checkpointIndex + 1).find((argument) => !argument.startsWith("--")) || "/tmp/fb_group_events_checkpoint.json";
+const postsPath = path.join(archiveDir, "posts.json");
+
+const posts = JSON.parse(fs.readFileSync(postsPath, "utf8"));
+const checkpoint = JSON.parse(fs.readFileSync(checkpointPath, "utf8"));
+const eventCheckpoint = fs.existsSync(eventCheckpointPath)
+  ? JSON.parse(fs.readFileSync(eventCheckpointPath, "utf8"))
+  : { events: [] };
+const fetchedById = new Map(checkpoint.posts.map((post) => [String(post.id), post]));
+
+const noiseLines = new Set([
+  "·",
+  "管理者",
+  "フォローする",
+  "投稿をシェアしました",
+  "シェアする",
+  "編集済み",
+  "いいね！",
+  "リアクションする",
+  "非表示にするまたは報告",
+  "コメントする",
+  "返信する",
+  "まだコメントはありません",
+  "最初のコメントを投稿しよう。",
+  "最初のコメントを投稿しよう",
+  "参加予定",
+]);
+
+function normalizeLines(value = "") {
+  return String(value)
+    .replaceAll("\u00a0", " ")
+    .replace(/\r\n/g, "\n")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+}
+
+function isNoiseLine(line) {
+  return noiseLines.has(line)
+    || /^Code for SAITAMA～/.test(line)
+    || /^プライバシー設定:/.test(line)
+    || /^\d{4}年\d{1,2}月\d{1,2}日(?:.+)?$/.test(line)
+    || /^\d+(?:件|人)?$/.test(line)
+    || /^\d+(?:年|か月|週間|日|時間|分|秒)$/.test(line)
+    || /^リアクション\d+件/.test(line)
+    || /^いいね！:/.test(line)
+    || /^写真の説明はありません[。.]*$/.test(line)
+    || /^\d+件以上$/.test(line);
+}
+
+function cleanPostText(raw = "", post) {
+  const author = String(post.author || "").split("\n")[0].replace(/さんが.*$/, "").trim();
+  const lines = normalizeLines(raw);
+  while (lines.length && (isNoiseLine(lines[0]) || lines[0] === author)) lines.shift();
+  while (lines.length && isNoiseLine(lines.at(-1))) lines.pop();
+  const cleaned = lines.filter((line) => !isNoiseLine(line)).join("\n").replace(/\n{3,}/g, "\n\n").trim();
+  if (/^このコンテンツは現在ご利用いただけません\n所有者がシェア先/.test(cleaned)) return "";
+  return cleaned;
+}
+
+function cleanCommentText(raw = "", author = "") {
+  const lines = normalizeLines(raw);
+  while (lines.length && (isNoiseLine(lines[0]) || lines[0] === author)) lines.shift();
+  while (lines.length && isNoiseLine(lines.at(-1))) lines.pop();
+  return lines.filter((line) => !isNoiseLine(line)).join("\n").trim();
+}
+
+function summarize(value = "", limit = 180) {
+  const compact = value.replace(/https?:\/\/\S+/g, "").replace(/\s+/g, " ").trim();
+  if (!compact) return "";
+  const sentences = compact.match(/[^。！？!?]+[。！？!?]?/g) || [compact];
+  let summary = "";
+  for (const sentence of sentences) {
+    if (summary && summary.length + sentence.length > limit) break;
+    summary += sentence;
+    if (summary.length >= Math.min(80, limit)) break;
+  }
+  if (!summary) summary = compact.slice(0, limit);
+  return summary.length <= limit ? summary : `${summary.slice(0, limit - 1)}…`;
+}
+
+function stableImageKey(image) {
+  const photoId = String(image.photo_url || "").match(/[?&]fbid=(\d+)/)?.[1];
+  if (photoId) return `photo:${photoId}`;
+  try {
+    return new URL(image.src).pathname;
+  } catch {
+    return image.src;
+  }
+}
+
+function imageExtension(image) {
+  try {
+    const extension = path.extname(new URL(image.src).pathname).toLowerCase();
+    return [".jpg", ".jpeg", ".png", ".gif", ".webp"].includes(extension) ? extension : ".jpg";
+  } catch {
+    return ".jpg";
+  }
+}
+
+const commentImageManifest = [];
+const eventImageManifest = [];
+const eventLinkMap = new Map();
+let recoveredBodies = 0;
+let commentCount = 0;
+
+for (const post of posts) {
+  const fetched = fetchedById.get(String(post.id));
+  const fetchedBody = fetched ? cleanPostText(fetched.post_raw_text, post) : "";
+  const existingBody = cleanPostText(post.text, post);
+  const body = fetchedBody || existingBody;
+  if (!existingBody && fetchedBody) recoveredBodies += 1;
+
+  post.text = body;
+  post.summary = summarize(body);
+  post.fetched_at = fetched?.fetched_at || null;
+  post.expected_comment_count = fetched?.expected_comment_count ?? null;
+  post.fb_event_links = (fetched?.event_links || []).map((event) => {
+    const match = String(event.url).match(/\/events\/(\d+)/);
+    const eventId = match?.[1] || "";
+    if (eventId && !eventLinkMap.has(eventId)) {
+      eventLinkMap.set(eventId, {
+        event_id: eventId,
+        url: `https://www.facebook.com/events/${eventId}/`,
+        title: String(event.title || "").replace(/\s+/g, " ").trim(),
+        discovered_from_post_ids: [],
+      });
+    }
+    if (eventId) eventLinkMap.get(eventId).discovered_from_post_ids.push(post.id);
+    return { event_id: eventId, url: eventId ? `https://www.facebook.com/events/${eventId}/` : event.url, title: event.title };
+  });
+
+  post.comments = (fetched?.comments || []).map((comment, commentIndex) => {
+    const commentId = String(comment.comment_id || `${post.id}-${commentIndex + 1}`);
+    const text = cleanCommentText(comment.raw_text, comment.author);
+    const savedImages = [];
+    const seen = new Set();
+    for (const image of comment.images || []) {
+      const key = stableImageKey(image);
+      if (!image.src || seen.has(key)) continue;
+      seen.add(key);
+      const relativePath = path.posix.join(
+        "images",
+        "comments",
+        post.date.slice(0, 4),
+        post.id,
+        commentId,
+        `${String(savedImages.length + 1).padStart(2, "0")}${imageExtension(image)}`,
+      );
+      savedImages.push(relativePath);
+      commentImageManifest.push({
+        post_id: post.id,
+        comment_id: commentId,
+        author: comment.author,
+        timestamp_label: comment.timestamp_label,
+        alt: image.alt,
+        width: image.width,
+        height: image.height,
+        photo_url: image.photo_url,
+        source_url: image.src,
+        saved_path: relativePath,
+      });
+    }
+    commentCount += 1;
+    return {
+      id: commentId,
+      parent_comment_id: String(comment.parent_comment_id || ""),
+      author: String(comment.author || "").trim() || "投稿者不明",
+      timestamp_label: String(comment.timestamp_label || "").trim(),
+      permalink: String(comment.permalink || "").split("&__cft__")[0],
+      text,
+      summary: summarize(text, 140),
+      images: comment.images || [],
+      saved_images: savedImages,
+    };
+  });
+
+  const commentText = post.comments.map((comment) => comment.text).filter(Boolean).join(" ");
+  post.comments_summary = summarize(commentText, 240);
+}
+
+for (const event of eventLinkMap.values()) {
+  event.discovered_from_post_ids = [...new Set(event.discovered_from_post_ids)];
+}
+
+function parseEventDate(value = "") {
+  const match = String(value).match(/(\d{4})[\/.年](\d{1,2})[\/.月](\d{1,2})日?/);
+  if (!match) return "";
+  return `${match[1]}-${match[2].padStart(2, "0")}-${match[3].padStart(2, "0")}`;
+}
+
+function cleanEventDescription(value = "") {
+  const lines = normalizeLines(value).filter((line) => line !== "詳細"
+    && !/^\d+人が回答しました$/.test(line)
+    && line !== "公開"
+    && !/^· Facebook利用者以外/.test(line)
+    && !/^時間:/.test(line));
+  const candidate = lines.find((line) => line.length >= 50 && !/さんのイベント$/.test(line)) || "";
+  return candidate.replace(/\.\.\.\.\.\. さらに表示$/, "").trim();
+}
+
+const groupEventIds = new Set();
+const groupEvents = (eventCheckpoint.events || []).filter((event) => event.status === "recovered").map((event) => {
+  const eventId = String(event.url || "").match(/\/events\/(\d+)/)?.[1] || "";
+  if (eventId) groupEventIds.add(eventId);
+  const headerLines = normalizeLines(event.header_text || event.containerText);
+  const date = parseEventDate(headerLines[0] || event.containerText);
+  const place = headerLines.find((line) => line !== event.title && !parseEventDate(line) && !/さんがシェア|作成:/.test(line)) || "";
+  const description = cleanEventDescription(event.detail_text);
+  const seen = new Set();
+  const savedImages = [];
+  for (const image of event.images || []) {
+    const key = stableImageKey(image);
+    if (!image.src || seen.has(key)) continue;
+    seen.add(key);
+    const relativePath = path.posix.join("images", "events", date.slice(0, 4) || "unknown", eventId, `${String(savedImages.length + 1).padStart(2, "0")}${imageExtension(image)}`);
+    savedImages.push(relativePath);
+    eventImageManifest.push({
+      event_id: eventId,
+      title: event.title,
+      date,
+      alt: image.alt,
+      width: image.width,
+      height: image.height,
+      source_url: image.src,
+      saved_path: relativePath,
+    });
+  }
+  const postDiscovery = eventLinkMap.get(eventId)?.discovered_from_post_ids || [];
+  eventLinkMap.delete(eventId);
+  return {
+    event_id: eventId,
+    title: event.title,
+    date,
+    date_display: headerLines[0] || "",
+    place,
+    url: event.url,
+    description,
+    summary: summarize(description || event.detail_text, 220),
+    detail_text: event.detail_text || "",
+    header_text: event.header_text || "",
+    images: event.images || [],
+    saved_images: savedImages,
+    discovered_from_post_ids: [...new Set(postDiscovery)],
+    fetched_at: event.fetched_at || eventCheckpoint.fetched_at || null,
+    sources: ["facebook-group"],
+  };
+}).sort((a, b) => a.date.localeCompare(b.date) || a.event_id.localeCompare(b.event_id));
+
+for (const event of eventLinkMap.values()) {
+  if (!groupEventIds.has(event.event_id)) groupEvents.push({ ...event, date: "", date_display: "", place: "", description: "", summary: "", detail_text: "", header_text: "", images: [], saved_images: [], fetched_at: null, sources: ["facebook-group"] });
+}
+
+const crawlReport = {
+  generated_at: new Date().toISOString(),
+  checkpoint_path: checkpointPath,
+  total_posts: checkpoint.posts.length,
+  archived_posts: posts.length,
+  fetched_posts: fetchedById.size,
+  missing_posts: [],
+  errors: (checkpoint.errors || []).filter((error) => !fetchedById.has(String(error.id))),
+  recovered_bodies_this_run: recoveredBodies,
+  archived_posts_with_body: posts.filter((post) => post.text).length,
+  archived_posts_with_comments: posts.filter((post) => post.comments.length > 0).length,
+  comments: commentCount,
+  comment_images: commentImageManifest.length,
+  group_events: groupEvents.length,
+  event_images: eventImageManifest.length,
+};
+
+if (!dryRun) {
+  fs.writeFileSync(postsPath, `${JSON.stringify(posts, null, 2)}\n`);
+  fs.writeFileSync(path.join(archiveDir, "comment_images_manifest.json"), `${JSON.stringify(commentImageManifest, null, 2)}\n`);
+  fs.writeFileSync(path.join(archiveDir, "group_events.json"), `${JSON.stringify(groupEvents, null, 2)}\n`);
+  fs.writeFileSync(path.join(archiveDir, "event_images_manifest.json"), `${JSON.stringify(eventImageManifest, null, 2)}\n`);
+  fs.writeFileSync(path.join(archiveDir, "full_crawl_report.json"), `${JSON.stringify(crawlReport, null, 2)}\n`);
+}
+
+console.log(JSON.stringify(crawlReport, null, 2));

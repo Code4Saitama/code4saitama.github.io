@@ -12,6 +12,9 @@ page: "event-2016-08-20-iot-mokumoku-adult-summer-project.html"
 image: ""
 images: []
 fbid: ""
+groupEventId: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

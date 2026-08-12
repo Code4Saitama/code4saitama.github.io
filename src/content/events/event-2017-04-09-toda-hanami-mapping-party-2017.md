@@ -10,8 +10,11 @@ themes: ["地図・マッピング"]
 themeKeys: ["mapping"]
 page: "event-2017-04-09-toda-hanami-mapping-party-2017.html"
 image: ""
-images: []
-fbid: ""
+images: ["/group-media/2017/2017-03-24/644005499133926/01.jpg", "/group-media/events/2017/170925160084906/01.jpg"]
+fbid: "170925160084906"
+groupEventId: "170925160084906"
+sources: ["facebook-page", "facebook-group"]
+groupPostIds: ["644005499133926"]
 hasDetail: true
 ---
 
@@ -37,3 +40,7 @@ hasDetail: true
 
 ※参加費は無料です。
 ※終了後に懇親会を予定しています。
+
+## Facebookグループでの記録
+
+- 2017-03-24: 今年のお花見マッピングパーティは戸田市でやります。 2017/04/09(日) 【4/9日曜】お花見マッピングパーティ2017【今年は戸田】 埼玉県 戸田市

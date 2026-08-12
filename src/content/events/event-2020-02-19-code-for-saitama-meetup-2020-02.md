@@ -10,8 +10,11 @@ themes: ["Meetup・交流"]
 themeKeys: ["community"]
 page: "event-2020-02-19-code-for-saitama-meetup-2020-02.html"
 image: ""
-images: []
-fbid: ""
+images: ["/group-media/2020/2020-02-03/1305161759684960/01.jpg"]
+fbid: "169274637702623"
+groupEventId: "169274637702623"
+sources: ["facebook-page", "facebook-group"]
+groupPostIds: ["1305161759684960"]
 hasDetail: true
 ---
 
@@ -32,3 +35,7 @@ hasDetail: true
 ・決まったこと発表
 
 終了後、希望者で懇親会します。
+
+## Facebookグループでの記録
+
+- 2020-02-03: 次回Meetupは2/19（水）です！ 2020/02/19(水) Code for SAITAMA Meetup 2020/2月 さいたま市

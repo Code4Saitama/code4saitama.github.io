@@ -10,8 +10,11 @@ themes: ["オープンデータ", "アイデアソン・ハッカソン"]
 themeKeys: ["open-data", "civic-tech"]
 page: "event-2015-01-16-open-data-ideathon.html"
 image: "assets/images/webp/cfs-image-0001.webp"
-images: ["assets/images/webp/cfs-image-0001.webp", "assets/images/webp/cfs-image-0002.webp", "assets/images/webp/cfs-image-0003.webp", "assets/images/webp/cfs-image-0004.webp", "assets/images/webp/cfs-image-0005.webp", "assets/images/webp/cfs-image-0006.webp", "assets/images/webp/cfs-image-0007.webp", "assets/images/webp/cfs-image-0008.webp", "assets/images/webp/cfs-image-0009.webp", "assets/images/webp/cfs-image-0010.webp", "assets/images/webp/cfs-image-0011.webp", "assets/images/webp/cfs-image-0012.webp", "assets/images/webp/cfs-image-0013.webp", "assets/images/webp/cfs-image-0014.webp", "assets/images/webp/cfs-image-0015.webp", "assets/images/webp/cfs-image-0016.webp", "assets/images/webp/cfs-image-0017.webp", "assets/images/webp/cfs-image-0018.webp", "assets/images/webp/cfs-image-0019.webp", "assets/images/webp/cfs-image-0020.webp", "assets/images/webp/cfs-image-0021.webp", "assets/images/webp/cfs-image-0022.webp", "assets/images/webp/cfs-image-0023.webp", "assets/images/webp/cfs-image-0171.webp"]
-fbid: ""
+images: ["assets/images/webp/cfs-image-0001.webp", "assets/images/webp/cfs-image-0002.webp", "assets/images/webp/cfs-image-0003.webp", "assets/images/webp/cfs-image-0004.webp", "assets/images/webp/cfs-image-0005.webp", "assets/images/webp/cfs-image-0006.webp", "assets/images/webp/cfs-image-0007.webp", "assets/images/webp/cfs-image-0008.webp", "assets/images/webp/cfs-image-0009.webp", "assets/images/webp/cfs-image-0010.webp", "assets/images/webp/cfs-image-0011.webp", "assets/images/webp/cfs-image-0012.webp", "assets/images/webp/cfs-image-0013.webp", "assets/images/webp/cfs-image-0014.webp", "assets/images/webp/cfs-image-0015.webp", "assets/images/webp/cfs-image-0016.webp", "assets/images/webp/cfs-image-0017.webp", "assets/images/webp/cfs-image-0018.webp", "assets/images/webp/cfs-image-0019.webp", "assets/images/webp/cfs-image-0020.webp", "assets/images/webp/cfs-image-0021.webp", "assets/images/webp/cfs-image-0022.webp", "assets/images/webp/cfs-image-0023.webp", "assets/images/webp/cfs-image-0171.webp", "/group-media/2015/2015-01-15/334615663406246/01.jpg"]
+fbid: "842165239180533"
+groupEventId: "842165239180533"
+sources: ["facebook-page", "facebook-group"]
+groupPostIds: ["334615663406246"]
 hasDetail: true
 ---
 
@@ -48,4 +51,7 @@ hasDetail: true
 お問い合わせ・お申し込み
 Code for Saitama
 事務局：立正大学地球環境科学部環境システム学科後藤研究室
-Fax:048-539-1653 E-mail: gotoken@ris.ac.jp
+
+## Facebookグループでの記録
+
+- 2015-01-15: いよいよ明日開催です！！ 皆さん、ぜひご参加ください！！ オープンデータアイデアソン／ハッカソン開催のご案内 【開催主旨】 公共データを二次利用しやすい形でオープン化する「オープンデータ」の取組は、民間における公共データの活用を促進し、経済活性化等を促進するものとして期待されています。 埼玉県でも、埼玉県、さいたま市、和光市などでオープンデータが公開されて…

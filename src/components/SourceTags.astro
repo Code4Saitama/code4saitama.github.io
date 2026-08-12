@@ -1,0 +1,14 @@
+---
+import { sourceLabel, type SourceKey } from "../lib/sources";
+
+interface Props {
+  sources?: SourceKey[];
+}
+
+const sources = [...new Set(Astro.props.sources || [])];
+---
+{sources.length > 0 && (
+  <span class="source-tags" aria-label="情報源">
+    {sources.map((source) => <span class:list={["source-tag", `source-${source}`]}>{sourceLabel(source)}</span>)}
+  </span>
+)}

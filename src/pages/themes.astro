@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { getEvents, pageUrl } from "../lib/archive";
+import SourceTags from "../components/SourceTags.astro";
+import { getEvents, logoPath, pageUrl, siteImage } from "../lib/archive";
+import { activityRecords, archiveRecordImage, archiveRecordPath } from "../lib/archiveRecords";
 
 const events = await getEvents();
 const themes = new Map<string, { label: string; events: typeof events }>();
@@ -11,6 +13,13 @@ for (const event of events) {
   });
 }
 const themeRows = [...themes.entries()].sort((a, b) => a[1].label.localeCompare(b[1].label, "ja"));
+const recordThemes = new Map<string, { label: string; records: typeof activityRecords }>();
+for (const record of activityRecords) record.themeKeys.forEach((key, index) => {
+  if (!recordThemes.has(key)) recordThemes.set(key, { label: record.themes[index], records: [] });
+  recordThemes.get(key)?.records.push(record);
+});
+for (const [key, group] of recordThemes) if (!themes.has(key)) themeRows.push([key, { label: group.label, events: [] }]);
+themeRows.sort((a, b) => a[1].label.localeCompare(b[1].label, "ja"));
 const description = "Code for SAITAMAの活動を、地図、オープンデータ、防災、学び、地域課題解決などのテーマ別に紹介しています。";
 const jsonLd = {
   "@context": "https://schema.org",
@@ -24,7 +33,7 @@ const jsonLd = {
     "@type": "ItemList",
     name: group.label,
     url: `${pageUrl("themes.html")}#${key}`,
-    numberOfItems: group.events.length
+    numberOfItems: group.events.length + (recordThemes.get(key)?.records.length || 0)
   }))
 };
 ---
@@ -32,19 +41,31 @@ const jsonLd = {
   <section class="page-title">
     <p class="eyebrow">Themes</p>
     <h1>テーマ別に見る</h1>
-    <p>Code for SAITAMAの活動を、地図、データ、防災、学びなどの観点から見られるようにまとめています。</p>
+    <p>Code for SAITAMAの活動記録を、地図、データ、防災、学びなどの観点からまとめています。各行から要約全文、コメント、画像、元ページを確認できます。</p>
   </section>
   {themeRows.map(([key, group]) => (
     <section class="theme-section" id={key}>
-      <div class="section-head"><h2>{group.label}</h2><span>{group.events.length}件</span></div>
+      <div class="section-head"><h2>{group.label}</h2><span>{group.events.length + (recordThemes.get(key)?.records.length || 0)}件</span></div>
       <div class="compact-list">
-        {group.events.sort((a, b) => a.data.sort - b.data.sort).map((event) => (
-          event.data.hasDetail ? (
-            <a href={event.data.page}><time>{event.data.date}</time><strong>{event.data.title}</strong><span>詳細</span></a>
-          ) : (
-            <div class="theme-row"><time>{event.data.date}</time><strong>{event.data.title}</strong><span>年表のみ</span></div>
-          )
-        ))}
+        {[
+          ...group.events.map((event) => ({ sort: event.data.sort, event })),
+          ...(recordThemes.get(key)?.records || []).map((record) => ({ sort: record.sort, record })),
+        ].sort((a, b) => a.sort - b.sort).map((row) => {
+          const isEvent = "event" in row;
+          const href = isEvent ? `/${row.event.data.page}` : archiveRecordPath(row.record);
+          const image = isEvent ? siteImage(row.event.data.image) : archiveRecordImage(row.record);
+          const date = isEvent ? row.event.data.date : row.record.date;
+          const title = isEvent ? row.event.data.title : row.record.title;
+          const sources = isEvent ? row.event.data.sources : row.record.sources;
+          return (
+            <a class="compact-theme-row" href={href}>
+              <span class:list={["compact-thumb", { "is-logo": !image }]}><img src={image || logoPath} alt="" loading="lazy" /></span>
+              <time>{date}</time>
+              <strong>{title}</strong>
+              <span><SourceTags sources={sources} /></span>
+            </a>
+          );
+        })}
       </div>
     </section>
   ))}

@@ -33,6 +33,10 @@ export function pageUrl(path = "index.html") {
   return absoluteUrl(path);
 }
 
+export function noteArchivePath(id: string) {
+  return `/archive/note-${id.replace(/\.md$/, "")}.html`;
+}
+
 export function sitemapDate(value = "") {
   const match = value.match(/^(\d{4})[.-](\d{2})[.-](\d{2})/);
   return match ? `${match[1]}-${match[2]}-${match[3]}` : value;
@@ -81,7 +85,7 @@ export async function getSlides() {
 }
 
 export async function getPage(slug: string) {
-  const page = (await getCollection("pages")).find((entry) => entry.id === `${slug}.md`);
+  const page = (await getCollection("pages")).find((entry) => entry.id === slug);
   if (!page) throw new Error(`Missing page content: ${slug}`);
   const rendered = await render(page);
   return { page, Content: rendered.Content };

@@ -11,9 +11,16 @@ themeKeys: ["mapping", "civic-tech"]
 page: "event-2015-04-04-kawagoe-hanami-mapping-portal-hackathon.html"
 image: ""
 images: []
-fbid: ""
+fbid: "1418239738488078"
+groupEventId: "1418239738488078"
+sources: ["facebook-page", "facebook-group"]
+groupPostIds: ["362185767315902"]
 hasDetail: true
 ---
 
 4月4日土曜日に川越でお花見やります。
 JR川越駅集合、桜の名所をまわって歩いてマッピングするもよしイングレスするもよし、自由にやりたいと思います。
+
+## Facebookグループでの記録
+
+- 2015-03-23: 【お花見イベント】 来週末はCIVIC TECH FORUM 2015、 4/11はArduinoワークショップがありますので その間を縫って、今年は川越でお花見、マッピングパーティー、Ingressイベントを行います。 Code for SAITAMA、今年はさいたま市を越えて埼玉県全体に広げていきたいですね。 2015/04/04(土) Code fo…

@@ -12,6 +12,9 @@ page: "event-2016-04-03-kumagaya-hanami-mapping-party.html"
 image: "assets/images/webp/cfs-image-0225.webp"
 images: ["assets/images/webp/cfs-image-0225.webp"]
 fbid: ""
+groupEventId: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

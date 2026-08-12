@@ -12,6 +12,9 @@ page: "event-2015-09-12-open-data-hackathon-2015-saitama.html"
 image: ""
 images: []
 fbid: ""
+groupEventId: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 
@@ -78,7 +81,6 @@ https://goo.gl/BvVpE9
 
 高鼻コミュニティセンター　第６・７会議室 JR「大宮駅」東口より徒歩20分
 http://www.saitama-culture.jp/takahanacom/access.html
-〒330-0803 埼玉県さいたま市大宮区高鼻町２丁目２９２−１ TEL:048-644-3360
 
 ## 【主催】
 
@@ -86,7 +88,6 @@ Code for SAITAMA、さいたま市
 
 【問合わせ・申込み】：Code for Saitama
 （事務局：立正大学地球環境科学部環境システム学科後藤研究室
-Fax:048-539-1653　 E-mail: gotoken@ris.ac.jp)
 【費用】　無料
 
 ## 【プログラム（予定）】

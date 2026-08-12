@@ -1,0 +1,20 @@
+---
+import SourceTags from "./SourceTags.astro";
+import type { ArchiveRecord } from "../lib/archiveRecords";
+import { archiveRecordImage, archiveRecordPath } from "../lib/archiveRecords";
+import { logoPath } from "../lib/archive";
+
+interface Props { record: ArchiveRecord; label?: string; }
+const { record, label = "FB Group記録" } = Astro.props;
+const image = archiveRecordImage(record);
+const href = archiveRecordPath(record);
+---
+<a class="timeline-item archive-record-row compact-archive-row" href={href}>
+  <time>{record.date || "日付不明"}</time>
+  <span class:list={["timeline-thumb", { "is-logo": !image }]}><img src={image || logoPath} alt="" loading="lazy" /></span>
+  <div>
+    <p class="meta">{label} · {record.themes.slice(0, 2).join(" / ")}{record.commentCount > 0 ? ` · コメント${record.commentCount}件` : ""}</p>
+    <h3>{record.title}</h3>
+    <SourceTags sources={record.sources} />
+  </div>
+</a>

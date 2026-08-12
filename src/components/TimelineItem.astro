@@ -1,8 +1,11 @@
 ---
-import { excerpt, logoPath, siteImage, themeText } from "../lib/archive";
+import { logoPath, noteArchivePath, siteImage, themeText } from "../lib/archive";
+import SourceTags from "./SourceTags.astro";
+import type { SourceKey } from "../lib/sources";
 
 interface Props {
   item: {
+    id: string;
     body?: string;
     data: {
       title: string;
@@ -12,6 +15,7 @@ interface Props {
       theme?: string;
       hasDetail?: boolean;
       source?: string;
+      sources?: SourceKey[];
       image?: string;
     };
     kind: "イベント" | "補足";
@@ -19,29 +23,18 @@ interface Props {
 }
 
 const { item } = Astro.props;
-const hasDetail = item.data.hasDetail === true;
 const theme = item.data.themes ? themeText(item.data.themes) : item.data.theme || "";
-const text = excerpt(item.body || "", 130);
 const image = item.data.image ? siteImage(item.data.image) : logoPath;
 const isLogo = !item.data.image;
 const isSupplemental = item.kind === "補足";
+const href = item.kind === "イベント" && item.data.page ? `/${item.data.page}` : noteArchivePath(item.id);
 ---
-<article class:list={["timeline-item", { "is-supplemental": isSupplemental }]}>
+<a class:list={["timeline-item", "compact-archive-row", { "is-supplemental": isSupplemental }]} href={href}>
   <time>{item.data.date}</time>
-  {!isSupplemental && (
-    hasDetail && item.data.page ? (
-      <a class:list={["timeline-thumb", { "is-logo": isLogo }]} href={item.data.page} aria-label={`${item.data.title}の詳細`}>
-        <img src={image} alt="" loading="lazy" />
-      </a>
-    ) : (
-      <div class:list={["timeline-thumb", { "is-logo": isLogo }]}>
-        <img src={image} alt="" loading="lazy" />
-      </div>
-    )
-  )}
+  <span class:list={["timeline-thumb", { "is-logo": isLogo }]}><img src={image} alt="" loading="lazy" /></span>
   <div>
-    <p class="meta">{item.kind} · {theme} {!hasDetail && <span class="timeline-only">年表のみ</span>} {item.data.source && <span class="timeline-source">{item.data.source}</span>}</p>
-    <h3>{hasDetail && item.data.page ? <a href={item.data.page}>{item.data.title}</a> : item.data.title}</h3>
-    <p>{text}</p>
+    <p class="meta">{item.kind} · {theme}</p>
+    <h3>{item.data.title}</h3>
+    <SourceTags sources={item.data.sources} />
   </div>
-</article>
+</a>

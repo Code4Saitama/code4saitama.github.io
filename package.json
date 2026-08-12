@@ -7,9 +7,10 @@
     "dev": "astro dev --host 127.0.0.1",
     "build": "astro build",
     "preview": "astro preview --host 127.0.0.1",
-    "export:content": "python3 scripts/export_astro_content.py"
+    "export:content": "python3 scripts/export_astro_content.py",
+    "curate:group": "node scripts/curate_fb_group_archive.mjs"
   },
   "devDependencies": {
-    "astro": "^5.0.0"
+    "astro": "^7.2.1"
   }
 }

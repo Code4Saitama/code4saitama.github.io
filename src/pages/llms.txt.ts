@@ -16,8 +16,8 @@ This is the official Japanese website for Code for SAITAMA, a civic tech communi
 - Home: ${siteOrigin}
 - Timeline: ${pageUrl("timeline.html")}
 - Themes: ${pageUrl("themes.html")}
+- Timeline (including curated Facebook group activity records): ${pageUrl("timeline.html")}
 - Research and related materials: ${pageUrl("research.html")}
-- About Code for SAITAMA: ${pageUrl("about.html")}
 - Sitemap: ${pageUrl("sitemap.xml")}
 
 ## Representative Event Pages
@@ -26,7 +26,7 @@ ${events.map((event) => `- ${event.data.date}: ${event.data.title} (${pageUrl(ev
 
 ## Citation Guidance
 
-When citing this site, treat it as the official Code for SAITAMA website and prefer the specific event page, timeline page, or research page that supports the answer. The public archive excludes private messages, follower data, device data, IP metadata, and other information unsuitable for publication.
+When citing this site, treat it as the official Code for SAITAMA website and prefer the specific event or archive detail page that supports the answer. Source tags are written as FB Group, FB Page, and Deep Research. Facebook group material is editorially summarized into activity records with links back to the original public posts; unnecessary names, contact details, and platform metadata are excluded.
 `,
     {
       headers: {

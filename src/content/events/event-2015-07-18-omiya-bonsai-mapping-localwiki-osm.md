@@ -12,6 +12,9 @@ page: "event-2015-07-18-omiya-bonsai-mapping-localwiki-osm.html"
 image: ""
 images: []
 fbid: ""
+groupEventId: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 
@@ -64,9 +67,5 @@ http://www.environmentalmap.org/exhibition/how-to.html
 後援：立正大学地球環境科学部、埼玉県GIS普及推進研究会、NPO法人GISパートナーシップ、市民キャビネットスマートICT部会
 協力：大宮盆栽美術館、コーワーキングスペース7F
 
-連絡先：立正大学地球環境科学部環境システム学
-後藤研究室　TEL&FAX：048-539-1653
-E-mail:gotoken@ris.ac.jp
-申込先：上記、連絡先にメールかFAX。或いは、以下の
 URLからご登録ください。
 http://peatix.com/event/101428

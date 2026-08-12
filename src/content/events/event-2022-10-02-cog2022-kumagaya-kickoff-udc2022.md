@@ -10,8 +10,11 @@ themes: ["オープンデータ", "アイデアソン・ハッカソン", "SDGs�
 themeKeys: ["open-data", "civic-tech", "sdgs"]
 page: "event-2022-10-02-cog2022-kumagaya-kickoff-udc2022.html"
 image: ""
-images: []
+images: ["/group-media/2022/2022-10-01/2053178228216639/01.jpg"]
 fbid: "510483177511134"
+groupEventId: ""
+sources: ["facebook-page", "facebook-group"]
+groupPostIds: ["2053178228216639"]
 hasDetail: true
 ---
 
@@ -48,3 +51,7 @@ BIOTREX（土壌微生物多様性・活性値）を利用したブランド化�
 - 14:45-15:30　チームビルディング、アイデアブラッシュアップ
 
 - 15:30-15:50 プレゼンテーション
+
+## Facebookグループでの記録
+
+- 2022-10-01: 熊谷でチャレンジオープンガバナンス2022のキックオフイベント行います！ 2022/10/02(日) チャレンジオープンガバナンス2022 in 熊谷 キックオフ【UDC2022】 埼玉県 熊谷市 熊谷市市民活動支援センターに「いいね！」しました

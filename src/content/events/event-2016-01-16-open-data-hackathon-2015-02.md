@@ -12,6 +12,9 @@ page: "event-2016-01-16-open-data-hackathon-2015-02.html"
 image: "assets/images/webp/cfs-image-0216.webp"
 images: ["assets/images/webp/cfs-image-0216.webp", "assets/images/webp/cfs-image-0218.webp"]
 fbid: ""
+groupEventId: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 
@@ -56,7 +59,6 @@ Code for SAITAMA、さいたま市
 
 【問合わせ・申込み】：Code for Saitama
 （事務局：立正大学地球環境科学部環境システム学科後藤研究室
-Fax:048-539-1653　 E-mail: gotoken@ris.ac.jp)
 【費用】　無料
 
 ## 【プログラム（予定）】

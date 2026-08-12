@@ -3,7 +3,8 @@ title: "Code for Kusatsu 真夏のマッピングパーティー支援"
 date: "2017.08.06"
 sort: 1501945200.0
 theme: "他コミュニティ交流"
-source: "関連資料"
+source: "DeepResearch"
+sources: ["deep-research"]
 ---
 
 滋賀県草津市でのマッピング活動を現地支援した事例として補足レポートに挙げられています。県外コミュニティとの交流記録です。

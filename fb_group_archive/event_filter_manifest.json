@@ -1,0 +1,8 @@
+{
+  "generated_at": "2026-08-12T15:00:23.184Z",
+  "criteria": "シビックテックのイベントへの関連が本文・コメント・イベントリンク・既存イベント記録から確認できる投稿のみ保持",
+  "original_posts": 941,
+  "kept_posts": 388,
+  "removed_posts": 553,
+  "removal_reason_counts": []
+}

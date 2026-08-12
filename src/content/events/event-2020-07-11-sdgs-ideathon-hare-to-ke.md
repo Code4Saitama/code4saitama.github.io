@@ -10,8 +10,11 @@ themes: ["アイデアソン・ハッカソン", "SDGs・地域課題"]
 themeKeys: ["civic-tech", "sdgs"]
 page: "event-2020-07-11-sdgs-ideathon-hare-to-ke.html"
 image: "assets/images/webp/cfs-image-0149.webp"
-images: ["assets/images/webp/cfs-image-0149.webp"]
-fbid: ""
+images: ["assets/images/webp/cfs-image-0149.webp", "/group-media/2020/2020-07-07/1432508856950249/01.jpg"]
+fbid: "2699772700307616"
+groupEventId: "2699772700307616"
+sources: ["facebook-page", "facebook-group"]
+groupPostIds: ["1432508856950249", "1435453016655833"]
 hasDetail: true
 ---
 
@@ -21,9 +24,6 @@ hasDetail: true
 
 日時：7/11 18:00-21:00 （準備時間として13:00-18:00のワークの作戦会議を設けます。共に、入退出自由です。）
 場所：オンライン開催
-https://zoom.us/j/98623033397...
-ミーティングID: 986 2303 3397
-パスワード: 132621
 
 主催：Code for SAITAMA/Kumagaya
 協力：熊谷JCI有志
@@ -47,3 +47,8 @@ JCIの目指すSDGsとは？（熊谷JCIメンバー予定）
 - 14:00-18:00 作戦会議/準備会
 
 また、8/1-2にハッカソンを予定してます。併せてご計画ください。
+
+## Facebookグループでの記録
+
+- 2020-07-07: 2020/07/11(土) 7/11 SDGsアイデアソン－アプリを使ってハレからケへの橋渡し－ 参加者17人・興味あり40人
+- 2020-07-11: SDGsアイデアソンは本日です。本番は18:00-21:00ですが、13:00-18:00にもZoomに入室でき作戦会議ができますのでご利用ください。 Zoomミーティングに参加する 2020/07/11(土) 7/11 SDGsアイデアソン－アプリを使ってハレからケへの橋渡し－ 参加者17人・興味あり40人

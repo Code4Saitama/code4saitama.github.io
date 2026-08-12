@@ -12,6 +12,9 @@ page: "event-2017-04-21-map-study-04.html"
 image: ""
 images: []
 fbid: ""
+groupEventId: ""
+sources: ["facebook-page"]
+groupPostIds: []
 hasDetail: true
 ---
 

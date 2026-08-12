@@ -1,13 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import StatBand from "../components/StatBand.astro";
-import EventCard from "../components/EventCard.astro";
-import { absoluteUrl, defaultOgImage, getEvents, getSlides, pageUrl, schemaDateTime, siteDescription, siteName, siteOrigin } from "../lib/archive";
+import SourceTags from "../components/SourceTags.astro";
+import { absoluteUrl, defaultOgImage, getEvents, getNotes, getPage, getSlides, pageUrl, schemaDateTime, siteDescription, siteName, siteOrigin } from "../lib/archive";
 import imageManifest from "../../public/assets/images/images-manifest.json";
+import { archiveRecords } from "../lib/archiveRecords";
 
 const events = await getEvents();
+const notes = await getNotes();
 const slides = await getSlides();
-const eventByDate = new Map(events.filter((event) => event.data.hasDetail).map((event) => [event.data.date, event]));
+const { page: aboutPage, Content: AboutContent } = await getPage("about");
+const eventByDate = new Map(events.map((event) => [event.data.date, event]));
 const highlights = events.filter((event) => event.data.hasDetail).slice(0, 6);
 const jsonLd = [
   {
@@ -45,16 +48,19 @@ const jsonLd = [
   <section class="hero-slider" data-slider data-interval="5000">
     {slides.map((slide, i) => {
       const event = slide.data.eventDate ? eventByDate.get(slide.data.eventDate) : null;
+      const image = slide.data.image || `/assets/images/webp/${slide.data.assetId}.webp`;
+      const href = slide.data.link || event?.data.page;
       return (
         <article class:list={["slide", { "is-active": i === 0 }]}>
           <div class="slide-media">
-            <img src={`/assets/images/webp/${slide.data.assetId}.webp`} alt="" />
+            <img src={image} alt={slide.data.caption} />
           </div>
           <div class="slide-copy">
+            <SourceTags sources={slide.data.sources} />
             <p class="eyebrow">{slide.data.date}</p>
             <h1>{slide.data.caption}</h1>
             <p>{slide.data.text}</p>
-            {event && <a class="button" href={event.data.page}>詳細を見る</a>}
+            {href && <a class="button" href={href}>詳細を見る</a>}
           </div>
         </article>
       );
@@ -64,16 +70,26 @@ const jsonLd = [
     <div class="slider-dots" aria-hidden="true">{slides.map(() => <span></span>)}</div>
   </section>
 
-  <StatBand events={events} imageCount={imageManifest.length} />
+  <StatBand events={events} imageCount={imageManifest.length} archiveRecordCount={archiveRecords.length} noteCount={notes.length} />
 
   <section class="intro-band">
     <div>
       <p class="eyebrow">Official Site</p>
       <h2>Code for SAITAMAの活動を、ここからたどれます。</h2>
     </div>
-    <p>このサイトは、Code for SAITAMAの公式ページです。現在は活動アーカイブを中心に、OpenStreetMap、オープンデータ、アイデアソン、ハッカソン、防災、UDC/COGなどの記録を整理しています。</p>
+    <p>このサイトは、Code for SAITAMAの公式アーカイブです。FB Page、FB Group、Deep Researchの情報源を区別しながら、OpenStreetMap、オープンデータ、防災、UDC/COGなどの記録を統合しています。</p>
   </section>
 
-  <section class="section-head"><h2>主な活動記録</h2><a href="timeline.html">年表を見る</a></section>
-  <div class="card-grid">{highlights.map((event) => <EventCard event={event} />)}</div>
+  <section class="text-page home-about">
+    <p class="eyebrow">{aboutPage.data.eyebrow}</p>
+    <h2>{aboutPage.data.title}</h2>
+    <p class="about-lead">{aboutPage.data.lead}</p>
+    <AboutContent />
+  </section>
+
+  <section class="archive-entry-links" aria-label="アーカイブを探す">
+    <a href="/timeline.html"><span>Timeline</span><strong>時系列から探す</strong></a>
+    <a href="/themes.html"><span>Themes</span><strong>テーマから探す</strong></a>
+    <a href="/research.html"><span>References</span><strong>関連資料を見る</strong></a>
+  </section>
 </BaseLayout>
