@@ -6,10 +6,15 @@ const archiveDir = path.join(repoRoot, "fb_group_archive");
 const args = process.argv.slice(2);
 const dryRun = args.includes("--dry-run");
 const checkpointPath = args.find((argument) => !argument.startsWith("--")) || "/tmp/fb_group_full_checkpoint.json";
+const checkpointIndex = args.indexOf(checkpointPath);
+const eventCheckpointPath = args.slice(checkpointIndex + 1).find((argument) => !argument.startsWith("--")) || "/tmp/fb_group_events_checkpoint.json";
 const postsPath = path.join(archiveDir, "posts.json");
 
 const posts = JSON.parse(fs.readFileSync(postsPath, "utf8"));
 const checkpoint = JSON.parse(fs.readFileSync(checkpointPath, "utf8"));
+const eventCheckpoint = fs.existsSync(eventCheckpointPath)
+  ? JSON.parse(fs.readFileSync(eventCheckpointPath, "utf8"))
+  : { events: [] };
 const fetchedById = new Map(checkpoint.posts.map((post) => [String(post.id), post]));
 
 const noiseLines = new Set([
@@ -94,6 +99,7 @@ function imageExtension(image) {
 }
 
 const commentImageManifest = [];
+const eventImageManifest = [];
 const eventLinkMap = new Map();
 let recoveredBodies = 0;
 let commentCount = 0;
@@ -177,23 +183,91 @@ for (const event of eventLinkMap.values()) {
   event.discovered_from_post_ids = [...new Set(event.discovered_from_post_ids)];
 }
 
+function parseEventDate(value = "") {
+  const match = String(value).match(/(\d{4})[\/.年](\d{1,2})[\/.月](\d{1,2})日?/);
+  if (!match) return "";
+  return `${match[1]}-${match[2].padStart(2, "0")}-${match[3].padStart(2, "0")}`;
+}
+
+function cleanEventDescription(value = "") {
+  const lines = normalizeLines(value).filter((line) => line !== "詳細"
+    && !/^\d+人が回答しました$/.test(line)
+    && line !== "公開"
+    && !/^· Facebook利用者以外/.test(line)
+    && !/^時間:/.test(line));
+  const candidate = lines.find((line) => line.length >= 50 && !/さんのイベント$/.test(line)) || "";
+  return candidate.replace(/\.\.\.\.\.\. さらに表示$/, "").trim();
+}
+
+const groupEvents = (eventCheckpoint.events || []).filter((event) => event.status === "recovered").map((event) => {
+  const eventId = String(event.url || "").match(/\/events\/(\d+)/)?.[1] || "";
+  const headerLines = normalizeLines(event.header_text || event.containerText);
+  const date = parseEventDate(headerLines[0] || event.containerText);
+  const place = headerLines.find((line) => line !== event.title && !parseEventDate(line) && !/さんがシェア|作成:/.test(line)) || "";
+  const description = cleanEventDescription(event.detail_text);
+  const seen = new Set();
+  const savedImages = [];
+  for (const image of event.images || []) {
+    const key = stableImageKey(image);
+    if (!image.src || seen.has(key)) continue;
+    seen.add(key);
+    const relativePath = path.posix.join("images", "events", date.slice(0, 4) || "unknown", eventId, `${String(savedImages.length + 1).padStart(2, "0")}${imageExtension(image)}`);
+    savedImages.push(relativePath);
+    eventImageManifest.push({
+      event_id: eventId,
+      title: event.title,
+      date,
+      alt: image.alt,
+      width: image.width,
+      height: image.height,
+      source_url: image.src,
+      saved_path: relativePath,
+    });
+  }
+  const postDiscovery = eventLinkMap.get(eventId)?.discovered_from_post_ids || [];
+  eventLinkMap.delete(eventId);
+  return {
+    event_id: eventId,
+    title: event.title,
+    date,
+    date_display: headerLines[0] || "",
+    place,
+    url: event.url,
+    description,
+    summary: summarize(description || event.detail_text, 220),
+    detail_text: event.detail_text || "",
+    header_text: event.header_text || "",
+    images: event.images || [],
+    saved_images: savedImages,
+    discovered_from_post_ids: [...new Set(postDiscovery)],
+    fetched_at: event.fetched_at || eventCheckpoint.fetched_at || null,
+    sources: ["facebook-group"],
+  };
+}).sort((a, b) => a.date.localeCompare(b.date) || a.event_id.localeCompare(b.event_id));
+
+for (const event of eventLinkMap.values()) {
+  groupEvents.push({ ...event, date: "", date_display: "", place: "", description: "", summary: "", detail_text: "", header_text: "", images: [], saved_images: [], fetched_at: null, sources: ["facebook-group"] });
+}
+
 const crawlReport = {
   generated_at: new Date().toISOString(),
   checkpoint_path: checkpointPath,
   total_posts: posts.length,
   fetched_posts: fetchedById.size,
   missing_posts: posts.filter((post) => !fetchedById.has(String(post.id))).map((post) => post.id),
-  errors: checkpoint.errors || [],
+  errors: (checkpoint.errors || []).filter((error) => !fetchedById.has(String(error.id))),
   recovered_bodies: recoveredBodies,
   comments: commentCount,
   comment_images: commentImageManifest.length,
-  discovered_events: eventLinkMap.size,
+  group_events: groupEvents.length,
+  event_images: eventImageManifest.length,
 };
 
 if (!dryRun) {
   fs.writeFileSync(postsPath, `${JSON.stringify(posts, null, 2)}\n`);
   fs.writeFileSync(path.join(archiveDir, "comment_images_manifest.json"), `${JSON.stringify(commentImageManifest, null, 2)}\n`);
-  fs.writeFileSync(path.join(archiveDir, "group_events.json"), `${JSON.stringify([...eventLinkMap.values()], null, 2)}\n`);
+  fs.writeFileSync(path.join(archiveDir, "group_events.json"), `${JSON.stringify(groupEvents, null, 2)}\n`);
+  fs.writeFileSync(path.join(archiveDir, "event_images_manifest.json"), `${JSON.stringify(eventImageManifest, null, 2)}\n`);
   fs.writeFileSync(path.join(archiveDir, "full_crawl_report.json"), `${JSON.stringify(crawlReport, null, 2)}\n`);
 }
 
