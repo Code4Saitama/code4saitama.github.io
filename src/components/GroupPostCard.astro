@@ -1,6 +1,6 @@
 ---
 import SourceTags from "./SourceTags.astro";
-import { cleanGroupAuthor, groupImageUrl, groupPostExcerpt, groupPostPage, groupPostTitle, type GroupPost } from "../lib/groupPosts";
+import { cleanGroupAuthor, groupPostCommentImageCount, groupImageUrl, groupPostExcerpt, groupPostPage, groupPostTitle, type GroupPost } from "../lib/groupPosts";
 
 interface Props {
   post: GroupPost;
@@ -10,7 +10,9 @@ const { post } = Astro.props;
 const title = groupPostTitle(post);
 const page = groupPostPage(post);
 const image = post.saved_images[0];
-const searchText = `${post.date} ${post.id} ${post.author} ${post.text}`.toLowerCase();
+const commentCount = post.comments?.length || 0;
+const commentImageCount = groupPostCommentImageCount(post);
+const searchText = `${post.date} ${post.id} ${post.author} ${post.text} ${post.comments_summary || ""} ${(post.comments || []).map((comment) => `${comment.author} ${comment.text}`).join(" ")}`.toLowerCase();
 ---
 <article class="group-post-card" data-post-card data-year={post.date.slice(0, 4)} data-search={searchText}>
   {image ? (
@@ -23,6 +25,6 @@ const searchText = `${post.date} ${post.id} ${post.author} ${post.text}`.toLower
     <SourceTags sources={["facebook-group"]} />
     <h2><a href={page}>{title}</a></h2>
     <p>{groupPostExcerpt(post)}</p>
-    <p class="group-post-assets">投稿ID {post.id} · 写真 {post.saved_images.length}点</p>
+    <p class="group-post-assets">投稿ID {post.id} · 投稿写真 {post.saved_images.length}点 · コメント {commentCount}件 · コメント写真 {commentImageCount}点</p>
   </div>
 </article>

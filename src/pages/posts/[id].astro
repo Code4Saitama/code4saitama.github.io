@@ -2,7 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import SourceTags from "../../components/SourceTags.astro";
 import { absoluteUrl, excerpt, getEvents, pageUrl } from "../../lib/archive";
-import { cleanGroupAuthor, groupImageUrl, groupPostBody, groupPostPage, groupPosts, groupPostTitle } from "../../lib/groupPosts";
+import { cleanGroupAuthor, groupPostCommentImageCount, groupImageUrl, groupPostBody, groupPostPage, groupPosts, groupPostTitle } from "../../lib/groupPosts";
 
 export async function getStaticPaths() {
   return groupPosts.map((post) => ({ params: { id: post.id }, props: { post } }));
@@ -13,9 +13,11 @@ const events = await getEvents();
 const relatedEvents = events.filter((event) => event.data.groupPostIds.includes(post.id));
 const title = groupPostTitle(post);
 const body = groupPostBody(post);
+const comments = post.comments || [];
+const commentImageCount = groupPostCommentImageCount(post);
 const canonicalPath = groupPostPage(post);
 const image = post.saved_images[0] ? groupImageUrl(post.saved_images[0]) : undefined;
-const description = excerpt(body || `${post.date_display}のFacebookグループ投稿。`, 155);
+const description = excerpt(post.summary || body || `${post.date_display}のFacebookグループ投稿。`, 155);
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SocialMediaPosting",
@@ -24,7 +26,8 @@ const jsonLd = {
   author: { "@type": "Person", name: cleanGroupAuthor(post.author) },
   url: pageUrl(canonicalPath),
   image: image ? absoluteUrl(image) : undefined,
-  isBasedOn: post.url
+  isBasedOn: post.url,
+  commentCount: comments.length
 };
 ---
 <BaseLayout title={title} canonicalPath={canonicalPath} description={description} image={image} type="article" jsonLd={jsonLd}>
@@ -40,9 +43,20 @@ const jsonLd = {
     <dl class="detail-meta">
       <div><dt>投稿日</dt><dd>{post.date_display}</dd></div>
       <div><dt>投稿者</dt><dd>{cleanGroupAuthor(post.author)}</dd></div>
-      <div><dt>保存写真</dt><dd>{post.saved_images.length}点</dd></div>
+      <div><dt>投稿写真</dt><dd>{post.saved_images.length}点</dd></div>
+      <div><dt>コメント</dt><dd>{comments.length}件</dd></div>
+      <div><dt>コメント写真</dt><dd>{commentImageCount}点</dd></div>
       <div><dt>元投稿</dt><dd><a href={post.url} target="_blank" rel="noopener">Facebookで開く</a></dd></div>
     </dl>
+
+    {(post.summary || post.comments_summary) && (
+      <section class="group-post-summaries" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">内容の要約</h2>
+        {post.summary && <div><h3>投稿本文</h3><p>{post.summary}</p></div>}
+        {post.comments_summary && <div><h3>コメント</h3><p>{post.comments_summary}</p></div>}
+        <p class="summary-note">原文から自動作成した要約です。正確な文脈は以下の本文とコメントを確認してください。</p>
+      </section>
+    )}
 
     <section class="text-page">
       <h2>保存された本文</h2>
@@ -50,13 +64,51 @@ const jsonLd = {
     </section>
 
     {post.saved_images.length > 0 && (
-      <section class="detail-gallery">
+      <section>
+        <h2>投稿写真</h2>
+        <div class="detail-gallery">
         {post.saved_images.map((savedImage, index) => (
           <figure>
             <a href={groupImageUrl(savedImage)} target="_blank"><img src={groupImageUrl(savedImage)} alt={post.images[index]?.alt || ""} loading="lazy" /></a>
             <figcaption>{post.images[index]?.alt || `投稿写真 ${index + 1}`}</figcaption>
           </figure>
         ))}
+        </div>
+      </section>
+    )}
+
+    <section class="group-post-comments" aria-labelledby="comments-heading">
+      <h2 id="comments-heading">保存されたコメント <span>{comments.length}件</span></h2>
+      {comments.length > 0 ? (
+        <ol>
+          {comments.map((comment) => (
+            <li id={`comment-${comment.id}`} class:list={["group-post-comment", { "group-post-reply": comment.parent_comment_id }]}>
+              <header>
+                <strong>{comment.author}</strong>
+                {comment.timestamp_label && <time>{comment.timestamp_label}</time>}
+                {comment.permalink && <a href={comment.permalink} target="_blank" rel="noopener">Facebookで開く</a>}
+              </header>
+              {comment.text ? <p class="group-post-body">{comment.text}</p> : <p>（本文なし）</p>}
+              {comment.saved_images.length > 0 && (
+                <div class="comment-gallery">
+                  {comment.saved_images.map((savedImage, index) => (
+                    <figure>
+                      <a href={groupImageUrl(savedImage)} target="_blank"><img src={groupImageUrl(savedImage)} alt={comment.images[index]?.alt || ""} loading="lazy" /></a>
+                      <figcaption>{comment.images[index]?.alt || `コメント写真 ${index + 1}`}</figcaption>
+                    </figure>
+                  ))}
+                </div>
+              )}
+            </li>
+          ))}
+        </ol>
+      ) : <p>保存されたコメントはありません。</p>}
+    </section>
+
+    {post.fb_event_links && post.fb_event_links.length > 0 && (
+      <section class="related-records">
+        <h2>投稿から確認できたFacebookイベント</h2>
+        <ul>{post.fb_event_links.map((event) => <li><a href={event.url} target="_blank" rel="noopener">{event.title || `Facebookイベント ${event.event_id}`}</a></li>)}</ul>
       </section>
     )}
 

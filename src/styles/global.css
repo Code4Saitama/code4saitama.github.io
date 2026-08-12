@@ -301,6 +301,25 @@ main { min-height: 70vh; }
 .group-post-header h1 { margin: 4px 0 12px; max-width: 920px; font-size: clamp(30px, 4vw, 50px); line-height: 1.25; }
 .group-post-header > p:last-child { margin: 0; color: var(--muted); }
 .group-post-body { white-space: pre-wrap; overflow-wrap: anywhere; }
+.group-post-summaries { margin: 28px 0; padding: 24px; background: #eef6f2; border-left: 5px solid var(--teal); }
+.group-post-summaries > h2 { margin-top: 0; }
+.group-post-summaries div { display: grid; grid-template-columns: 130px 1fr; gap: 18px; padding: 13px 0; border-top: 1px solid rgba(14, 96, 86, .2); }
+.group-post-summaries h3, .group-post-summaries p { margin: 0; }
+.group-post-summaries h3 { font-size: 16px; }
+.group-post-summaries .summary-note { margin-top: 10px; color: var(--muted); font-size: 13px; }
+.group-post-comments { margin-top: 36px; }
+.group-post-comments > h2 span { color: var(--muted); font-size: .6em; font-weight: 600; }
+.group-post-comments > ol { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.group-post-comment { padding: 18px 20px; background: #fff; border: 1px solid var(--line); }
+.group-post-comment.group-post-reply { margin-left: 42px; border-left: 4px solid var(--teal); }
+.group-post-comment header { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: baseline; margin-bottom: 10px; }
+.group-post-comment header time { color: var(--muted); font-size: 13px; }
+.group-post-comment header a { margin-left: auto; color: var(--teal); font-size: 13px; font-weight: 700; }
+.group-post-comment > p { margin: 0; }
+.comment-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 280px)); gap: 10px; margin-top: 14px; }
+.comment-gallery figure { margin: 0; background: #f7f5ef; border: 1px solid var(--line); }
+.comment-gallery img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; display: block; background: #eee; }
+.comment-gallery figcaption { padding: 8px; color: var(--muted); font-size: 12px; }
 .detail-meta a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
 .related-records { margin-top: 30px; padding: 24px; background: #fff; border: 1px solid var(--line); }
 .related-records h2 { margin: 0 0 16px; }
@@ -411,4 +430,6 @@ main { min-height: 70vh; }
   .post-controls { position: static; grid-template-columns: 1fr; }
   .group-post-card { grid-template-columns: 1fr; }
   .group-post-thumb { min-height: 180px; max-height: 260px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .group-post-summaries div { grid-template-columns: 1fr; gap: 4px; }
+  .group-post-comment.group-post-reply { margin-left: 18px; }
 }

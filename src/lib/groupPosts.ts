@@ -8,6 +8,26 @@ export interface GroupPostImage {
   w: number;
 }
 
+export interface GroupPostCommentImage {
+  alt: string;
+  height: number;
+  photo_url: string;
+  src: string;
+  width: number;
+}
+
+export interface GroupPostComment {
+  id: string;
+  parent_comment_id: string;
+  author: string;
+  timestamp_label: string;
+  permalink: string;
+  text: string;
+  summary: string;
+  images: GroupPostCommentImage[];
+  saved_images: string[];
+}
+
 export interface GroupPost {
   id: string;
   date: string;
@@ -15,6 +35,12 @@ export interface GroupPost {
   author: string;
   url: string;
   text: string;
+  summary?: string;
+  comments_summary?: string;
+  comments?: GroupPostComment[];
+  expected_comment_count?: number | null;
+  fetched_at?: string | null;
+  fb_event_links?: Array<{ event_id: string; url: string; title: string }>;
   images: GroupPostImage[];
   saved_images: string[];
 }
@@ -67,9 +93,20 @@ export function groupPostTitle(post: GroupPost) {
 }
 
 export function groupPostExcerpt(post: GroupPost, limit = 170) {
-  const compact = groupPostBody(post).replace(/\s+/g, " ").trim();
+  const compact = (post.summary || groupPostBody(post)).replace(/\s+/g, " ").trim();
   if (!compact) return post.saved_images.length ? `写真 ${post.saved_images.length}点を保存した投稿です。` : "本文を取得できなかった投稿です。";
   return truncate(compact, limit);
+}
+
+export function groupPostCommentImageCount(post: GroupPost) {
+  return (post.comments || []).reduce((sum, comment) => sum + comment.saved_images.length, 0);
+}
+
+export function groupPostMedia(post: GroupPost) {
+  return [
+    ...post.saved_images,
+    ...(post.comments || []).flatMap((comment) => comment.saved_images),
+  ];
 }
 
 export function groupPostPage(post: GroupPost) {

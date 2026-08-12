@@ -2,11 +2,13 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import GroupPostCard from "../components/GroupPostCard.astro";
 import SourceTags from "../components/SourceTags.astro";
-import { groupPosts } from "../lib/groupPosts";
+import { groupPostCommentImageCount, groupPosts } from "../lib/groupPosts";
 import { pageUrl } from "../lib/archive";
 
 const years = [...new Set(groupPosts.map((post) => post.date.slice(0, 4)))].sort();
 const imageCount = groupPosts.reduce((sum, post) => sum + post.saved_images.length, 0);
+const commentCount = groupPosts.reduce((sum, post) => sum + (post.comments?.length || 0), 0);
+const commentImageCount = groupPosts.reduce((sum, post) => sum + groupPostCommentImageCount(post), 0);
 const description = `公開Facebookグループから保存したCode for SAITAMA関連投稿${groupPosts.length}件を、本文と写真でたどれるアーカイブです。`;
 const jsonLd = {
   "@context": "https://schema.org",
@@ -23,7 +25,7 @@ const jsonLd = {
     <p class="eyebrow">Facebook Group Archive</p>
     <h1>FBグループ投稿</h1>
     <p>公開グループから保存した投稿を、古い順に掲載しています。削除対象として目視確認済みの38投稿は除外しています。</p>
-    <div class="source-legend"><SourceTags sources={["facebook-group"]} /><span>{groupPosts.length}投稿 · 写真{imageCount}点 · {years[0]}–{years[years.length - 1]}</span></div>
+    <div class="source-legend"><SourceTags sources={["facebook-group"]} /><span>{groupPosts.length}投稿 · コメント{commentCount}件 · 投稿写真{imageCount}点 · コメント写真{commentImageCount}点 · {years[0]}–{years[years.length - 1]}</span></div>
   </section>
 
   <section class="post-controls" aria-label="投稿の絞り込み">
