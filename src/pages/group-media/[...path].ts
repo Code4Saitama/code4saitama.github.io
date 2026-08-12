@@ -2,10 +2,14 @@ import type { APIRoute } from "astro";
 import fs from "node:fs";
 import path from "node:path";
 import { groupPostMedia, groupPosts } from "../../lib/groupPosts";
+import { groupEvents } from "../../lib/groupEvents";
 
 export const prerender = true;
 
-const media = [...new Set(groupPosts.flatMap(groupPostMedia))].map((savedPath) => {
+const media = [...new Set([
+  ...groupPosts.flatMap(groupPostMedia),
+  ...groupEvents.flatMap((event) => event.saved_images),
+])].map((savedPath) => {
   const relativePath = savedPath.replace(/^images\//, "");
   return {
     relativePath,
